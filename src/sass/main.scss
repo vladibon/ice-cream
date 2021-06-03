@@ -1,7 +1,14 @@
-/*
- * Главный файл стилей.
- * Все паршалы подключаются сюда.
- */
+@import './utils/variables';
+@import './utils/common';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/visually-hidden';
 
-// Стили для файла с примером HTML-фрагмента
-@import './example';
+@import './layout/hero-header.scss';
+@import './layout/products.scss';
+@import './layout/about.scss';
+@import './layout/advantages.scss';
+@import './layout/gallery.scss';
+@import './layout/customer-reviews.scss';
+@import './layout/contacts.scss';
+@import './layout/page-footer.scss';
