@@ -1,0 +1,25 @@
+{
+    "version": 3,
+    "mappings": "AKAA,AAAA,gBAAgB,CAAC;EACf,QAAQ,EAAE,mBAAmB;EAC7B,IAAI,EAAE,qBAAqB;EAC3B,IAAI,EAAE,wBAAwB;EAC9B,OAAO,EAAE,YAAY;EACrB,MAAM,EAAE,YAAY;EACpB,MAAM,EAAE,cAAc;EACtB,KAAK,EAAE,cAAc;EACrB,QAAQ,EAAE,MAAM;CACjB;;AETD,AAAA,UAAU,CAAC;EACT,KAAK,EAAE,IAAI;EACX,YAAY,EAAE,IAAI;EAClB,aAAa,EAAE,IAAI;CAmBpB;;AHpBC,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EGFrC,AAAA,UAAU,CAAC;IAMP,SAAS,ENyCJ,KAAK;IMxCV,WAAW,EAAE,IAAI;IACjB,YAAY,EAAE,IAAI;GAcrB;;;AHpBC,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,KAAK;EGFrC,AAAA,UAAU,CAAC;IAYP,SAAS,ENoCJ,KAAK;IMnCV,YAAY,EAAE,IAAI;IAClB,aAAa,EAAE,IAAI;GAQtB;;;AHpBC,MAAM,CAAC,MAAM,MAAM,SAAS,EAAE,MAAM;EGFtC,AAAA,UAAU,CAAC;IAkBP,SAAS,EN+BH,MAAM;IM9BZ,YAAY,EAAE,KAAK;IACnB,aAAa,EAAE,KAAK;GAEvB",
+    "sources": [
+        "main.scss",
+        "utils/_variables.scss",
+        "utils/_common.scss",
+        "utils/_placeholders.scss",
+        "utils/_mixins.scss",
+        "utils/_visually-hidden.scss",
+        "components/_buttons.scss",
+        "layout/_container.scss",
+        "layout/_page-header.scss",
+        "layout/_hero.scss",
+        "layout/_products.scss",
+        "layout/_about.scss",
+        "layout/_advantages.scss",
+        "layout/_gallery.scss",
+        "layout/_customer-reviews.scss",
+        "layout/_contacts.scss",
+        "layout/_page-footer.scss"
+    ],
+    "names": [],
+    "file": "main.css"
+}
