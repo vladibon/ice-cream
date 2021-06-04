@@ -1,0 +1,70 @@
+.hero {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 195px;
+  padding-bottom: 200px;
+  background-color: $header-main-bg-color;
+
+  @include respond-above($tablet) {
+    padding-top: 100px;
+    padding-bottom: 34px;
+  }
+
+  @include respond-above($desktop) {
+    padding-top: 170px;
+    padding-bottom: 56px;
+  }
+}
+
+.hero__title {
+  font-family: Titan One;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white-text-color;
+
+  @include respond-above($tablet) {
+    font-size: 22px;
+    line-height: 1.14;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 38px;
+    line-height: 1.16;
+  }
+}
+
+.hero__title--accent {
+  font-size: 48px;
+  line-height: 0.96;
+  color: $main-title-color;
+
+  @include respond-above($tablet) {
+    font-size: 34px;
+    line-height: 0.9;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 58px;
+  }
+}
+
+.extra-info {
+  display: none;
+
+  @include respond-above($tablet) {
+    display: block;
+  }
+}
+
+.store-list {
+  display: none;
+
+  @include respond-above($tablet) {
+    display: block;
+  }
+}
