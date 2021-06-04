@@ -1,0 +1,84 @@
+.btn {
+  min-width: 63px;
+  height: auto;
+  min-height: 24px;
+  padding: 7px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 20px;
+  outline: 1px solid black;
+  font-size: 8px;
+  line-height: 1.2;
+  font-weight: 400;
+  cursor: pointer;
+
+  @include respond-above($desktop) {
+    font-size: 14px;
+    line-height: 1.31;
+    padding: 11px 22px;
+  }
+}
+
+.btn--primary {
+  color: $btn-secondary-color;
+  background-color: $btn-primary-color;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-primary-accent-color;
+  }
+}
+
+.btn--secondary {
+  color: $btn-primary-color;
+  background-color: $btn-secondary-color;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-secondary-accent-color;
+  }
+}
+
+.btn--about,
+.btn--contacts {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 1.25;
+  border-radius: 22px;
+  padding: 12px 36px;
+}
+
+.btn--contacts {
+  @include respond-below($tablet) {
+    width: 160px;
+  }
+}
+
+.btn__icon {
+  fill: currentColor;
+}
+
+.btn__icon--append {
+  margin-left: 14px;
+}
+
+.btn--open {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  color: $btn-secondary-color;
+  background-color: $btn-primary-color;
+
+  &:hover,
+  &:focus {
+    color: $btn-primary-color;
+    background-color: $btn-secondary-color;
+  }
+}
+
+.btn--open__icon {
+  fill: currentColor;
+}
