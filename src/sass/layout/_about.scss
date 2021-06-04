@@ -1,12 +1,37 @@
 .about {
-  position: relative;
-
   padding-top: 125px;
   padding-bottom: 39px;
 
   text-align: center;
 
   background-color: $primary-bg-color;
+
+  background-image: url(../images/about/mobile/about_img2_mobile_@1x.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  @include retina-display(2) {
+    background-image: url(../images/about/mobile/about_img2_mobile_@2x.png);
+  }
+
+  @include respond-above($tablet) {
+    background-image: url();
+
+    @include retina-display(2) {
+      background-image: url();
+    }
+  }
+
+  @include respond-above($desktop) {
+    max-width: 1200px;
+
+    background-image: url(../images/about/desktop/about_img2_desktop_@1x.png);
+
+    @include retina-display(2) {
+      background-image: url(../images/about/desktop/about_img2_desktop_@2x.png);
+    }
+  }
 }
 
 .about__label {
@@ -20,7 +45,7 @@
 
   color: $secondary-title-color;
 
-  &--padding {
+  &--margin {
     margin-bottom: 15px;
   }
 }
@@ -46,13 +71,14 @@
   display: block;
   width: 100%;
 
-  &--padding {
+  &--margin {
     margin-bottom: 46px;
   }
 }
 
 .about__box {
   display: block;
+
   margin-left: auto;
   margin-right: auto;
   max-width: 220px;
@@ -62,7 +88,6 @@
 
 .about__box-title {
   margin: 0;
-  margin-bottom: 30px;
 
   font-family: $main-font;
   font-weight: 500;
@@ -70,6 +95,10 @@
   line-height: 1.9;
 
   color: $black-text-color;
+
+  &--margin {
+    margin-bottom: 30px;
+  }
 }
 
 .about__box-text {
@@ -88,11 +117,4 @@
     margin-top: 12px;
     margin-bottom: 20px;
   }
-}
-
-.about__bg {
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 85px;
 }
