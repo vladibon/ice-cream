@@ -17,14 +17,14 @@
   }
 }
 
-// Grid
-@mixin grid($item-gap: 30px) {
+// Grid with 3 items per line
+@mixin grid($item-gap: 20px) {
   display: flex;
   flex-wrap: wrap;
   margin: -$item-gap / 2;
 }
 
-@mixin grid-item($items-num: 2, $item-gap: 30px) {
-  flex-basis: calc((100% - #{$items-num} * #{$item-gap}) / #{$items-num});
+@mixin grid-item($item-gap: 20px) {
+  flex-basis: calc((100% - #{$item-gap} * 3) / 3);
   margin: $item-gap / 2;
 }
