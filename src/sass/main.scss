@@ -4,7 +4,11 @@
 @import './utils/mixins';
 @import './utils/visually-hidden';
 
-@import './layout/hero-header.scss';
+@import './components/buttons';
+
+@import './layout/container';
+@import './layout/page-header';
+@import './layout/hero.scss';
 @import './layout/products.scss';
 @import './layout/about.scss';
 @import './layout/advantages.scss';
