@@ -1,0 +1,56 @@
+.u-visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+.u-container {
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+
+  @media screen and (min-width: 480px) {
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+    padding: 0 34px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    padding: 0 75px;
+  }
+}
+
+.u-flexbox {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+
+.u-section-title {
+  padding-bottom: 100px;
+
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-transform: uppercase;
+
+  @media screen and (min-width: 768px) {
+    font-size: 48px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
+}
