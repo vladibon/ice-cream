@@ -2,12 +2,36 @@
   <div class="container">
     <p class="about__label about__label--padding">tradition and lovesu</p>
     <h2 class="about__title about__title--center">how it’s made?</h2>
-    <img
-      class="about__pictures about__pictures--padding"
-      src="/images/test-cow.png"
-      alt="Milk carafe on the background of a cow"
-      width="280px"
-    />
+    <picture>
+      <source
+        srcset="
+          /images/about/desktop/about_img1_desktop_@1x.png 1x,
+          /images/about/desktop/about_img1_desktop_@2x.png 2x
+        "
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="
+          /images/about/tablet/about_img1_tablet_@1x.png 1x,
+          /images/about/tablet/about_img1_tablet_@2x.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="
+          /images/about/mobile/about_img1_mobile_@1x.png 1x,
+          /images/about/mobile/about_img1_mobile_@2x.png 2x
+        "
+        media="(min-width: 320px)"
+      />
+      <img
+        class="about__pictures about__pictures--padding"
+        src="/images/about/desktop/about_img1_desktop_@1x.png"
+        alt="Milk carafe on the background of a cow"
+        width="280px"
+      />
+    </picture>
+
     <div class="about__box">
       <h3 class="about__box-title">
         Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo cursus, faucibus
@@ -20,7 +44,12 @@
         <span class="about__box-text about__box-text--p"
           >Aliquam erat volutpat. Aenean accumsan.
         </span>
-        <img class="about__bg" src="/images/test-gb-milk.png" alt="" width="320px" />
+        <img
+          class="about__bg"
+          src="/images/about/mobile/about_img2_mobile_@1x.png"
+          alt=""
+          width="320px"
+        />
       </p>
       <button type="button">Read more</button>
     </div>
