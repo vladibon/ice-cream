@@ -1,5 +1,5 @@
 .hero {
-  position: absolute;
+  position: relative;
   top: 0;
   left: 0;
   width: 100%;
@@ -19,13 +19,15 @@
 }
 
 .hero__title {
-  font-family: Titan One;
+  font-family: $title-font;
   font-weight: 400;
   font-size: 26px;
   line-height: 1.16;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: $white-text-color;
+  display: flex;
+  flex-direction: column;
 
   @include respond-above($tablet) {
     font-size: 22px;
@@ -58,6 +60,24 @@
 
   @include respond-above($tablet) {
     display: block;
+    font-size: 8px;
+    line-height: 1.5;
+    color: $white-text-color;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+}
+
+.extra-info__link {
+  width: 18px;
+  height: 18px;
+
+  @include respond-above($desktop) {
+    width: 26px;
+    height: 26px;
   }
 }
 
@@ -66,5 +86,29 @@
 
   @include respond-above($tablet) {
     display: block;
+  }
+}
+
+.store-list__number {
+  font-family: $title-font;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $main-title-color;
+  margin-bottom: 0;
+
+  @include respond-above($desktop) {
+    font-size: 46px;
+  }
+}
+
+.store-list__name {
+  font-size: 8px;
+  color: $white-text-color;
+  margin-bottom: 0;
+
+  @include respond-above($desktop) {
+    font-size: 14px;
   }
 }
