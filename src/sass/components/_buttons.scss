@@ -2,23 +2,17 @@
   min-width: 63px;
   height: auto;
   min-height: 24px;
-  padding: 7px 15px;
-  display: flex;
+  padding: 12px 36px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   border: none;
-  border-radius: 20px;
-  outline: 1px solid black;
-  font-size: 8px;
-  line-height: 1.2;
-  font-weight: 400;
-  cursor: pointer;
+  border-radius: 22px;
 
-  @include respond-above($desktop) {
-    font-size: 14px;
-    line-height: 1.31;
-    padding: 11px 22px;
-  }
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 .btn--primary {
@@ -40,14 +34,31 @@
     background-color: $btn-secondary-accent-color;
   }
 }
+.btn--hero {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.2;
+  padding: 7px 15px;
+  border-radius: 20px;
 
-.btn--about,
-.btn--contacts {
-  font-weight: bold;
-  font-size: 16px;
-  line-height: 1.25;
-  border-radius: 22px;
-  padding: 12px 36px;
+  @include respond-above($desktop) {
+    font-size: 14px;
+    line-height: 1.31;
+    padding: 11px 22px;
+  }
+}
+.btn--header {
+  @include respond-below($mobile) {
+    width: 100%;
+  }
+
+  @include respond-below($tablet) {
+    width: 480px;
+  }
+
+  .mobile-menu.is-open & {
+    width: 185px;
+  }
 }
 
 .btn--contacts {
@@ -64,6 +75,7 @@
   margin-left: 14px;
 }
 
+// Arrow buttons
 .btn--open {
   display: inline-flex;
   padding: 0;
