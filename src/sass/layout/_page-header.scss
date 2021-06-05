@@ -1,0 +1,153 @@
+.page-header {
+  outline: 1px solid tomato;
+}
+
+.page-header__container {
+  position: relative;
+
+  @include respond-above($tablet) {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.page-header__btn {
+  position: absolute;
+  z-index: 2;
+  top: 62px;
+  right: 24px;
+
+  width: calc(100% - 48px);
+  max-width: 202px;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(200px);
+  transition: color $animation, background-color $animation, visibility $modal-animation,
+    opacity $modal-animation, transform $modal-animation;
+
+  &--nav-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+    transform: translateX(0);
+  }
+}
+
+.backdrop {
+  @include respond-below($desktop) {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $backdrop-color;
+    overflow-y: scroll;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility $modal-animation, opacity $modal-animation;
+
+    &--is-open {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: initial;
+    }
+  }
+}
+
+.backdrop__container {
+  position: relative;
+}
+
+// Site Navigation
+.site-nav {
+  @include respond-below($desktop) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(200px);
+
+    width: 100vw;
+    max-width: 250px;
+    min-height: 100vh;
+
+    padding-top: 136px;
+    padding-bottom: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    background-color: $site-nav-bg-color;
+    box-shadow: $site-nav-shadow;
+    transition: transform $modal-animation;
+
+    .backdrop--is-open & {
+      transform: translateX(0);
+    }
+  }
+}
+
+.site-nav__item:not(:last-child) {
+  margin-bottom: 24px;
+}
+
+.site-nav__link {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.28;
+  display: flex;
+  align-items: center;
+
+  color: #ffffff;
+
+  &--active {
+    color: $main-title-color;
+  }
+}
+
+// Site Nav Button
+.site-nav-btn {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 10px;
+
+  padding: 10px;
+
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transform: scale(1);
+  transition: fill $animation, transform $animation;
+
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+
+  @include respond-above($desktop) {
+    display: none;
+  }
+}
+
+.site-nav-btn__icon {
+  .site-nav-btn--is-open & {
+    display: none;
+  }
+}
+
+.site-nav-btn__icon-close {
+  display: none;
+
+  .site-nav-btn--is-open & {
+    display: block;
+  }
+}
+
+// Buy now Button

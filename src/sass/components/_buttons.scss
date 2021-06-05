@@ -34,6 +34,7 @@
     background-color: $btn-secondary-accent-color;
   }
 }
+
 .btn--hero {
   font-weight: 400;
   font-size: 8px;
@@ -45,21 +46,6 @@
     font-size: 14px;
     line-height: 1.31;
     padding: 11px 22px;
-  }
-}
-
-.btn--header {
-  @include respond-below($mobile) {
-    width: 100%;
-  }
-
-  @include respond-below($tablet) {
-    width: 480px;
-  }
-
-  // Эдуард, для тебя этот кусок - пропишешь под себя))
-  .mobile-menu.is-open & {
-    width: 185px;
   }
 }
 

@@ -10,7 +10,7 @@
     menuBtnRef.classList.toggle("site-nav-btn--is-open");
     menuBtnRef.setAttribute("aria-expanded", !expanded);
 
-    buyBtn.classList.toggle("buy-btn--nav-open");
+    buyBtn.classList.toggle("page-header__btn--nav-open");
 
     mobileMenuRef.classList.toggle("backdrop--is-open");
     page.classList.toggle("page--nav-open");
