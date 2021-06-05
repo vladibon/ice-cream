@@ -75,6 +75,7 @@
 }
 
 .product {
+  text-align: center;
   border-radius: 24px;
   padding-top: 160px;
   padding-right: 40px;
@@ -105,7 +106,6 @@
   }
 
   &__title {
-    text-align: center;
     margin-bottom: 66px;
 
     font-family: $title-font;
@@ -128,8 +128,6 @@
 
     font-weight: 500;
     line-height: 1.5;
-
-    text-align: center;
 
     @include respond-above($tablet) {
       margin-bottom: 40px;
