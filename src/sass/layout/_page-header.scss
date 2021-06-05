@@ -11,9 +11,10 @@
   }
 }
 
+// Buy now Button
 .page-header__btn {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   top: 62px;
   right: 24px;
 
@@ -37,7 +38,7 @@
 .backdrop {
   @include respond-below($desktop) {
     position: fixed;
-    z-index: 1;
+    z-index: 4;
     top: 0;
     right: 0;
 
@@ -114,7 +115,7 @@
 // Site Nav Button
 .site-nav-btn {
   position: absolute;
-  z-index: 2;
+  z-index: 5;
   top: 14px;
   right: 10px;
 
@@ -149,5 +150,3 @@
     display: block;
   }
 }
-
-// Buy now Button
