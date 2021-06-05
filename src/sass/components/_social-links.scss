@@ -1,0 +1,30 @@
+.social {
+  display: flex;
+  margin-bottom: 50px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.social__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $brand-link-color;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-link-color;
+  }
+}
+
+.social__icon {
+  width: 19px;
+  height: 19px;
+}
