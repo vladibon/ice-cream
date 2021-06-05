@@ -72,6 +72,7 @@
     font-size: 58px;
   }
 }
+
 .btn--hero {
   display: flex;
 }
@@ -124,6 +125,12 @@
   @include respond-above($tablet) {
     display: block;
   }
+}
+
+.store-list__item {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
 
 .store-list__number {
@@ -192,24 +199,82 @@
   border-radius: 50%;
   background-color: $header-circle-bg-color;
 
-  &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: 50%;
+  @include respond-above(400px) {
+    left: 25%;
+  }
+
+  @include respond-between($mobile, $tablet) {
+    left: 35%;
+  }
+
+  @include respond-above($tablet) {
+    width: 324px;
+    height: 324px;
+    left: 310px;
+    bottom: 46px;
+  }
+
+  @include respond-above($desktop) {
+    width: 538px;
+    height: 538px;
+    left: 475px;
+    bottom: 75px;
+  }
+
+  @include respond-above(1370px) {
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
+}
+
+.hero__image--main::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: -75px;
+  transform: translate(-50%, 0);
+  position: absolute;
+  background-image: url(../images/hero/mobile/hero1_mobile_@1x.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 171px;
+  height: 410px;
+
+  @include retina-display(2) {
+    background-image: url(../images/hero/mobile/hero1_mobile_@2x.png);
+  }
+
+  @include respond-above($tablet) {
+    background-image: url(../images/hero/tablet/hero1_tablet_@1x.png);
+    left: 45%;
+    bottom: -46px;
+    width: 143px;
+    height: 336px;
+
+    @include retina-display(2) {
+      background-image: url(../images/hero/tablet/hero1_tablet_@2x.png);
+    }
+  }
+
+  @include respond-above($desktop) {
+    background-image: url(../images/hero/desktop/hero1_desktop_@1x.png);
     bottom: -75px;
-    transform: translate(-50%, 0);
-    position: absolute;
-    background-image: url(../images/hero/mobile/hero1_mobile_@1x.png);
-    background-repeat: no-repeat;
-    width: 171px;
-    height: 410px;
+    width: 236px;
+    height: 557px;
+
+    @include retina-display(2) {
+      background-image: url(../images/hero/desktop/hero1_desktop_@2x.png);
+    }
   }
 }
 
 .hero__image--left {
   position: absolute;
 }
+
 .hero__image--right {
   position: absolute;
 }
