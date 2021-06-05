@@ -36,3 +36,20 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+.section__title {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  text-transform: uppercase;
+
+  @include respond-above($tablet) {
+    font-size: 48px;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
+}
