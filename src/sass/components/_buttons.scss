@@ -47,6 +47,7 @@
     padding: 11px 22px;
   }
 }
+
 .btn--header {
   @include respond-below($mobile) {
     width: 100%;
@@ -56,6 +57,7 @@
     width: 480px;
   }
 
+  // Эдуард, для тебя этот кусок - пропишешь под себя))
   .mobile-menu.is-open & {
     width: 185px;
   }
@@ -76,7 +78,7 @@
 }
 
 // Arrow buttons
-.btn--open {
+.btn-open {
   display: inline-flex;
   padding: 0;
   border: none;
@@ -91,6 +93,6 @@
   }
 }
 
-.btn--open__icon {
+.btn-open__icon {
   fill: currentColor;
 }
