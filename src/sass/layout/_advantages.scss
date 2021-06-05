@@ -8,6 +8,7 @@
   line-height: 1.13;
   text-align: right;
   letter-spacing: 0.04em;
+  margin-bottom: 38px;
 
   color: $main-title-color;
 
@@ -31,11 +32,14 @@
   @media screen and(min-width:768px) {
     font-size: 14px;
     line-height: 1.74;
+    margin-right: 60px;
+    margin-bottom: 0;
   }
-
   @media screen and(min-width:1200px) {
     font-size: 16px;
     line-height: 1.76;
+    margin-right: 30px;
+    margin-bottom: 0;
   }
 }
 .grid {
@@ -57,7 +61,7 @@
 .grid__item::before {
   content: '';
   display: block;
-  width: 50px;
+  width: 33px;
   height: 50px;
   background-repeat: no-repeat;
   background-position: center;
@@ -77,7 +81,7 @@
 .grid__item:nth-child(3)::before {
   content: '';
   display: block;
-  width: 50px;
+  width: 44px;
   height: 50px;
   background-repeat: no-repeat;
   background-position: center;
