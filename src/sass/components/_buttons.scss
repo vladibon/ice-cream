@@ -1,0 +1,98 @@
+.btn {
+  min-width: 63px;
+  height: auto;
+  min-height: 24px;
+  padding: 12px 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 22px;
+
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.btn--primary {
+  color: $btn-secondary-color;
+  background-color: $btn-primary-color;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-primary-accent-color;
+  }
+}
+
+.btn--secondary {
+  color: $btn-primary-color;
+  background-color: $btn-secondary-color;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-secondary-accent-color;
+  }
+}
+.btn--hero {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 1.2;
+  padding: 7px 15px;
+  border-radius: 20px;
+
+  @include respond-above($desktop) {
+    font-size: 14px;
+    line-height: 1.31;
+    padding: 11px 22px;
+  }
+}
+
+.btn--header {
+  @include respond-below($mobile) {
+    width: 100%;
+  }
+
+  @include respond-below($tablet) {
+    width: 480px;
+  }
+
+  // Эдуард, для тебя этот кусок - пропишешь под себя))
+  .mobile-menu.is-open & {
+    width: 185px;
+  }
+}
+
+.btn--contacts {
+  @include respond-below($tablet) {
+    width: 160px;
+  }
+}
+
+.btn__icon {
+  fill: currentColor;
+}
+
+.btn__icon--append {
+  margin-left: 14px;
+}
+
+// Arrow buttons
+.btn-open {
+  display: inline-flex;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  color: $btn-secondary-color;
+  background-color: $btn-primary-color;
+
+  &:hover,
+  &:focus {
+    color: $btn-primary-color;
+    background-color: $btn-secondary-color;
+  }
+}
+
+.btn-open__icon {
+  fill: currentColor;
+}

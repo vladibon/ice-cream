@@ -1,0 +1,59 @@
+<!-- Header -->
+<header class="page-header">
+  <div class="container page-header__container">
+    <!-- Company`s Logo -->
+    <a class="logo" href="./index.html" lang="en">
+      <svg width="50" height="50" aria-label="Logo">
+        <use href="images/icons.svg#logo"></use>
+      </svg>
+      Icecream
+    </a>
+
+    <div class="backdrop" data-nav>
+      <nav class="container backdrop__container">
+        <!-- Site Navigation -->
+        <ul class="site-nav" id="nav">
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="#">Home</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#">About us</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#">How it’s made?</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#">Our products</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Header Buttons -->
+    <div class="page-header__buttons">
+      <!-- Site Nav Button -->
+      <button
+        class="site-nav-btn"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav"
+        data-nav-btn
+      >
+        <svg width="20" height="14" aria-label="Переключатель мобильного меню">
+          <use class="site-nav-btn__icon" href="images/icons.svg#home"></use>
+          <use class="site-nav-btn__icon-close" href="images/icons.svg#button-arrow"></use>
+        </svg>
+      </button>
+
+      <!-- Buy now Button -->
+      <button class="buy-btn btn btn--primary" type="button" data-buy-btn>Buy now &gt;</button>
+    </div>
+  </div>
+</header>
