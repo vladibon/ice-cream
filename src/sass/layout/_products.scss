@@ -112,6 +112,7 @@
     color: $white-text-color;
 
     font-size: 20px;
+    font-weight: 400;
     line-height: 1.15;
     text-transform: uppercase;
 
@@ -126,7 +127,7 @@
     margin-bottom: 30px;
     color: $white-text-color;
 
-    font-weight: 500;
+    font-weight: 700;
     line-height: 1.5;
 
     @include respond-above($tablet) {
