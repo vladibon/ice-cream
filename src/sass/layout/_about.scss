@@ -1,0 +1,195 @@
+.about {
+  padding-top: 125px;
+  padding-bottom: 39px;
+
+  text-align: center;
+
+  background-color: $primary-bg-color;
+
+  background-image: url(../images/about/mobile/about_img2_mobile_@1x.png);
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+
+  @include retina-display(2) {
+    background-image: url(../images/about/mobile/about_img2_mobile_@2x.png);
+  }
+
+  @include respond-above($tablet) {
+    background-image: url();
+
+    @include retina-display(2) {
+      background-image: url();
+    }
+  }
+
+  @include respond-above($desktop) {
+    background-image: url(../images/about/desktop/about_img2_desktop_@1x.png);
+
+    @include retina-display(2) {
+      background-image: url(../images/about/desktop/about_img2_desktop_@2x.png);
+    }
+  }
+
+  @include respond-between($tablet, $desktop) {
+    padding-top: 130px;
+    padding-bottom: 66px;
+  }
+}
+
+.about__label {
+  font-family: $title-font;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+
+  color: $secondary-title-color;
+
+  &--margin {
+    margin-bottom: 15px;
+
+    @include respond-between($tablet, $desktop) {
+      margin-bottom: 16px;
+    }
+  }
+
+  @include respond-above($tablet) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 30px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+  }
+}
+
+.about__title {
+  font-family: $title-font;
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.15;
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: #d41443;
+
+  &--margin {
+    margin-bottom: 26px;
+
+    @include respond-above($tablet) {
+      margin-bottom: 50px;
+    }
+
+    @include respond-above($desktop) {
+      margin-bottom: 55px;
+    }
+  }
+
+  @include respond-above($tablet) {
+    font-size: 48px;
+    letter-spacing: 0.04em;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
+}
+
+.about__pictures {
+  display: block;
+  width: 100%;
+
+  &--margin {
+    @include respond-below($tablet) {
+      margin-bottom: 46px;
+    }
+  }
+}
+
+.about__box {
+  display: block;
+
+  padding: 0 30px;
+  text-align: left;
+
+  @include respond-above($tablet) {
+    padding: 50px 0 0 17px;
+    width: 50%;
+  }
+
+  @include respond-above($desktop) {
+    padding: 55px 0 0 74px;
+  }
+}
+
+.about__box-title {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+
+  color: $black-text-color;
+
+  &--margin {
+    margin-bottom: 30px;
+
+    @include respond-above($desktop) {
+      margin-bottom: 35px;
+    }
+  }
+
+  @include respond-above($tablet) {
+    font-size: 14px;
+    line-height: 1.76;
+  }
+  @include respond-above($desktop) {
+    font-size: 16px;
+    letter-spacing: 0.04em;
+  }
+}
+
+.about__box-descr {
+  font-family: $main-font;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 1.62;
+
+  color: $gray-text-color;
+
+  &--p {
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 22px;
+
+    @include respond-above($tablet) {
+      margin-bottom: 62px;
+    }
+
+    @include respond-above($desktop) {
+      margin-top: 27px;
+      margin-bottom: 49px;
+    }
+  }
+
+  @include respond-above($tablet) {
+    font-size: 14px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+  }
+
+  @include respond-above($desktop) {
+    line-height: 1.94;
+  }
+}
+
+@include respond-above($tablet) {
+  .about__card {
+    display: flex;
+  }
+}

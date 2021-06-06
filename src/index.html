@@ -17,19 +17,24 @@
       crossorigin="anonymous"
     />
   </head>
-  <body>
+  <body class="page" data-nav-page>
     <include src="./partials/page-header.html"></include>
-    <include src="./partials/hero.html"></include>
-    <include src="./partials/products.html"></include>
-    <include src="./partials/about.html"></include>
-    <include src="./partials/advantages.html"></include>
-    <include src="./partials/gallery.html"></include>
-    <include src="./partials/customer-reviews.html"></include>
-    <include src="./partials/locations.html"></include>
+
+    <main>
+      <include src="./partials/hero.html"></include>
+      <include src="./partials/products.html"></include>
+      <include src="./partials/about.html"></include>
+      <include src="./partials/advantages.html"></include>
+      <include src="./partials/gallery.html"></include>
+      <include src="./partials/customer-reviews.html"></include>
+      <include src="./partials/locations.html"></include>
+    </main>
+
     <include src="./partials/page-footer.html"></include>
 
     <!-- Скрипт. В нём подключен главный SASS-файл. -->
     <script src="./index.js"></script>
     <script src="./js/menu.js"></script>
+    <script src="./js/site-nav.js"></script>
   </body>
 </html>
