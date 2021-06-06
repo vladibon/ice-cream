@@ -74,9 +74,11 @@
   }
 }
 
-.btn--contacts {
+.btn--locations {
   @include respond-below($tablet) {
     width: 160px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
