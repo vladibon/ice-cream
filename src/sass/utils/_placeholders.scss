@@ -1,0 +1,13 @@
+// Section Products for "befor"
+%befor-mobile {
+  content: '';
+  display: inline-flex;
+
+  width: 249px;
+  height: 252px;
+  margin-bottom: $list-gap-tablet;
+
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
