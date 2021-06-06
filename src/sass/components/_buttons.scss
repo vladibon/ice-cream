@@ -34,6 +34,22 @@
     background-color: $btn-secondary-accent-color;
   }
 }
+
+.btn--header {
+  @include respond-below($mobile) {
+    width: 100%;
+  }
+
+  @include respond-below($tablet) {
+    width: 480px;
+  }
+
+  // Вовчик, для тебя этот кусок - пропишешь под себя))
+  .mobile-menu.is-open & {
+    width: 185px;
+  }
+}
+
 .btn--hero {
   font-weight: 400;
   font-size: 8px;
@@ -48,33 +64,32 @@
   }
 }
 
-.btn--header {
-  @include respond-below($mobile) {
-    width: 100%;
-  }
+.btn--about {
+  font-size: 14px;
+  line-height: 1.29;
 
-  @include respond-below($tablet) {
-    width: 480px;
-  }
-
-  // Эдуард, для тебя этот кусок - пропишешь под себя))
-  .mobile-menu.is-open & {
-    width: 185px;
+  @include respond-above($desktop) {
+    font-size: 16px;
+    line-height: 1.31;
   }
 }
 
-.btn--contacts {
+.btn--locations {
   @include respond-below($tablet) {
     width: 160px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 .btn__icon {
   fill: currentColor;
+  width: 10px;
+  height: 10px;
 }
 
 .btn__icon--append {
-  margin-left: 14px;
+  margin-left: 13px;
 }
 
 // Arrow buttons
@@ -95,14 +110,4 @@
 
 .btn-open__icon {
   fill: currentColor;
-}
-
-.btn--about {
-  font-size: 14px;
-  line-height: 1.29;
-
-  @include respond-above($desktop) {
-    font-size: 16px;
-    line-height: 1.31;
-  }
 }
