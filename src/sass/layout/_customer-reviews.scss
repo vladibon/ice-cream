@@ -1,5 +1,5 @@
 * {
-  outline: 1px solid tomato;
+  // outline: 1px solid tomato;
 }
 .reviews {
   text-align: center;
@@ -9,4 +9,8 @@
   margin: 0 auto 29px;
 
   border-radius: 50%;
+}
+
+.reviews__comment {
+  margin-bottom: 30px;
 }
