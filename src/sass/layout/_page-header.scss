@@ -22,7 +22,6 @@
   @include respond-below($desktop) {
     position: fixed;
     z-index: 4;
-
     top: 0;
     right: 0;
 
@@ -47,7 +46,6 @@
 // Site Navigation
 .site-nav {
   @include respond-below($desktop) {
-    z-index: 4;
     position: absolute;
     top: 0;
     right: 0;
