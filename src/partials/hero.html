@@ -1,7 +1,9 @@
 <section class="hero">
   <div class="container container--hero">
     <div class="hero__wrapper">
-      <h1 class="hero__title">ice cream made with passion</h1>
+      <h1 class="hero__title">
+        ice cream<br />made with<span class="hero__title--accent">passion</span>
+      </h1>
       <ul class="hero-links">
         <li class="hero-links__item">
           <a class="btn btn--secondary btn--hero" href="#">Products</a>
@@ -15,17 +17,25 @@
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
           ut labore et
         </p>
-        <a class="extra-info__link" href="#">round arrow here</a>
+        <a class="extra-info__link btn-open" href="#">
+          <svg class="btn-open__icon">
+            <use href="images/icons.svg#link-arrow"></use>
+          </svg>
+        </a>
       </div>
     </div>
     <ul class="store-list">
       <li class="store-list__item">
-        <p class="store-list__number">16</p>
-        <p class="store-list__name">cafes</p>
+        <div class="store-list__wrapper">
+          <p class="store-list__number">16</p>
+          <p class="store-list__name">cafes</p>
+        </div>
       </li>
       <li class="store-list__item">
-        <p class="store-list__number">23</p>
-        <p class="store-list__name">food trucks</p>
+        <div class="store-list__wrapper">
+          <p class="store-list__number">23</p>
+          <p class="store-list__name">food trucks</p>
+        </div>
       </li>
     </ul>
     <div class="hero__image--main"></div>
