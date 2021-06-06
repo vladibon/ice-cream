@@ -1,41 +1,56 @@
 .section-advantages {
   background-color: $primary-bg-color;
+  padding-bottom: 97px;
+
+  @include respond-above($tablet) {
+    padding-bottom: 140px;
+  }
 }
 
 .grid__title {
   font-family: $title-font;
   font-size: 36px;
   line-height: 1.13;
-  text-align: right;
+  text-align: left;
   letter-spacing: 0.04em;
-  margin-bottom: 38px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
 
   color: $main-title-color;
 
-  @media screen and(min-width: 768px) {
+  @include respond-above($tablet) {
     font-size: 48px;
     line-height: 1.14;
+    text-transform: none;
+    margin-bottom: 13px;
   }
 
-  @media screen and(min-width:1200px) {
+  @include respond-above($desktop) {
     font-size: 58px;
     line-height: 1.13;
+    text-transform: none;
+    margin-bottom: 15px;
   }
 }
 .grid__descr {
-  font-size: 12px;
-  line-height: 1.7;
   letter-spacing: 0.02em;
 
   color: $black-text-color;
 
-  @media screen and(min-width:768px) {
+  @media screen and(max-width:320px) {
+    font-size: 12px;
+    line-height: 1.7;
+    margin-right: 70px;
+    margin-bottom: 0;
+  }
+
+  @include respond-above($tablet) {
     font-size: 14px;
     line-height: 1.74;
     margin-right: 60px;
     margin-bottom: 0;
   }
-  @media screen and(min-width:1200px) {
+  @include respond-above($desktop) {
     font-size: 16px;
     line-height: 1.76;
     margin-right: 30px;
@@ -50,7 +65,7 @@
   &__item {
     @include respond-below($tablet) {
       &:not(:last-child) {
-        margin-bottom: 33px;
+        margin-bottom: 38px;
       }
     }
     @include respond-above($tablet) {
@@ -66,7 +81,15 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/advantages/advantages_icon1_@1x.png);
-  margin-bottom: 40px;
+  margin-bottom: 16px;
+
+  @include respond-above($tablet) {
+    margin-bottom: 36px;
+  }
+
+  @include respond-above($desktop) {
+    margin-bottom: 40px;
+  }
 }
 .grid__item:nth-child(2n)::before {
   content: '';
@@ -76,7 +99,15 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/advantages/advantages_icon2_@1x.png);
-  margin-bottom: 40px;
+  margin-bottom: 16px;
+
+  @include respond-above($tablet) {
+    margin-bottom: 36px;
+  }
+
+  @include respond-above($desktop) {
+    margin-bottom: 40px;
+  }
 }
 .grid__item:nth-child(3)::before {
   content: '';
@@ -86,5 +117,13 @@
   background-repeat: no-repeat;
   background-position: center;
   background-image: url(../images/advantages/advantages_icon3_@1x.png);
-  margin-bottom: 40px;
+  margin-bottom: 16px;
+
+  @include respond-above($tablet) {
+    margin-bottom: 36px;
+  }
+
+  @include respond-above($desktop) {
+    margin-bottom: 40px;
+  }
 }
