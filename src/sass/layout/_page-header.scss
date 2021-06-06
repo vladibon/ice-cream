@@ -1,45 +1,47 @@
 .page-header {
   position: absolute;
+  z-index: 3;
   width: 100%;
+  padding-top: 38px;
 }
 
 .page-header__container {
   position: relative;
 
-  @include respond-above($tablet) {
+  @include respond-above($desktop) {
+    padding-left: 46px;
     display: flex;
-    justify-content: space-between;
   }
 }
 
 .backdrop {
-  @include respond-below($desktop) {
-    position: fixed;
-    z-index: 4;
-    top: 0;
-    right: 0;
+  position: fixed;
+  z-index: 4;
 
-    width: 100vw;
-    height: 100vh;
+  top: 0;
+  right: 0;
 
-    background-color: $backdrop-color;
-    overflow-y: scroll;
-    pointer-events: none;
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility $modal-animation, opacity $modal-animation;
+  width: 100vw;
+  height: 100vh;
 
-    &--is-open {
-      visibility: visible;
-      opacity: 1;
-      pointer-events: initial;
-    }
+  background-color: $backdrop-color;
+  overflow-y: scroll;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility $modal-animation, opacity $modal-animation;
+
+  &--is-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
   }
 }
 
 // Site Navigation
 .site-nav {
   @include respond-below($desktop) {
+    z-index: 4;
     position: absolute;
     top: 0;
     right: 0;
@@ -61,24 +63,39 @@
 }
 
 .site-nav__list {
-  position: absolute;
-  top: 136px;
-  left: 20px;
+  @include respond-below($desktop) {
+    position: absolute;
+    top: 136px;
+    left: 20px;
+  }
+
+  @include respond-above($desktop) {
+    display: flex;
+  }
 }
 
 .site-nav__item:not(:last-child) {
-  margin-bottom: 4px;
+  @include respond-below($desktop) {
+    margin-bottom: 2px;
+  }
+
+  @include respond-above($desktop) {
+    margin-right: 35px;
+  }
 }
 
 .site-nav__link {
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 12px;
+  padding-bottom: 12px;
   display: block;
 
-  font-size: 14px;
   font-weight: 700;
   line-height: 1.28;
   color: #ffffff;
+
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
 
   &--active {
     color: $main-title-color;
@@ -97,16 +114,25 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
-  transform: scale(1);
+  // transform: scale(1);
   transition: fill $animation, transform $animation;
 
-  &:hover,
-  &:focus {
-    transform: scale(1.1);
-  }
+  // &:hover,
+  // &:focus {
+  //   transform: scale(1.1);
+  // }
 
   &--nav-open {
     position: fixed;
+  }
+
+  @include respond-above($tablet) {
+    transform: translate(-196px, 30px);
+    transition: transform $modal-animation;
+
+    &--nav-open {
+      transform: translate(0);
+    }
   }
 
   @include respond-above($desktop) {
@@ -133,21 +159,60 @@
   position: fixed;
   z-index: 5;
   top: 62px;
-  right: 24px;
+  right: 25px;
 
-  width: calc(100% - 48px);
-  max-width: 202px;
+  width: calc(100% - 50px);
+  max-width: 160px;
   pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateX(200px);
-  transition: color $animation, background-color $animation, visibility $modal-animation,
-    opacity $modal-animation, transform $modal-animation;
 
-  &--nav-open {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: initial;
-    transform: translateX(0);
+  @include respond-below($tablet) {
+    max-width: 200px;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: color $animation, background-color $animation, visibility $modal-animation,
+      opacity $modal-animation, transform $modal-animation;
+
+    &--nav-open {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: initial;
+      transform: translateX(0);
+    }
   }
+
+  @include respond-between($tablet, $desktop) {
+    position: absolute;
+    right: 34px;
+    transform: translateY(-24px);
+    transition: transform $modal-animation, max-width $modal-animation, position $modal-animation 4s;
+
+    &--nav-open {
+      position: fixed;
+      max-width: 182px;
+      transform: translateY(0);
+    }
+  }
+
+  @include respond-above($desktop) {
+    position: absolute;
+    top: 0;
+    right: 116px;
+  }
+}
+
+.logo {
+  margin-right: 110px;
+  display: flex;
+  align-items: center;
+
+  font-family: $title-font;
+  font-size: 28px;
+  text-transform: uppercase;
+
+  color: $main-title-color;
+}
+
+.logo__icon {
+  margin-right: 20px;
 }
