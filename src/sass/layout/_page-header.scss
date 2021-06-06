@@ -56,7 +56,7 @@
     width: 100vw;
     max-width: 250px;
     height: 100vh;
-    min-height: 340px;
+    min-height: 360px;
 
     background-color: $site-nav-bg-color;
     box-shadow: $site-nav-shadow;
@@ -72,7 +72,7 @@
   @include respond-below($desktop) {
     position: absolute;
     top: 136px;
-    left: 20px;
+    left: 34px;
   }
 
   @include respond-above($desktop) {
@@ -164,6 +164,7 @@
 // Buy now Button
 .page-header__btn {
   position: absolute;
+  width: 160px;
 
   @include respond-below($tablet) {
     display: none;
@@ -173,9 +174,11 @@
     top: 5px;
     right: 84px;
     opacity: 1;
-    transition: opacity $modal-animation;
+    transition: visibility $modal-animation, opacity $modal-animation;
 
     &--nav-open {
+      pointer-events: none;
+      visibility: hidden;
       opacity: 0;
     }
   }
@@ -191,13 +194,12 @@
   position: fixed;
   z-index: 5;
   top: 62px;
-  right: 25px;
+  right: 34px;
 
-  width: calc(100% - 50px);
-  max-width: 160px;
+  width: calc(100% - 68px);
+  max-width: 182px;
   pointer-events: none;
 
-  max-width: 200px;
   visibility: hidden;
   opacity: 0;
   transform: translateX(200px);
