@@ -34,7 +34,7 @@
       margin-bottom: 20px;
     }
   }
-  @include respond-below($desktop) {
+  @include respond-between($tablet, $desktop) {
     &:not(:last-child) {
       margin-right: 20px;
     }
@@ -170,21 +170,32 @@
 .locations__btn-list {
   padding-top: 55px;
   @include respond-above($tablet) {
+    justify-content: center;
     display: flex;
     padding-top: 80px;
   }
   @include respond-above($desktop) {
+    justify-content: center;
     display: flex;
     padding-top: 85px;
   }
 }
-.locations__btn-item:not(:last-child) {
-  margin-bottom: 10px;
+.locations__btn-item {
+  @include respond-below($tablet) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @include respond-above($tablet) {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
 }
 //.btn__l {
 //width: 160px;
 //height: 44px;
 //}
-//.locations__btn-item {
-// text-align: center;
-//}
+.locations__btn-item {
+  text-align: center;
+}
