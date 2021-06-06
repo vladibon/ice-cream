@@ -81,7 +81,7 @@
   height: 50px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../images/advantages/advantages_icon1_@1x.png);
+  background-image: url(../images/advantages/advantages_icon1.svg);
   margin-bottom: 16px;
 
   @include respond-above($tablet) {
@@ -99,7 +99,7 @@
   height: 50px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../images/advantages/advantages_icon2_@1x.png);
+  background-image: url(../images/advantages/advantages_icon2.svg);
   margin-bottom: 16px;
 
   @include respond-above($tablet) {
@@ -117,7 +117,7 @@
   height: 50px;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: url(../images/advantages/advantages_icon3_@1x.png);
+  background-image: url(../images/advantages/advantages_icon3.svg);
   margin-bottom: 16px;
 
   @include respond-above($tablet) {
