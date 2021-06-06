@@ -49,23 +49,37 @@
   }
 }
 
-.btn--contacts {
+.btn--about {
+  font-size: 14px;
+  line-height: 1.29;
+
+  @include respond-above($desktop) {
+    font-size: 16px;
+    line-height: 1.31;
+  }
+}
+
+.btn--locations {
   @include respond-below($tablet) {
     width: 160px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
 }
 
 .btn__icon {
   fill: currentColor;
+  width: 10px;
+  height: 10px;
 }
 
 .btn__icon--append {
-  margin-left: 14px;
+  margin-left: 13px;
 }
 
 // Arrow buttons
 .btn-open {
-  display: inline-flex;
+  display: flex;
   padding: 0;
   border: none;
   border-radius: 50%;
@@ -81,18 +95,4 @@
 
 .btn-open__icon {
   fill: currentColor;
-}
-
-.btn__icon {
-  margin-left: 11px;
-}
-
-.btn--about {
-  font-size: 14px;
-  line-height: 1.29;
-
-  @include respond-above($desktop) {
-    font-size: 16px;
-    line-height: 1.31;
-  }
 }
