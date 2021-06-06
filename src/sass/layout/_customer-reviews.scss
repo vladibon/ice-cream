@@ -1,42 +1,119 @@
-// * {
-//  outline: 1px solid tomato;
-// }
 .reviews {
   text-align: center;
 }
 
 .reviews__photo {
-  margin: 0 auto 29px;
-
   border-radius: 50%;
 }
 
+.reviews__photo--margin {
+  margin: 80px auto 29px;
+
+  @include respond-above($tablet) {
+    margin: 121px auto 19px;
+  }
+
+  @include respond-above($desktop) {
+    margin: 123px auto 15px;
+  }
+}
+
 .reviews__comment {
-  margin-bottom: 30px;
-  padding: 43px 50px 20px;
+  display: block;
+  padding: 43px 62px 26px;
 
   background-color: $comment-bg-color;
 
   font-weight: 500;
   font-size: 12px;
   line-height: 2.55;
+
+  background-image: url(../images/reviews/comment.svg);
+  background-repeat: no-repeat;
+  background-position-x: 61px;
+  background-position-y: 28px;
+
+  @include respond-above($tablet) {
+    padding: 47px 80px 34px;
+
+    font-size: 14px;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
+
+    background-position-x: 40px;
+    background-position-y: 30px;
+  }
+
+  @include respond-above($desktop) {
+    padding: 47px 88px 39px;
+
+    font-size: 16px;
+    line-height: 1.86;
+
+    background-position-x: 50px;
+    background-position-y: 32px;
+  }
 }
 
-.reviews__items {
-  display: block;
+.reviews__comment--margin {
+  margin-bottom: 30px;
+
+  @include respond-above($tablet) {
+    margin: 0 40px 24px;
+  }
+
+  @include respond-above($desktop) {
+    margin: 0 64px 15px;
+  }
+}
+
+.reviews__items--margin {
   margin: 0 auto 18px;
+
+  @include respond-above($tablet) {
+    margin: 0 auto 14px;
+  }
+
+  @include respond-above($desktop) {
+    margin: 0 auto 15px;
+  }
 }
 
 .reviews__caption {
+  font-weight: 500;
   font-size: 14px;
   line-height: 1.86;
 
+  @include respond-above($tablet) {
+    font-size: 16px;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 20px;
+  }
+}
+
+.reviews__caption--margin {
   margin-bottom: 30px;
+
+  @include respond-above($tablet) {
+    margin-bottom: 35px;
+  }
 }
 
-.reviews__menu {
+.review__menu {
   display: flex;
+  justify-content: center;
 }
 
-// .review-menu__items {
-// }
+.review__menu--margin {
+  margin-bottom: 86px;
+
+  @include respond-above($tablet) {
+    margin-bottom: 119px;
+  }
+}
+
+.review-menu__items:not(:last-child) {
+  margin-right: 18px;
+}
