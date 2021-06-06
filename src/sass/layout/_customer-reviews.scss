@@ -1,5 +1,5 @@
 * {
-  // outline: 1px solid tomato;
+  outline: 1px solid tomato;
 }
 .reviews {
   text-align: center;
@@ -13,4 +13,30 @@
 
 .reviews__comment {
   margin-bottom: 30px;
+  padding: 43px 50px 20px;
+
+  background-color: $comment-bg-color;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
+}
+
+.reviews__items {
+  display: block;
+  margin: 0 auto 18px;
+}
+
+.reviews__caption {
+  font-size: 14px;
+  line-height: 1.86;
+
+  margin-bottom: 30px;
+}
+
+.reviews__menu {
+  display: flex;
+}
+
+.review-menu__items {
 }
