@@ -41,7 +41,6 @@
   font-family: $title-font;
   font-size: 18px;
   line-height: 1.17;
-  text-align: center;
   text-transform: uppercase;
 
   color: $secondary-title-color;
@@ -71,7 +70,6 @@
   font-weight: 500;
   font-size: 34px;
   line-height: 1.15;
-  text-align: center;
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
@@ -91,7 +89,6 @@
 
   @include respond-above($tablet) {
     font-size: 48px;
-    letter-spacing: 0.04em;
   }
 
   @include respond-above($desktop) {
@@ -129,12 +126,9 @@
 }
 
 .about__box-title {
-  font-family: $main-font;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
-
-  color: $black-text-color;
 
   &--margin {
     margin-bottom: 30px;
@@ -155,7 +149,6 @@
 }
 
 .about__box-descr {
-  font-family: $main-font;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
