@@ -1,0 +1,19 @@
+// Logo
+.logo {
+  margin-right: 40px;
+  display: flex;
+  align-items: center;
+
+  font-family: $title-font;
+  font-size: 28px;
+  color: $main-title-color;
+  text-transform: uppercase;
+
+  @include respond-above($desktop) {
+    margin-right: 110px;
+  }
+}
+
+.logo__icon {
+  margin-right: 20px;
+}
