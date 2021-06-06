@@ -1,14 +1,8 @@
 .gallery {
-  @extend %section;
-  max-width: 480px;
-  height: 400px;
-  padding-top: 118px;
-  padding-bottom: 118px;
-  margin-left: auto;
-  margin-right: auto;
+  width: 100%;
+  height: calc(100vw / 3);
 
-  background: var(--secondary-background-color);
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/hero/hero.jpg);
+  background-image: url('../images/gallery/mobile/gallery364@1x.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -17,35 +11,32 @@
   (-webkit-min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-    background-image: url(../images/mobile/hero/hero@2x.jpg);
+    background-image: url('../images/gallery/mobile/gallery364@2x.jpg');
   }
 
-  @media screen and (min-width: 768px) {
-    max-width: 768px;
+  @media screen and (min-width: 365px) {
 
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/hero/hero.jpg);
+    background-image: url('../images/gallery/tablet/gallery786@1x.jpg');
 
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: url(../images/tablet/hero/hero@2x.jpg);
+      background-image: url('../images/gallery/tablet/gallery786@2x.jpg');
     }
   }
 
-  @media screen and (min-width: 1200px) {
-    max-width: 1600px;
-    height: 600px;
-    padding-top: 200px;
-    padding-bottom: 200px;
+  @media screen and (min-width: 787px) {
+    max-width: 1280px;
+    max-height: 430px;
 
-    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desktop/hero/hero.jpg);
+    background-image: url('../images/gallery/desktop/gallery1280@1x.jpg');
 
     @media (min-device-pixel-ratio: 2),
     (-webkit-min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
-      background-image: url(../images/desktop/hero/hero@2x.jpg);
+      background-image: url('../images/gallery/desktop/gallery1280@2x.jpg');
     }
   }
 }
