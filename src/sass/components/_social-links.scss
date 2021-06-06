@@ -1,12 +1,24 @@
 .social {
   display: flex;
-  margin-bottom: 50px;
+  margin-bottom: 46px;
   align-items: center;
   justify-content: flex-end;
+
+  @include respond-above($desktop) {
+    margin-bottom: 50px;
+  }
 }
 
 .social__item:not(:last-child) {
-  margin-right: 20px;
+  margin-right: 28px;
+
+  @include respond-above($tablet) {
+    margin-right: 30px;
+  }
+
+  @include respond-above($desktop) {
+    margin-right: 25px;
+  }
 }
 
 .social__link {
@@ -18,6 +30,11 @@
   border-radius: 50%;
   background-color: $brand-link-color;
 
+  @include respond-above($tablet) {
+    width: 34px;
+    height: 34px;
+  }
+
   &:hover,
   &:focus {
     background-color: $accent-link-color;
@@ -27,4 +44,9 @@
 .social__icon {
   width: 19px;
   height: 19px;
+
+  @include respond-above($tablet) {
+    width: 20px;
+    height: 20px;
+  }
 }
