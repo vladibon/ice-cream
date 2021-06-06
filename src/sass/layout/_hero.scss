@@ -214,14 +214,14 @@
     width: 324px;
     height: 324px;
     left: 310px;
-    bottom: 46px;
+    bottom: 12px;
   }
 
   @include respond-above($desktop) {
     width: 538px;
     height: 538px;
     left: 475px;
-    bottom: 75px;
+    bottom: 19px;
   }
 
   @include respond-above(1370px) {
@@ -278,7 +278,7 @@
   @include respond-below($tablet) {
     display: none;
   }
-  outline: 1px solid black;
+
   position: absolute;
   left: 35px;
   bottom: -6px;
@@ -295,7 +295,7 @@
   @include respond-above($desktop) {
     background-image: url(../images/hero/desktop/hero3_desktop_@1x.png);
     bottom: -11px;
-    left: -38px;
+    left: 77px;
     width: 188px;
     height: 191px;
 
