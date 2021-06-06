@@ -82,3 +82,17 @@
 .btn-open__icon {
   fill: currentColor;
 }
+
+.btn__icon {
+  margin-left: 11px;
+}
+
+.btn--about {
+  font-size: 14px;
+  line-height: 1.29;
+
+  @include respond-above($desktop) {
+    font-size: 16px;
+    line-height: 1.31;
+  }
+}
