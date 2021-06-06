@@ -39,7 +39,6 @@
   color: $black-text-color;
 
   @media screen and(max-width:320px) {
-    font-weight: 700;
     font-size: 12px;
     line-height: 1.7;
     margin-right: 70px;
@@ -47,14 +46,12 @@
   }
 
   @include respond-above($tablet) {
-    font-weight: 700;
     font-size: 14px;
     line-height: 1.74;
     margin-right: 60px;
     margin-bottom: 0;
   }
   @include respond-above($desktop) {
-    font-weight: 700;
     font-size: 16px;
     line-height: 1.76;
     margin-right: 30px;
