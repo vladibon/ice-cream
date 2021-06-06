@@ -1,0 +1,13 @@
+.gallery {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vw / 3);
+  max-height: 430px;
+  
+  background-image: linear-gradient($primary-bg-color 25%, $white-bg-color 25%, $white-bg-color);
+
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient($primary-bg-color 172px, $white-bg-color 172px, $white-bg-color);
+  }
+}
