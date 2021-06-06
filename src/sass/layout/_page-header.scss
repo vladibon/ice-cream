@@ -11,30 +11,6 @@
   }
 }
 
-// Buy now Button
-.page-header__btn {
-  position: absolute;
-  z-index: 5;
-  top: 62px;
-  right: 24px;
-
-  width: calc(100% - 48px);
-  max-width: 202px;
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  transform: translateX(200px);
-  transition: color $animation, background-color $animation, visibility $modal-animation,
-    opacity $modal-animation, transform $modal-animation;
-
-  &--nav-open {
-    visibility: visible;
-    opacity: 1;
-    pointer-events: initial;
-    transform: translateX(0);
-  }
-}
-
 .backdrop {
   @include respond-below($desktop) {
     position: fixed;
@@ -60,9 +36,13 @@
   }
 }
 
-.backdrop__container {
-  position: relative;
-}
+// .backdrop__container {
+//   position: relative;
+
+//   .backdrop--is-open & {
+//     position: static;
+//   }
+// }
 
 // Site Navigation
 .site-nav {
@@ -137,8 +117,12 @@
   }
 }
 
+.site-nav-btn--nav-open {
+  position: fixed;
+}
+
 .site-nav-btn__icon {
-  .site-nav-btn--is-open & {
+  .site-nav-btn--nav-open & {
     display: none;
   }
 }
@@ -146,7 +130,31 @@
 .site-nav-btn__icon-close {
   display: none;
 
-  .site-nav-btn--is-open & {
+  .site-nav-btn--nav-open & {
     display: block;
+  }
+}
+
+// Buy now Button
+.page-header__btn {
+  position: fixed;
+  z-index: 5;
+  top: 62px;
+  right: 24px;
+
+  width: calc(100% - 48px);
+  max-width: 202px;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(200px);
+  transition: color $animation, background-color $animation, visibility $modal-animation,
+    opacity $modal-animation, transform $modal-animation;
+
+  &--nav-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+    transform: translateX(0);
   }
 }
