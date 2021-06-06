@@ -266,6 +266,8 @@
   }
 
   &__text {
+    display: block;
+
     margin-bottom: 30px;
     color: $white-text-color;
 
@@ -281,6 +283,12 @@
     @include respond-above($desktop) {
       margin-bottom: 60px;
       font-size: 16px;
+    }
+  }
+
+  &__addition {
+    @include respond-above($tablet) {
+      display: none;
     }
   }
 }
