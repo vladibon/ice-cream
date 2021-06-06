@@ -1,80 +1,143 @@
 .locations {
   padding-top: 45px;
   padding-bottom: 65px;
-  background-color: $primary-bg-color;
+  background-image: linear-gradient(to bottom, $white-bg-color 8%, $primary-bg-color 92%);
 }
 .container__locations {
-  width: 100%;
-  padding-left: 50px;
-  padding-right: 50px;
+  @include respond-below($tablet) {
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+.locations__list {
+  @include respond-above($tablet) {
+    display: flex;
+  }
 }
 .locations__item {
-  padding: 45px 20px;
+  @include respond-below($tablet) {
+    padding: 45px 20px;
+  }
+  @include respond-below($desktop) {
+    padding: 50px 32px;
+  }
+  padding: 50px 45px 60px 45px;
   border-radius: 30px;
   background-color: $white-bg-color;
 
   box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
 }
-.locations__item:not(:last-child) {
-  margin-bottom: 20px;
+.locations__item {
+  @include respond-below($tablet) {
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  @include respond-below($desktop) {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  @include respond-above($desktop) {
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
 }
 .locations__type {
-  margin-bottom: 25px;
-  font-size: 12px;
+  @include respond-below($tablet) {
+    height: 16px;
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+    height: 28px;
+  }
+  margin-bottom: 30px;
   line-height: 1.83;
   text-align: center;
   align-items: center;
   text-transform: uppercase;
   width: 80px;
-  height: 16px;
   color: $white-text-color;
   background-color: $brown-card-bg-color;
   border-radius: 4px;
 }
 .locations__type-foodtruck {
+  @include respond-below($tablet) {
+    font-size: 12px;
+    height: 16px;
+  }
+  @include respond-below($desktop) {
+    height: 28px;
+    font-size: 14px;
+  }
   margin-bottom: 25px;
-  font-size: 12px;
   line-height: 1.83;
   text-align: center;
   align-items: center;
   text-transform: uppercase;
   width: 130px;
-  height: 16px;
+
   color: $white-text-color;
   background-color: $green-card-bg-color;
   border-radius: 4px;
 }
 .locations__title {
+  @include respond-below($tablet) {
+    font-size: 12px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
   margin-bottom: 10px;
-  font-size: 12px;
   line-height: 1.83;
   font-weight: 700;
 }
 .locations__descr {
+  @include respond-below($tablet) {
+    font-size: 12px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
   position: relative;
-
-  font-size: 12px;
   line-height: 1.5;
   color: $gray-text-color;
 }
 .locations__descr::after {
+  @include respond-below($tablet) {
+    margin-top: 25px;
+  }
   content: '';
-
+  margin-top: 30px;
   width: 180px;
   margin-top: 25px;
   display: inline-block;
-  border: 1px solid $gray-text-color;
+  border: 1px solid $fill-brackets-color;
 }
 
 .locations__work-day {
+  @include respond-below($tablet) {
+    font-size: 12px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
   margin-bottom: 0;
-  font-size: 12px;
   font-weight: 700;
   line-height: 1.83;
 }
 .locations__work-time {
+  @include respond-below($tablet) {
+    font-size: 12px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
   margin-bottom: 10px;
-  font-size: 12px;
   line-height: 1.83;
   color: $secondary-title-color;
 }
@@ -84,16 +147,21 @@
   width: 180px;
 
   display: inline-block;
-  border: 1px solid $gray-text-color;
+  border: 1px solid $fill-brackets-color;
 }
 .locations__contacts-item {
   margin-bottom: 0;
 }
 
 .locations__link {
+  @include respond-below($tablet) {
+    font-size: 12px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
   display: inline-block;
   margin-bottom: 0;
-  font-size: 12px;
   line-height: 1.5;
   line-height: 115%;
   color: $gray-text-color;
@@ -101,14 +169,22 @@
 
 .locations__btn-list {
   padding-top: 55px;
+  @include respond-above($tablet) {
+    display: flex;
+    padding-top: 80px;
+  }
+  @include respond-above($desktop) {
+    display: flex;
+    padding-top: 85px;
+  }
 }
 .locations__btn-item:not(:last-child) {
   margin-bottom: 10px;
 }
-.btn__l {
-  width: 160px;
-  height: 44px;
-}
-.locations__btn-item {
-  text-align: center;
-}
+//.btn__l {
+//width: 160px;
+//height: 44px;
+//}
+//.locations__btn-item {
+// text-align: center;
+//}
