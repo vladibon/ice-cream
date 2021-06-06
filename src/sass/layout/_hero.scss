@@ -23,11 +23,12 @@
   @include respond-above($tablet) {
     display: flex;
     justify-content: space-between;
+    position: relative;
   }
 }
 
 .hero__wrapper {
-  z-index: 3;
+  z-index: 2;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -55,6 +56,7 @@
   @include respond-above($desktop) {
     font-size: 38px;
     line-height: 1.16;
+    margin-bottom: 25px;
   }
 }
 
@@ -83,6 +85,10 @@
   @include respond-above($tablet) {
     margin-bottom: 66px;
   }
+
+  @include respond-above($desktop) {
+    margin-bottom: 112px;
+  }
 }
 
 .hero-links__item:not(:last-child) {
@@ -104,6 +110,7 @@
   }
 
   @include respond-above($desktop) {
+    width: 200px;
     font-size: 14px;
     line-height: 1.4;
   }
@@ -128,6 +135,33 @@
 }
 
 .store-list__item {
+  position: relative;
+
+  top: -8px;
+  right: 0px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $white-bg-color;
+
+  @include respond-above($desktop) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.store-list__item:not(:last-child) {
+  margin-bottom: 40px;
+
+  @include respond-above($desktop) {
+    margin-bottom: 62px;
+  }
+}
+
+.store-list__wrapper {
+  position: absolute;
+  right: 6px;
+  width: 100px;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -158,37 +192,6 @@
 }
 
 // Images
-// .hero__image--main {
-//   position: absolute;
-//   left: 30%;
-//   bottom: 0;
-//   width: 171px;
-//   height: 410px;
-//   // z-index: 3;
-
-//   background-image: url(../images/hero/mobile/hero1_mobile_@1x.png);
-//   background-repeat: no-repeat;
-//   background-position: center;
-//   background-size: cover;
-
-//   @include retina-display(2) {
-//     background-image: url(../images/hero/mobile/hero1_mobile_@2x.png);
-//   }
-// }
-
-// .hero__image--main::after {
-//   content: '';
-//   display: block;
-//   position: absolute;
-//   left: -50%;
-//   top: -10px;
-//   width: 346px;
-//   height: 346px;
-//   z-index: 0;
-//   border-radius: 50%;
-//   background-color: $header-circle-bg-color;
-// }
-
 .hero__image--main {
   position: absolute;
   left: 15%;
@@ -211,14 +214,14 @@
     width: 324px;
     height: 324px;
     left: 310px;
-    bottom: 46px;
+    bottom: 12px;
   }
 
   @include respond-above($desktop) {
     width: 538px;
     height: 538px;
     left: 475px;
-    bottom: 75px;
+    bottom: 19px;
   }
 
   @include respond-above(1370px) {
@@ -272,9 +275,63 @@
 }
 
 .hero__image--left {
+  @include respond-below($tablet) {
+    display: none;
+  }
+
   position: absolute;
+  left: 35px;
+  bottom: -6px;
+  width: 124px;
+  height: 126px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/hero/tablet/hero3_tablet_@1x.png);
+
+  @include retina-display(2) {
+    background-image: url(../images/hero/tablet/hero3_tablet_@2x.png);
+  }
+
+  @include respond-above($desktop) {
+    background-image: url(../images/hero/desktop/hero3_desktop_@1x.png);
+    bottom: -11px;
+    left: 77px;
+    width: 188px;
+    height: 191px;
+
+    @include retina-display(2) {
+      background-image: url(../images/hero/desktop/hero3_desktop_@2x.png);
+    }
+  }
 }
 
 .hero__image--right {
+  @include respond-below($tablet) {
+    display: none;
+  }
+
   position: absolute;
+  right: 35px;
+  bottom: -34px;
+  width: 168px;
+  height: 133px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-image: url(../images/hero/tablet/hero2_tablet_@1x.png);
+
+  @include retina-display(2) {
+    background-image: url(../images/hero/tablet/hero2_tablet_@2x.png);
+  }
+
+  @include respond-above($desktop) {
+    background-image: url(../images/hero/desktop/hero2_desktop_@1x.png);
+    right: 109px;
+    bottom: -56px;
+    width: 293px;
+    height: 232px;
+
+    @include retina-display(2) {
+      background-image: url(../images/hero/desktop/hero2_desktop_@2x.png);
+    }
+  }
 }
