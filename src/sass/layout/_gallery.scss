@@ -1,42 +1,13 @@
 .gallery {
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: calc(100vw / 3);
+  max-height: 430px;
+  
+  background-image: linear-gradient($primary-bg-color 25%, $white-bg-color 25%, $white-bg-color);
 
-  background-image: url('../images/gallery/mobile/gallery364@1x.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-
-  @media (min-device-pixel-ratio: 2),
-  (-webkit-min-device-pixel-ratio: 2),
-  (min-resolution: 192dpi),
-  (min-resolution: 2dppx) {
-    background-image: url('../images/gallery/mobile/gallery364@2x.jpg');
-  }
-
-  @media screen and (min-width: 365px) {
-
-    background-image: url('../images/gallery/tablet/gallery786@1x.jpg');
-
-    @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: url('../images/gallery/tablet/gallery786@2x.jpg');
-    }
-  }
-
-  @media screen and (min-width: 787px) {
-    max-width: 1280px;
-    max-height: 430px;
-
-    background-image: url('../images/gallery/desktop/gallery1280@1x.jpg');
-
-    @media (min-device-pixel-ratio: 2),
-    (-webkit-min-device-pixel-ratio: 2),
-    (min-resolution: 192dpi),
-    (min-resolution: 2dppx) {
-      background-image: url('../images/gallery/desktop/gallery1280@2x.jpg');
-    }
+  @media screen and (min-width: 1280px) {
+    background-image: linear-gradient($primary-bg-color 172px, $white-bg-color 172px, $white-bg-color);
   }
 }
