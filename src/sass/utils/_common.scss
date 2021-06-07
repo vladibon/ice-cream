@@ -48,7 +48,11 @@ img {
   font-weight: 400;
   font-size: 34px;
   line-height: 1.15;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  font-family: $title-font;
+  color: $main-title-color;
 
   @include respond-above($tablet) {
     font-size: 48px;

@@ -20,6 +20,9 @@
 }
 
 .container--hero {
+  position: relative;
+}
+.container--hero {
   @include respond-above($tablet) {
     display: flex;
     justify-content: space-between;
@@ -105,7 +108,6 @@
 
     font-size: 8px;
     line-height: 1.5;
-    letter-spacing: 0;
     color: $white-text-color;
   }
 
@@ -113,6 +115,7 @@
     width: 200px;
     font-size: 14px;
     line-height: 1.4;
+    margin-left: 180px;
   }
 }
 
@@ -194,21 +197,13 @@
 // Images
 .hero__image--main {
   position: absolute;
-  left: 15%;
-  bottom: 75px;
   display: block;
+  right: -62px;
+  bottom: -85px;
   width: 346px;
   height: 346px;
   border-radius: 50%;
   background-color: $header-circle-bg-color;
-
-  @include respond-above(400px) {
-    left: 25%;
-  }
-
-  @include respond-between($mobile, $tablet) {
-    left: 35%;
-  }
 
   @include respond-above($tablet) {
     width: 324px;
@@ -223,28 +218,19 @@
     left: 475px;
     bottom: 19px;
   }
-
-  @include respond-above(1370px) {
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-  }
 }
 
 .hero__image--main::after {
   content: '';
   display: block;
-  position: absolute;
+  @extend %bgr-image-absolute;
   left: 50%;
   bottom: -75px;
   transform: translate(-50%, 0);
-  position: absolute;
-  background-image: url(../images/hero/mobile/hero1_mobile_@1x.png);
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 171px;
   height: 410px;
+
+  background-image: url(../images/hero/mobile/hero1_mobile_@1x.png);
 
   @include retina-display(2) {
     background-image: url(../images/hero/mobile/hero1_mobile_@2x.png);
@@ -279,13 +265,12 @@
     display: none;
   }
 
-  position: absolute;
+  @extend %bgr-image-absolute;
   left: 35px;
   bottom: -6px;
   width: 124px;
   height: 126px;
-  background-repeat: no-repeat;
-  background-size: contain;
+
   background-image: url(../images/hero/tablet/hero3_tablet_@1x.png);
 
   @include retina-display(2) {
@@ -310,13 +295,11 @@
     display: none;
   }
 
-  position: absolute;
+  @extend %bgr-image-absolute;
   right: 35px;
   bottom: -34px;
   width: 168px;
   height: 133px;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url(../images/hero/tablet/hero2_tablet_@1x.png);
 
   @include retina-display(2) {
