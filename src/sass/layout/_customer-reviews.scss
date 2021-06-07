@@ -27,7 +27,8 @@
   }
 }
 
-.reviews__gradient {
+.reviews__card {
+  position: relative;
   padding: 43px 50px 20px;
   background-color: $comment-bg-color;
 
@@ -40,48 +41,7 @@
   }
 }
 
-.reviews__comment {
-  margin: 0;
-  padding: 0 16px 0 7px;
-
-  background: repeating-linear-gradient(
-    to bottom,
-    #fafafa,
-    #fafafa 28px,
-    #e1e1e1 28px,
-    #e1e1e1 29px
-  );
-
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 2.55;
-
-  // background-image: url(../images/reviews/comment.svg);
-  // background-repeat: no-repeat;
-  // background-position-x: 61px;
-  // background-position-y: 28px;
-
-  @include respond-above($tablet) {
-    padding: 0 44px 0 20px;
-
-    font-size: 14px;
-    line-height: 2.16;
-    letter-spacing: 0.04em;
-
-    //   background-position-x: 40px;
-    //   background-position-y: 30px;
-  }
-
-  @include respond-above($desktop) {
-    font-size: 16px;
-    line-height: 1.86;
-
-    //   background-position-x: 50px;
-    //   background-position-y: 32px;
-  }
-}
-
-.reviews__gradient--margin {
+.reviews__card--margin {
   margin-bottom: 30px;
 
   @include respond-above($tablet) {
@@ -90,6 +50,63 @@
 
   @include respond-above($desktop) {
     margin: 0 64px 15px;
+  }
+}
+
+.reviews__gradient {
+  background: repeating-linear-gradient(
+    to bottom,
+    #fafafa,
+    #fafafa 28px,
+    #e1e1e1 28px,
+    #e1e1e1 29px
+  );
+
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 54px;
+    height: 40px;
+    left: 61px;
+    top: 28px;
+    background-repeat: no-repeat;
+    background-image: url(../images/reviews/comment.svg);
+
+    @include respond-above($tablet) {
+      left: 40px;
+      top: 30px;
+    }
+
+    @include respond-above($desktop) {
+      left: 50px;
+      top: 32px;
+    }
+  }
+}
+
+.reviews__comment {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  padding: 0 16px 0 7px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
+
+  @include respond-above($tablet) {
+    padding: 0 44px 0 20px;
+
+    font-size: 14px;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 16px;
+    line-height: 1.86;
   }
 }
 
