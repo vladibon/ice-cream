@@ -1,36 +1,36 @@
 <!-- Header -->
-<header class="page-header">
+<header class="page-header" id="page-home">
   <div class="container page-header__container">
     <!-- Company`s Logo -->
-    <a class="logo" href="./index.html" lang="en">
-      <svg width="50" height="50" aria-label="Logo">
+    <a class="logo" href="index.html">
+      <svg class="logo__icon" width="50" height="50" aria-label="Logo">
         <use href="images/icons.svg#logo"></use>
       </svg>
       Icecream
     </a>
 
     <div class="backdrop" data-nav>
-      <nav class="container backdrop__container">
-        <!-- Site Navigation -->
-        <ul class="site-nav" id="nav">
+      <!-- Site Navigation -->
+      <nav class="site-nav" id="nav">
+        <ul class="site-nav__list">
           <li class="site-nav__item">
-            <a class="site-nav__link site-nav__link--active" href="#">Home</a>
+            <a class="site-nav__link site-nav__link--active" href="#page-home">Home</a>
           </li>
 
           <li class="site-nav__item">
-            <a class="site-nav__link" href="#">About us</a>
+            <a class="site-nav__link" href="#advantages">About us</a>
           </li>
 
           <li class="site-nav__item">
-            <a class="site-nav__link" href="#">How it’s made?</a>
+            <a class="site-nav__link" href="#about">How it’s made?</a>
           </li>
 
           <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Our products</a>
+            <a class="site-nav__link" href="#products">Our products</a>
           </li>
 
           <li class="site-nav__item">
-            <a class="site-nav__link" href="#">Contact</a>
+            <a class="site-nav__link" href="#locations">Contact</a>
           </li>
         </ul>
       </nav>
@@ -46,14 +46,27 @@
         aria-controls="nav"
         data-nav-btn
       >
-        <svg width="20" height="14" aria-label="Переключатель мобильного меню">
-          <use class="site-nav-btn__icon" href="images/icons.svg#home"></use>
-          <use class="site-nav-btn__icon-close" href="images/icons.svg#button-arrow"></use>
+        <svg width="24" height="20" aria-label="Переключатель меню навигации">
+          <use class="site-nav-btn__icon" href="images/icons.svg#mob-menu"></use>
+          <use class="site-nav-btn__icon-close" href="images/icons.svg#close-menu"></use>
         </svg>
       </button>
 
       <!-- Buy now Button -->
-      <button class="buy-btn btn btn--primary" type="button" data-buy-btn>Buy now &gt;</button>
+      <button class="btn btn--primary page-header__btn" type="button" data-buy-btn>
+        Buy now
+        <svg class="page-header__icon" width="6" height="10">
+          <use href="images/icons.svg#buy-btn"></use>
+        </svg>
+      </button>
+
+      <!-- Buy now Button Mobile -->
+      <button class="btn btn--primary page-header__btn-mob" type="button" data-buy-btn-mob>
+        Buy now
+        <svg class="page-header__icon" width="6" height="10">
+          <use href="images/icons.svg#buy-btn"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </header>

@@ -1,18 +1,21 @@
 (() => {
-  const menuBtnRef = document.querySelector("[data-nav-btn]");
+  const navBtnRef = document.querySelector("[data-nav-btn]");
   const buyBtn = document.querySelector("[data-buy-btn]");
-  const mobileMenuRef = document.querySelector("[data-nav]");
+  const buyBtnMob = document.querySelector("[data-buy-btn-mob]");
+  
   const page = document.querySelector("[data-nav-page]");
+  const siteNavRef = document.querySelector("[data-nav]");
 
-  menuBtnRef.addEventListener("click", () => {
-    const expanded = menuBtnRef.getAttribute("aria-expanded") === "true" || false;
+  navBtnRef.addEventListener("click", () => {
+    const expanded = navBtnRef.getAttribute("aria-expanded") === "true" || false;
 
-    menuBtnRef.classList.toggle("site-nav-btn--is-open");
-    menuBtnRef.setAttribute("aria-expanded", !expanded);
+    navBtnRef.classList.toggle("site-nav-btn--nav-open");
+    navBtnRef.setAttribute("aria-expanded", !expanded);
 
-    buyBtn.classList.toggle("buy-btn--nav-open");
+    buyBtn.classList.toggle("page-header__btn--nav-open");
+    buyBtnMob.classList.toggle("page-header__btn-mob--nav-open");
 
-    mobileMenuRef.classList.toggle("backdrop--is-open");
     page.classList.toggle("page--nav-open");
+    siteNavRef.classList.toggle("backdrop--is-open");
   });
 })();
