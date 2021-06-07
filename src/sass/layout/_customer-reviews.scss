@@ -18,40 +18,56 @@
   }
 }
 
-.reviews__comment {
-  display: block;
-  padding: 43px 62px 26px;
-
+.reviews__gradient {
+  padding: 43px 50px 20px;
   background-color: $comment-bg-color;
+
+  @include respond-above($tablet) {
+    padding: 47px 78px 28px;
+  }
+
+  @include respond-above($desktop) {
+    padding: 47px 88px 39px;
+  }
+}
+
+.reviews__comment {
+  padding: 0 12px;
+
+  background: repeating-linear-gradient(
+    to bottom,
+    #fafafa,
+    #fafafa 29px,
+    #e1e1e1 29px,
+    #e1e1e1 30px
+  );
 
   font-weight: 500;
   font-size: 12px;
   line-height: 2.55;
 
-  background-image: url(../images/reviews/comment.svg);
-  background-repeat: no-repeat;
-  background-position-x: 61px;
-  background-position-y: 28px;
+  // background-image: url(../images/reviews/comment.svg);
+  // background-repeat: no-repeat;
+  // background-position-x: 61px;
+  // background-position-y: 28px;
 
   @include respond-above($tablet) {
-    padding: 47px 80px 34px;
+    padding: 0 32px;
 
     font-size: 14px;
     line-height: 2.16;
     letter-spacing: 0.04em;
 
-    background-position-x: 40px;
-    background-position-y: 30px;
+    //   background-position-x: 40px;
+    //   background-position-y: 30px;
   }
 
   @include respond-above($desktop) {
-    padding: 47px 88px 39px;
-
     font-size: 16px;
     line-height: 1.86;
 
-    background-position-x: 50px;
-    background-position-y: 32px;
+    //   background-position-x: 50px;
+    //   background-position-y: 32px;
   }
 }
 
