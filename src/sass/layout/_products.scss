@@ -7,19 +7,18 @@
     padding-bottom: 110px;
   }
   @include respond-above($desktop) {
-    padding-top: 125px;
+    padding-top: 130px;
     padding-bottom: 120px;
   }
 
   &__label {
-    text-align: center;
-
     font-family: $title-font;
     color: $secondary-title-color;
 
     margin-bottom: 15px;
     font-size: 18px;
     line-height: 1.17;
+    text-align: center;
     text-transform: uppercase;
 
     @include respond-above($tablet) {
@@ -34,13 +33,14 @@
   }
 
   &__title {
-    text-align: center;
     font-family: $title-font;
     color: $main-title-color;
 
     margin-bottom: 145px;
     font-size: 34px;
     line-height: 1.15;
+    letter-spacing: 0.04em;
+    text-align: center;
     text-transform: uppercase;
 
     @include respond-above($tablet) {
@@ -77,35 +77,156 @@
 .product {
   text-align: center;
   border-radius: 24px;
-  padding-top: 160px;
-  padding-right: 40px;
-  padding-bottom: 40px;
-  padding-left: 40px;
-
-  @include respond-above($tablet) {
-    padding-top: 150px;
-    padding-right: 11px;
-    padding-left: 11px;
-  }
-
-  @include respond-above($desktop) {
-    padding-top: 160px;
-    padding-right: 44px;
-    padding-bottom: 50px;
-    padding-left: 44px;
-  }
 
   &--ice-cream {
     background-color: $header-main-bg-color;
   }
+
+  &--ice-cream::before {
+    @extend %befor-mobile;
+    background-image: url(/images/products/mobile/products_img1_mobile_@1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(/images/products/mobile/products_img1_mobile_@2x.png);
+    }
+
+    @include respond-above($tablet) {
+      width: 220px;
+      height: 226px;
+      margin-bottom: $list-gap-desktop;
+
+      background-image: url(/images/products/tablet/products_img1_tablet_@1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(/images/products/tablet/products_img1_tablet_@2x.png);
+      }
+    }
+
+    @include respond-above($desktop) {
+      width: 335px;
+      height: 335px;
+      margin-bottom: 40px;
+
+      background-image: url(/images/products/desktop/products_img1_desktop_@1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(/images/products/desktop/products_img1_desktop_@2x.png);
+      }
+    }
+  }
+
   &--ice-coffee {
     background-color: $brown-card-bg-color;
   }
+
+  &--ice-coffee::before {
+    @extend %befor-mobile;
+    background-image: url(/images/products/mobile/products_img2_mobile_@1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(/images/products/mobile/products_img2_mobile_@2x.png);
+    }
+
+    @include respond-above($tablet) {
+      width: 220px;
+      height: 226px;
+      margin-bottom: $list-gap-desktop;
+
+      background-image: url(/images/products/tablet/products_img2_tablet_@1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(/images/products/tablet/products_img2_tablet_@2x.png);
+      }
+    }
+
+    @include respond-above($desktop) {
+      width: 335px;
+      height: 335px;
+      margin-bottom: 40px;
+
+      background-image: url(/images/products/desktop/products_img2_desktop_@1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(/images/products/desktop/products_img2_desktop_@2x.png);
+      }
+    }
+  }
+
   &--milkshakes {
     background-color: $green-card-bg-color;
   }
 
+  &--milkshakes::before {
+    @extend %befor-mobile;
+    background-image: url(/images/products/mobile/products_img3_mobile_@1x.png);
+
+    @media screen and (min-device-pixel-ratio: 2),
+      screen and (min-resolution: 192dpi),
+      screen and (min-resolution: 2dppx) {
+      background-image: url(/images/products/mobile/products_img3_mobile_@2x.png);
+    }
+
+    @include respond-above($tablet) {
+      width: 220px;
+      height: 226px;
+      margin-bottom: $list-gap-desktop;
+
+      background-image: url(/images/products/tablet/products_img3_tablet_@1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(/images/products/tablet/products_img3_tablet_@2x.png);
+      }
+    }
+
+    @include respond-above($desktop) {
+      width: 335px;
+      height: 335px;
+      margin-bottom: 40px;
+
+      background-image: url(/images/products/desktop/products_img3_desktop_@1x.png);
+
+      @media screen and (min-device-pixel-ratio: 2),
+        screen and (min-resolution: 192dpi),
+        screen and (min-resolution: 2dppx) {
+        background-image: url(/images/products/desktop/products_img3_desktop_@2x.png);
+      }
+    }
+  }
+
+  &__content {
+    padding-left: 40px;
+    padding-bottom: 40px;
+    padding-right: 40px;
+
+    @include respond-above($tablet) {
+      padding-left: 11px;
+      padding-right: 11px;
+    }
+
+    @include respond-above($desktop) {
+      padding-left: 44px;
+      padding-bottom: 50px;
+      padding-right: 44px;
+    }
+  }
+
   &__title {
+    position: relative;
+    display: inline-flex;
     margin-bottom: 66px;
 
     font-family: $title-font;
@@ -114,6 +235,7 @@
     font-size: 20px;
     font-weight: 400;
     line-height: 1.15;
+    letter-spacing: 0.04em;
     text-transform: uppercase;
 
     @include respond-above($desktop) {
@@ -123,12 +245,35 @@
     }
   }
 
+  &__title::after {
+    content: '';
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 26px;
+    height: 6px;
+
+    background-image: url(/images/products/midle-circle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @include respond-above($desktop) {
+      top: 65px;
+    }
+  }
+
   &__text {
+    display: block;
+
     margin-bottom: 30px;
     color: $white-text-color;
 
     font-weight: 700;
     line-height: 1.5;
+    letter-spacing: 0.04em;
 
     @include respond-above($tablet) {
       margin-bottom: 40px;
@@ -140,4 +285,15 @@
       font-size: 16px;
     }
   }
+
+  &__addition {
+    @include respond-above($tablet) {
+      display: none;
+    }
+  }
+}
+
+.btn-open--centered {
+  margin-left: auto;
+  margin-right: auto;
 }

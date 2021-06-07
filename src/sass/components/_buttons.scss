@@ -35,21 +35,6 @@
   }
 }
 
-.btn--header {
-  @include respond-below($mobile) {
-    width: 100%;
-  }
-
-  @include respond-below($tablet) {
-    width: 480px;
-  }
-
-  // Вовчик, для тебя этот кусок - пропишешь под себя))
-  .mobile-menu.is-open & {
-    width: 185px;
-  }
-}
-
 .btn--hero {
   font-weight: 400;
   font-size: 8px;
