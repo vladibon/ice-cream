@@ -16,6 +16,6 @@
     buyBtnMob.classList.toggle("page-header__btn-mob--nav-open");
 
     page.classList.toggle("page--nav-open");
-    siteNavRef.classList.toggle("backdrop--is-open");
+    siteNavRef.classList.toggle("site-nav-backdrop--is-open");
   });
 })();
