@@ -1,5 +1,14 @@
 .reviews {
   text-align: center;
+  padding: 80px 0 86px;
+
+  @include respond-above($tablet) {
+    padding: 121px 0 119px;
+  }
+
+  @include respond-above($desktop) {
+    padding-top: 123px;
+  }
 }
 
 .reviews__photo {
@@ -7,14 +16,14 @@
 }
 
 .reviews__photo--margin {
-  margin: 80px auto 29px;
+  margin: 0 auto 29px;
 
   @include respond-above($tablet) {
-    margin: 121px auto 19px;
+    margin-bottom: 19px;
   }
 
   @include respond-above($desktop) {
-    margin: 123px auto 15px;
+    margin-bottom: 15px;
   }
 }
 
@@ -23,23 +32,24 @@
   background-color: $comment-bg-color;
 
   @include respond-above($tablet) {
-    padding: 47px 78px 28px;
+    padding: 47px 36px 28px 60px;
   }
 
   @include respond-above($desktop) {
-    padding: 47px 88px 39px;
+    padding: 47px 54px 39px 59px;
   }
 }
 
 .reviews__comment {
-  padding: 0 12px;
+  margin: 0;
+  padding: 0 16px 0 7px;
 
   background: repeating-linear-gradient(
     to bottom,
     #fafafa,
-    #fafafa 29px,
-    #e1e1e1 29px,
-    #e1e1e1 30px
+    #fafafa 28px,
+    #e1e1e1 28px,
+    #e1e1e1 29px
   );
 
   font-weight: 500;
@@ -52,7 +62,7 @@
   // background-position-y: 28px;
 
   @include respond-above($tablet) {
-    padding: 0 32px;
+    padding: 0 44px 0 20px;
 
     font-size: 14px;
     line-height: 2.16;
@@ -71,7 +81,7 @@
   }
 }
 
-.reviews__comment--margin {
+.reviews__gradient--margin {
   margin-bottom: 30px;
 
   @include respond-above($tablet) {
@@ -120,14 +130,6 @@
 .review__menu {
   display: flex;
   justify-content: center;
-}
-
-.review__menu--margin {
-  margin-bottom: 86px;
-
-  @include respond-above($tablet) {
-    margin-bottom: 119px;
-  }
 }
 
 .review-menu__items:not(:last-child) {
