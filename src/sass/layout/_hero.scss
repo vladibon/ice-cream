@@ -218,13 +218,6 @@
     left: 475px;
     bottom: 19px;
   }
-
-  @include respond-above(1370px) {
-    margin-left: auto;
-    margin-right: auto;
-    left: 0;
-    right: 0;
-  }
 }
 
 .hero__image--main::after {
