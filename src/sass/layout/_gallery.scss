@@ -11,3 +11,33 @@
     background-image: linear-gradient($primary-bg-color 172px, $white-bg-color 172px, $white-bg-color);
   }
 }
+
+.gallery__grid {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 calc(100vw / 32);
+}
+
+.gallery__item {
+  display: block;
+  padding: 0 calc(100vw / 256);
+}
+
+.gallery__img {
+  border-radius: calc(100vw / 128);
+  margin: calc(100vw / 128) 0;
+  box-shadow: $adress-card-shadow;
+
+  transform: scale(1);
+
+  transition: transform $animation, box-shadow $modal-animation;
+
+  &:hover {
+    position: relative;
+    z-index: 2;
+    box-shadow: $gallery-shadow;
+
+    transform: scale(1.4);
+  }
+}
