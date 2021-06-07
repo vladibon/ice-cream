@@ -29,6 +29,7 @@
   height: 32px;
   border-radius: 50%;
   background-color: $brand-link-color;
+  transition: background-color $animation;
 
   @include respond-above($tablet) {
     width: 34px;
