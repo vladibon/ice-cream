@@ -18,7 +18,7 @@
   }
 }
 
-.backdrop {
+.site-nav-backdrop {
   @include respond-below($desktop) {
     position: fixed;
     z-index: 4;
@@ -60,7 +60,7 @@
     box-shadow: $site-nav-shadow;
     transition: transform $modal-animation;
 
-    .backdrop--is-open & {
+    .site-nav-backdrop--is-open & {
       transform: translateX(0);
     }
   }
