@@ -2,10 +2,14 @@
   position: absolute;
   z-index: 3;
   width: 100%;
-  padding-top: 38px;
+  padding-top: 10px;
 
-  @include respond-below($tablet) {
-    padding-top: 6px;
+  @include respond-above($tablet) {
+    padding-top: 24px;
+  }
+
+  @include respond-above($desktop) {
+    padding-top: 38px;
   }
 }
 
@@ -84,11 +88,11 @@
     padding-left: 34px;
     border-bottom: $site-nav-border;
   }
-}
 
-.site-nav__item:nth-child(1) {
-  @include respond-below($desktop) {
-    border-top: $site-nav-border;
+  &:nth-child(1) {
+    @include respond-below($desktop) {
+      border-top: $site-nav-border;
+    }
   }
 
   @include respond-above($desktop) {
@@ -137,14 +141,14 @@
 
   &--nav-open {
     position: fixed;
-    transform: translateY(6px);
+    transform: translateY(10px);
   }
 
   @include respond-above($tablet) {
     transform: translateX(-14px);
 
     &--nav-open {
-      transform: translateY(6px);
+      transform: translateY(10px);
     }
   }
 
@@ -190,7 +194,7 @@
   }
 
   @include respond-above($desktop) {
-    top: 0;
+    top: 2px;
     right: 116px;
   }
 }
