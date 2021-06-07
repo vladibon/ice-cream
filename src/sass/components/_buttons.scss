@@ -18,6 +18,7 @@
 .btn--primary {
   color: $btn-secondary-color;
   background-color: $btn-primary-color;
+  transition: background-color $modal-animation;
 
   &:hover,
   &:focus {
@@ -28,6 +29,7 @@
 .btn--secondary {
   color: $btn-primary-color;
   background-color: $btn-secondary-color;
+  transition: background-color $modal-animation;
 
   &:hover,
   &:focus {
@@ -85,6 +87,7 @@
   border-radius: 50%;
   color: $btn-secondary-color;
   background-color: $btn-primary-color;
+  transition: color $animation, background-color $animation;
 
   &:hover,
   &:focus {
