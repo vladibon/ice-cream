@@ -197,9 +197,9 @@
 // Images
 .hero__image--main {
   position: absolute;
+  display: block;
   right: -62px;
   bottom: -85px;
-  display: block;
   width: 346px;
   height: 346px;
   border-radius: 50%;
@@ -230,16 +230,14 @@
 .hero__image--main::after {
   content: '';
   display: block;
-  position: absolute;
+  @extend %bgr-image-absolute;
   left: 50%;
   bottom: -75px;
   transform: translate(-50%, 0);
-  position: absolute;
-  background-image: url(../images/hero/mobile/hero1_mobile_@1x.png);
-  background-repeat: no-repeat;
-  background-size: contain;
   width: 171px;
   height: 410px;
+
+  background-image: url(../images/hero/mobile/hero1_mobile_@1x.png);
 
   @include retina-display(2) {
     background-image: url(../images/hero/mobile/hero1_mobile_@2x.png);
@@ -274,13 +272,12 @@
     display: none;
   }
 
-  position: absolute;
+  @extend %bgr-image-absolute;
   left: 35px;
   bottom: -6px;
   width: 124px;
   height: 126px;
-  background-repeat: no-repeat;
-  background-size: contain;
+
   background-image: url(../images/hero/tablet/hero3_tablet_@1x.png);
 
   @include retina-display(2) {
@@ -305,13 +302,11 @@
     display: none;
   }
 
-  position: absolute;
+  @extend %bgr-image-absolute;
   right: 35px;
   bottom: -34px;
   width: 168px;
   height: 133px;
-  background-repeat: no-repeat;
-  background-size: contain;
   background-image: url(../images/hero/tablet/hero2_tablet_@1x.png);
 
   @include retina-display(2) {

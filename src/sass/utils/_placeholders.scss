@@ -11,3 +11,9 @@
   background-size: contain;
   background-position: center;
 }
+
+%bgr-image-absolute {
+  position: absolute;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
