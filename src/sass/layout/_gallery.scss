@@ -2,31 +2,75 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: calc(100vw / 3);
-  max-height: 430px;
+  height: 108px;
   
-  background-image: linear-gradient($primary-bg-color 25%, $white-bg-color 25%, $white-bg-color);
+  background-image: linear-gradient($primary-bg-color 40%, $white-bg-color 40%, $white-bg-color);
 
-  @media screen and (min-width: 1280px) {
-    background-image: linear-gradient($primary-bg-color 172px, $white-bg-color 172px, $white-bg-color);
+  @include respond-above($tablet) {
+    height: 258px;
+  }
+
+  @include respond-above($desktop) {
+    height: 430px;
   }
 }
 
 .gallery__grid {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 0 calc(100vw / 32);
 }
 
 .gallery__item {
-  display: block;
-  padding: 0 calc(100vw / 256);
+  display: flex;
+  flex-direction: column;
+  padding: 0 1px;
+
+  @include respond-above($tablet) {
+    padding: 0 2px;
+  }
+
+  @include respond-above($desktop) {
+    padding: 0 4px;
+  }
+
+  &--pt1 {
+    padding-top: 50px;
+  }
+  
+  &--pt2 {
+    padding-top: 85px;
+  }
+  
+  &--pt3 {
+    padding-top: 100px;
+  }
+  
+  &--pt4 {
+    padding-top: 140px;
+  }
+  
+  &--pt5 {
+    padding-top: 155px;
+  }
 }
 
 .gallery__img {
-  border-radius: calc(100vw / 128);
-  margin: calc(100vw / 128) 0;
+  max-width: 35px;
+  border-radius: 5px;
+  margin: 1px 0;
+
+  @include respond-above($tablet) {
+    max-width: 84px;
+    border-radius: 12px;
+    margin: 2px 0;
+  }
+
+  @include respond-above($desktop) {
+    max-width: 140px;
+    border-radius: 20px;
+    margin: 4px 0;
+  }
+
   box-shadow: $adress-card-shadow;
 
   transform: scale(1);
@@ -39,5 +83,17 @@
     box-shadow: $gallery-shadow;
 
     transform: scale(1.4);
+  }
+
+  &--2x {
+    max-width: 70px;
+  
+    @include respond-above($tablet) {
+      max-width: 168px;
+    }
+  
+    @include respond-above($desktop) {
+      max-width: 280px;
+    }
   }
 }

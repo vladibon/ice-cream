@@ -12,14 +12,6 @@
   }
 }
 
-.container__products {
-  @include respond-below($tablet) {
-    width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
-
 .section__label {
   font-family: $title-font;
   color: $secondary-title-color;
@@ -56,19 +48,25 @@
 }
 
 .products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   @include respond-above($tablet) {
     @include grid();
   }
+}
 
-  &__item {
-    @include respond-below($tablet) {
-      &:not(:last-child) {
-        margin-bottom: 130px;
-      }
+.products__item {
+  max-width: 330px;
+
+  @include respond-below($tablet) {
+    &:not(:last-child) {
+      margin-bottom: 130px;
     }
-    @include respond-above($tablet) {
-      @include grid-item();
-    }
+  }
+  @include respond-above($tablet) {
+    @include grid-item();
   }
 }
 
@@ -194,49 +192,49 @@
       }
     }
   }
+}
 
-  &__content {
-    padding-top: 160px;
-    padding-left: 40px;
-    padding-bottom: 40px;
-    padding-right: 40px;
+.product__content {
+  padding-top: 160px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
 
-    @include respond-above($tablet) {
-      padding-top: 150px;
-      padding-left: 11px;
-      padding-right: 11px;
-    }
-
-    @include respond-above($desktop) {
-      padding-top: 163px;
-      padding-left: 44px;
-      padding-bottom: 50px;
-      padding-right: 44px;
-    }
+  @include respond-above($tablet) {
+    padding-top: 150px;
+    padding-left: 11px;
+    padding-right: 11px;
   }
 
-  &__title {
-    position: relative;
-    display: inline-flex;
-    margin-bottom: 66px;
+  @include respond-above($desktop) {
+    padding-top: 163px;
+    padding-left: 44px;
+    padding-bottom: 50px;
+    padding-right: 44px;
+  }
+}
 
-    font-family: $title-font;
-    color: $white-text-color;
+.product__title {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 66px;
 
-    font-size: 20px;
-    font-weight: 400;
-    line-height: 1.15;
-    letter-spacing: 0.04em;
-    text-transform: uppercase;
+  font-family: $title-font;
+  color: $white-text-color;
 
-    @include respond-above($desktop) {
-      margin-bottom: 70px;
-      font-size: 30px;
-      line-height: 1.13;
-    }
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include respond-above($desktop) {
+    margin-bottom: 70px;
+    font-size: 30px;
+    line-height: 1.13;
   }
 
-  &__title::after {
+  &::after {
     content: '';
     position: absolute;
     top: 53px;
@@ -255,33 +253,42 @@
       top: 65px;
     }
   }
+}
 
-  &__text {
-    display: block;
+.product__text {
+  display: block;
 
+  color: $white-text-color;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  @include respond-above($tablet) {
+    line-height: 1.76;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 16px;
+  }
+
+  &--margin {
     margin-bottom: 30px;
-    color: $white-text-color;
-
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1.5;
-    letter-spacing: 0.04em;
 
     @include respond-above($tablet) {
       margin-bottom: 40px;
-      line-height: 1.76;
     }
 
     @include respond-above($desktop) {
       margin-bottom: 60px;
-      font-size: 16px;
     }
   }
+}
 
-  &__addition {
-    @include respond-above($tablet) {
-      display: none;
-    }
+.product__addition {
+  @include respond-above($tablet) {
+    display: none;
   }
 }
 
