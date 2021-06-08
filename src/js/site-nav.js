@@ -9,7 +9,7 @@
   navBtnRef.addEventListener("click", () => {
     const expanded = navBtnRef.getAttribute("aria-expanded") === "true" || false;
 
-    navBtnRef.classList.toggle("site-nav-btn--nav-open");
+    navBtnRef.classList.toggle("is-active");
     navBtnRef.setAttribute("aria-expanded", !expanded);
 
     buyBtn.classList.toggle("page-header__btn--nav-open");
