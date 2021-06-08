@@ -29,7 +29,7 @@
   height: 32px;
   border-radius: 50%;
   background-color: $brand-link-color;
-  transition: background-color $animation;
+  transition: background-color $animation, transform $animation;
 
   @include respond-above($tablet) {
     width: 34px;
@@ -39,6 +39,7 @@
   &:hover,
   &:focus {
     background-color: $accent-link-color;
+    transform: scale(1.25);
   }
 }
 

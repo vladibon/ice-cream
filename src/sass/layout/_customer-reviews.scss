@@ -1,5 +1,14 @@
 .reviews {
   text-align: center;
+  padding: 80px 0 86px;
+
+  @include respond-above($tablet) {
+    padding: 121px 0 119px;
+  }
+
+  @include respond-above($desktop) {
+    padding-top: 123px;
+  }
 }
 
 .reviews__photo {
@@ -7,55 +16,32 @@
 }
 
 .reviews__photo--margin {
-  margin: 80px auto 29px;
+  margin: 0 auto 29px;
 
   @include respond-above($tablet) {
-    margin: 121px auto 19px;
+    margin-bottom: 19px;
   }
 
   @include respond-above($desktop) {
-    margin: 123px auto 15px;
+    margin-bottom: 15px;
   }
 }
 
-.reviews__comment {
-  display: block;
-  padding: 43px 62px 26px;
-
+.reviews__card {
+  position: relative;
+  padding: 43px 50px 20px;
   background-color: $comment-bg-color;
 
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 2.55;
-
-  background-image: url(../images/reviews/comment.svg);
-  background-repeat: no-repeat;
-  background-position-x: 61px;
-  background-position-y: 28px;
-
   @include respond-above($tablet) {
-    padding: 47px 80px 34px;
-
-    font-size: 14px;
-    line-height: 2.16;
-    letter-spacing: 0.04em;
-
-    background-position-x: 40px;
-    background-position-y: 30px;
+    padding: 47px 36px 28px 60px;
   }
 
   @include respond-above($desktop) {
-    padding: 47px 88px 39px;
-
-    font-size: 16px;
-    line-height: 1.86;
-
-    background-position-x: 50px;
-    background-position-y: 32px;
+    padding: 47px 54px 39px 59px;
   }
 }
 
-.reviews__comment--margin {
+.reviews__card--margin {
   margin-bottom: 30px;
 
   @include respond-above($tablet) {
@@ -64,6 +50,63 @@
 
   @include respond-above($desktop) {
     margin: 0 64px 15px;
+  }
+}
+
+.reviews__gradient {
+  background: repeating-linear-gradient(
+    to bottom,
+    $comment-bg-color,
+    $comment-bg-color 28px,
+    $fill-brackets-color 28px,
+    $fill-brackets-color 29px
+  );
+
+  &::before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    width: 54px;
+    height: 40px;
+    left: 61px;
+    top: 28px;
+    background-repeat: no-repeat;
+    background-image: url(../images/reviews/comment.svg);
+
+    @include respond-above($tablet) {
+      left: 40px;
+      top: 30px;
+    }
+
+    @include respond-above($desktop) {
+      left: 50px;
+      top: 32px;
+    }
+  }
+}
+
+.reviews__comment {
+  position: relative;
+  z-index: 1;
+
+  margin: 0;
+  padding: 0 16px 0 7px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 2.55;
+
+  @include respond-above($tablet) {
+    padding: 0 44px 0 20px;
+
+    font-size: 14px;
+    line-height: 2.16;
+    letter-spacing: 0.04em;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 16px;
+    line-height: 1.86;
   }
 }
 
@@ -104,14 +147,6 @@
 .review__menu {
   display: flex;
   justify-content: center;
-}
-
-.review__menu--margin {
-  margin-bottom: 86px;
-
-  @include respond-above($tablet) {
-    margin-bottom: 119px;
-  }
 }
 
 .review-menu__items:not(:last-child) {

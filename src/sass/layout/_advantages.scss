@@ -28,13 +28,12 @@
   @include respond-above($desktop) {
     font-size: 58px;
     line-height: 1.13;
-    text-transform: none;
     margin-bottom: 15px;
   }
 }
 .grid__descr {
   font-weight: 700;
-  letter-spacing: 0.02em;
+  margin-bottom: 0;
 
   color: $black-text-color;
 
@@ -42,20 +41,17 @@
     font-size: 12px;
     line-height: 1.7;
     margin-right: 70px;
-    margin-bottom: 0;
   }
 
   @include respond-above($tablet) {
     font-size: 14px;
     line-height: 1.74;
     margin-right: 60px;
-    margin-bottom: 0;
   }
   @include respond-above($desktop) {
     font-size: 16px;
     line-height: 1.76;
     margin-right: 30px;
-    margin-bottom: 0;
   }
 }
 .grid {
