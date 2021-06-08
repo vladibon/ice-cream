@@ -5,11 +5,11 @@
   color: $black-text-color;
   background-color: $white-text-color;
 
-  // @include respond-below($desktop) {
-  //   &--nav-open {
-  //     overflow: hidden;
-  //   }
-  // }
+  @include respond-below($desktop) {
+    &--nav-open {
+      overflow: hidden;
+    }
+  }
 }
 
 ul {
