@@ -10,12 +10,12 @@
                     <h3 class="product__title">ice cream</h3>
                     <p class="product__text product__text--margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et <span class="product__addition">. dolore magna aliqua facilisis.</span></p>
-                    <button class="btn-open btn-open--centered" type="button" aria-expanded="false" aria-controls="description" data-modal-open>
+                    <button class="btn-open btn-open--centered" type="button" aria-expanded="false" aria-controls="description" data-modal-open-ice-cream>
                         <svg class="btn-open__icon" width="40" height="40">
                             <use href="images/icons.svg#link-arrow"></use>
                         </svg></button>
-                        <div class="product__description" id="description" data-modal>
-                            <button class="btn-close-products" data-modal-close>
+                        <div class="product__description product__description--ice-cream product__description--is-hidden" id="description" data-modal-ice-cream>
+                            <button class="product__btn-close" data-modal-close-ice-cream>
                                 <svg width="20" height="20">
                                     <use href="images/icons.svg#close-menu"></use>
                                 </svg>
@@ -29,12 +29,22 @@
                 <article class="product product--ice-coffee">
                     <div class="product__content">
                     <h3 class="product__title">ice coffee</h3>
-                    <p class="product__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    <p class="product__text product__text--margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et<span class="product__addition">. dolore magna aliqua facilisis.</span></p>
-                    <button class="btn-open btn-open--centered" type="button">
+                    <button class="btn-open btn-open--centered" type="button" aria-expanded="false" aria-controls="description" data-modal-open-ice-coffee>
                         <svg class="btn-open__icon" width="40" height="40">
                             <use href="images/icons.svg#link-arrow"></use>
                         </svg></button>
+                        <div class="product__description product__description--ice-coffee product__description--is-hidden" id="description"
+                            data-modal-ice-coffee>
+                            <button class="product__btn-close" data-modal-close-ice-coffee>
+                                <svg width="20" height="20">
+                                    <use href="images/icons.svg#close-menu"></use>
+                                </svg>
+                            </button>
+                            <p class="product__text product__text--margin-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Facere repellat placeat corrupti aspernatur commodi voluptate quaerat iure provident. Enim, sint?</p>
+                        </div>
                     </div>
                 </article>
             </li>
@@ -42,12 +52,22 @@
                 <article class="product product--milkshakes">
                     <div class="product__content">
                     <h3 class="product__title">milkshakes</h3>
-                    <p class="product__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
+                    <p class="product__text product__text--margin">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
                         ut labore et<span class="product__addition">. dolore magna aliqua facilisis.</span></p>
-                    <button class="btn-open btn-open--centered" type="button">
+                    <button class="btn-open btn-open--centered" type="button" aria-expanded="false" aria-controls="description" data-modal-open-milkshakes>
                         <svg class="btn-open__icon" width="40" height="40">
                             <use href="images/icons.svg#link-arrow"></use>
                         </svg></button>
+                        <div class="product__description product__description--milkshakes product__description--is-hidden" id="description"
+                            data-modal-milkshakes>
+                            <button class="product__btn-close" data-modal-close-milkshakes>
+                                <svg width="20" height="20">
+                                    <use href="images/icons.svg#close-menu"></use>
+                                </svg>
+                            </button>
+                            <p class="product__text product__text--margin-description">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                                Facere repellat placeat corrupti aspernatur commodi voluptate quaerat iure provident. Enim, sint?</p>
+                        </div>
                     </div>
                 </article>
             </li>

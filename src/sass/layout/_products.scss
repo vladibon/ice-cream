@@ -12,12 +12,6 @@
   }
 }
 
-.container__products {
-  @include respond-between(380px, $tablet) {
-    max-width: 380px;
-  }
-}
-
 .section__label {
   font-family: $title-font;
   color: $secondary-title-color;
@@ -54,19 +48,25 @@
 }
 
 .products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
   @include respond-above($tablet) {
     @include grid();
   }
+}
 
-  &__item {
-    @include respond-below($tablet) {
-      &:not(:last-child) {
-        margin-bottom: 130px;
-      }
+.products__item {
+  max-width: 330px;
+
+  @include respond-below($tablet) {
+    &:not(:last-child) {
+      margin-bottom: 130px;
     }
-    @include respond-above($tablet) {
-      @include grid-item();
-    }
+  }
+  @include respond-above($tablet) {
+    @include grid-item();
   }
 }
 

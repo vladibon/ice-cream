@@ -2,8 +2,7 @@
   position: absolute;
   top: 200px;
   left: 0;
-  // overflow: auto;
-  overflow-y: scroll;
+  overflow: auto;
   width: 100%;
   min-height: 285px;
   padding-top: 60px;
@@ -11,8 +10,6 @@
   padding-left: 44px;
   padding-right: 44px;
   border-radius: 24px;
-  background-color: #fa98b1;
-
   transition: visibility $modal-animation, opacity $modal-animation;
 
   @include respond-above($tablet) {
@@ -29,13 +26,28 @@
     padding-left: 44px;
     padding-right: 44px;
   }
-}
 
-.product__description.is-hidden {
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-  transition: visibility $modal-animation, opacity $modal-animation;
+  &--ice-cream {
+    background-color: #fa98b1;
+    box-shadow: 0px 8px 30px #f3aec0;
+  }
+
+  &--ice-coffee {
+    background-color: #e4ba80;
+    box-shadow: 0px 8px 30px #d6af77;
+  }
+
+  &--milkshakes {
+    background-color: #b4d686;
+    box-shadow: 0px 8px 30px #c3e099;
+  }
+
+  &--is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility $modal-animation, opacity $modal-animation;
+  }
 }
 
 .product__text--margin-description {
@@ -43,17 +55,22 @@
 }
 
 // Btn-close
-.btn-close-products {
+.product__btn-close {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 25px;
+  height: 25px;
   top: 10px;
   right: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 50%;
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $btn-secondary-accent-color;
+  }
 }
