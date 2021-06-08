@@ -13,10 +13,8 @@
 }
 
 .container__products {
-  @include respond-below($tablet) {
-    width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
+  @include respond-between(380px, $tablet) {
+    max-width: 380px;
   }
 }
 
@@ -259,7 +257,6 @@
   &__text {
     display: block;
 
-    margin-bottom: 30px;
     color: $white-text-color;
 
     font-size: 14px;
@@ -268,13 +265,23 @@
     letter-spacing: 0.04em;
 
     @include respond-above($tablet) {
-      margin-bottom: 40px;
       line-height: 1.76;
     }
 
     @include respond-above($desktop) {
-      margin-bottom: 60px;
       font-size: 16px;
+    }
+  }
+
+  &__text--margin {
+    margin-bottom: 30px;
+
+    @include respond-above($tablet) {
+      margin-bottom: 40px;
+    }
+
+    @include respond-above($desktop) {
+      margin-bottom: 60px;
     }
   }
 
