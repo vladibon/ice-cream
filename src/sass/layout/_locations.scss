@@ -25,6 +25,9 @@
   @include respond-below($desktop) {
     padding: 50px 32px;
   }
+  @include respond-above($tablet) {
+    @include grid-item();
+  }
   padding: 50px 45px 60px 45px;
   border-radius: 30px;
   background-color: $white-bg-color;
@@ -42,6 +45,7 @@
   @include respond-between($tablet, $desktop) {
     &:not(:last-child) {
       margin-right: 20px;
+      max-width: 330px;
     }
   }
   @include respond-above($desktop) {
