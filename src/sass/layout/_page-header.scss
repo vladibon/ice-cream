@@ -184,7 +184,8 @@
     top: 3px;
     right: 84px;
     opacity: 1;
-    transition: visibility $modal-animation, opacity $modal-animation;
+    transition: visibility $modal-animation, opacity $modal-animation,
+      background-color $modal-animation, transform $modal-animation;
 
     &--nav-open {
       pointer-events: none;
@@ -213,7 +214,7 @@
   visibility: hidden;
   opacity: 0;
   transform: translateX(200px);
-  transition: color $animation, background-color $animation, visibility $modal-animation,
+  transition: background-color $modal-animation, visibility $modal-animation,
     opacity $modal-animation, transform $modal-animation;
 
   &--nav-open {
