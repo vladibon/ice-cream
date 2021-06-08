@@ -29,17 +29,14 @@
 
   &--ice-cream {
     background-color: #fa98b1;
-    box-shadow: 0px 8px 30px #f3aec0;
   }
 
   &--ice-coffee {
     background-color: #e4ba80;
-    box-shadow: 0px 8px 30px #d6af77;
   }
 
   &--milkshakes {
     background-color: #b4d686;
-    box-shadow: 0px 8px 30px #c3e099;
   }
 
   &--is-hidden {
@@ -71,6 +68,6 @@
 
   &:hover,
   &:focus {
-    background-color: $btn-secondary-accent-color;
+    background-color: $btn-secondary-color;
   }
 }
