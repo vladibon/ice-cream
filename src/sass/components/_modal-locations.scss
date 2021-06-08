@@ -21,7 +21,7 @@
   opacity: 0;
   pointer-events: none;
 }
-.modal {
+.modal-locations {
   @include respond-below($tablet) {
     width: 100%;
   }
@@ -62,25 +62,40 @@
   }
 }
 
-.madal-container {
+.modal-locations__container {
   padding: 40px;
 }
-.modal-title {
-  margin: 0;
+.modal-locations__title {
+  font-family: $title-font;
   font-weight: bold;
   font-size: 20px;
   line-height: 1.15;
   text-align: center;
-  letter-spacing: 0.03em;
-  // color: $main-text-cl;
-  margin-bottom: 12px;
+  letter-spacing: 0.04em;
+  color: $main-title-color;
+  margin-bottom: 16px;
+  @include respond-between($breakpoint-lower, $breakpoint-upper) {
+    font-family: $title-font;
+    font-size: 24px;
+    line-height: 1.13;
+    margin-bottom: 25px;
+    text-align: center;
+    color: $main-title-color;
+  }
+  @include respond-above($desktop) {
+    font-family: $title-font;
+    font-size: 30px;
+    line-height: 1.13;
+    margin-bottom: 30px;
+    text-align: center;
+    color: $main-title-color;
+  }
 }
-.modal-desc {
+.modal-locations__descr {
   margin-bottom: 10px;
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.01em;
-  // color: $pargf-cl;
+  font-size: 14px;
+  line-height: 1.14;
+  color: $main-title-color;
 }
 .form-field {
   position: relative;
@@ -88,11 +103,12 @@
 .form-field input {
   width: 100%;
   height: 40px;
-  // border: 1px solid $border-modal;
+  //border: 1px solid $border-modal-locations;
   box-sizing: border-box;
-  border-radius: 4px;
+  border-radius: 10px;
   outline: none;
-  margin-bottom: 10px;
+  //margin-bottom: 10px;
+  box-shadow: 0px, 8px rgba(212, 20, 67, 0.1);
 }
 
 .feedback-textarea {
@@ -100,10 +116,11 @@
   resize: none;
   width: 100%;
   height: 120px;
-  // border: 1px solid $border-modal;
+  // border: 1px solid $border-modal-locations;
   box-sizing: border-box;
   border-radius: 4px;
   outline: none;
+  box-shadow: 0px, 8px rgba(212, 20, 67, 0.1);
   &::placeholder {
     font-size: 14px;
     line-height: 1.14;
@@ -115,14 +132,14 @@
   }
 }
 
-.modal-icons {
+.modal-locations__icons {
   display: block;
   position: absolute;
   bottom: 40px;
   left: 15px;
 }
 
-.modal-input {
+.modal-locations__input {
   display: block;
   padding-top: 11px;
   padding-right: 12px;
@@ -134,7 +151,7 @@
   transition: $animation;
   outline: none;
 
-  &:focus ~ .modal-icons {
+  &:focus ~ .modal-locations_icons {
     // fill: $btn-cl;
   }
 
