@@ -7,6 +7,9 @@
 @import './components/logo';
 @import './components/buttons';
 @import './components/social-links';
+@import './components/modal-buynaw';
+@import './components/modal-products';
+// @import './components/modal-locations';
 
 @import './layout/container';
 @import './layout/page-header';
@@ -18,6 +21,3 @@
 @import './layout/customer-reviews.scss';
 @import './layout/locations.scss';
 @import './layout/page-footer.scss';
-
-@import './components/modal-buynaw';
-// @import './components/modal-locations';
