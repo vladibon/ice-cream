@@ -10,12 +10,12 @@
   //transition: visibility $animation, opacity $animation;
 }
 
-//.is-hidden {
-//  overflow-y: scroll;
-// pointer-events: none;
-// visibility: hidden;
-//opacity: 0;
-//}
+.is-hidden {
+  overflow-y: scroll;
+  pointer-events: none;
+  visibility: hidden;
+  opacity: 0;
+}
 
 .backdrop.is-hidden {
   opacity: 0;
