@@ -56,10 +56,10 @@
 .reviews__gradient {
   background: repeating-linear-gradient(
     to bottom,
-    #fafafa,
-    #fafafa 28px,
-    #e1e1e1 28px,
-    #e1e1e1 29px
+    $comment-bg-color,
+    $comment-bg-color 28px,
+    $fill-brackets-color 28px,
+    $fill-brackets-color 29px
   );
 
   &::before {
