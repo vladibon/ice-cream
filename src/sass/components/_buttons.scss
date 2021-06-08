@@ -89,7 +89,7 @@
   border-radius: 50%;
   color: $btn-secondary-color;
   background-color: $btn-primary-color;
-  transition: color $animation, background-color $animation;
+  transition: color $animation, background-color $animation, transform $animation;
 
   &:hover,
   &:focus {
