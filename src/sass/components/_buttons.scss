@@ -13,27 +13,29 @@
   line-height: 1.25;
   font-weight: 700;
   cursor: pointer;
+
+  transition: background-color $modal-animation, transform $modal-animation;
 }
 
 .btn--primary {
   color: $btn-secondary-color;
   background-color: $btn-primary-color;
-  transition: background-color $modal-animation;
 
   &:hover,
   &:focus {
     background-color: $btn-primary-accent-color;
+    transform: translate(10px, 0px) scale(1.15);
   }
 }
 
 .btn--secondary {
   color: $btn-primary-color;
   background-color: $btn-secondary-color;
-  transition: background-color $modal-animation;
 
   &:hover,
   &:focus {
     background-color: $btn-secondary-accent-color;
+    transform: translate(-10px, 0px) scale(1.15);
   }
 }
 
@@ -87,12 +89,13 @@
   border-radius: 50%;
   color: $btn-secondary-color;
   background-color: $btn-primary-color;
-  transition: color $animation, background-color $animation;
+  transition: color $animation, background-color $animation, transform $animation;
 
   &:hover,
   &:focus {
     color: $btn-primary-color;
     background-color: $btn-secondary-color;
+    transform: scale(1.15);
   }
 }
 
