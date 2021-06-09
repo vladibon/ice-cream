@@ -24,39 +24,28 @@ input {
 }
 
 .modal-delivery {
-  width: 100%;
+  position: absolute;
+  left: 50%;
+  min-width: 320px;
+  padding: 36px 14px;
 
   background-color: $primary-bg-color;
-  box-shadow: $site-nav-shadow;
-  border-radius: 4px;
-  transform: translate(0, 0) scaleX(1);
+  box-shadow: $adress-card-shadow;
+  border-radius: 24px;
+
+  transform: translate(-50%, 0) scaleX(1);
   transition: transform $modal-animation;
 
-  @include respond-above($mobile) {
-    position: absolute;
-    top: 94px;
-    left: 50%;
-    transform: translate(-50%, 0) scaleX(1);
-  }
-
-  @include respond-below($tablet) {
-    max-width: 320px;
-    min-height: 758px;
-    padding: 36px 14px;
-  }
-
   @include respond-above($tablet) {
-    top: 208px;
-    max-width: 644px;
-    min-height: 715px;
+    top: 50%;
+    min-width: 644px;
     padding: 40px 90px;
+
+    transform: translate(-50%, -50%) scaleX(1);
   }
 
   @include respond-above($desktop) {
-    top: 50%;
-    transform: translate(-50%, -50%) scaleX(1);
-    max-width: 528px;
-    min-height: 580px;
+    max-width: 644px;
   }
 
   .backdrop-delivery--is-hidden & {
@@ -70,17 +59,6 @@ input {
       transform: translate(-50%, 0) scaleX(0);
     }
   }
-}
-
-.modal-delivery {
-  width: 320px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 36px 14px;
-
-  background-color: $primary-bg-color;
-  box-shadow: $adress-card-shadow;
-  border-radius: 24px;
 }
 
 .modal-delivery__title {
@@ -111,6 +89,15 @@ input {
   color: $main-title-color;
 }
 
+.modal-delivery__br {
+  display: inline-block;
+  width: 100%;
+
+  @include respond-above($tablet) {
+    display: inline;
+  }
+}
+
 .delivery__item {
   position: relative;
   width: 100%;
@@ -118,6 +105,19 @@ input {
 
 .delivery__item--margin {
   margin-bottom: 20px;
+}
+
+.delivery__item--name {
+  @include respond-above($tablet) {
+    width: calc(50% - 10px);
+    margin-right: 20px;
+  }
+}
+
+.delivery__item--phone {
+  @include respond-above($tablet) {
+    width: calc(50% - 10px);
+  }
 }
 
 .delivery__item--flex-ice {
@@ -166,19 +166,16 @@ input {
 }
 
 .delivery__time {
+  width: 100%;
   padding-left: 12px;
 }
 
-.delivery__item--flex-regular {
-  width: 50%;
-}
-
-.delivery__item--flex-fast {
-  width: 50%;
-}
-
-.delivery_time-label {
+.delivery__time-label {
   display: flex;
+}
+
+.delivery__item--flex-two {
+  width: 50%;
 }
 
 .delivery__radio {
@@ -196,6 +193,10 @@ input {
   &:hover,
   &:focus {
     border: none;
+  }
+
+  @include respond-above($tablet) {
+    width: 165px;
   }
 }
 
@@ -223,6 +224,10 @@ input {
   display: inline-flex;
   width: 66%;
   margin-bottom: 24px;
+
+  @include respond-above($tablet) {
+    width: 100%;
+  }
 }
 
 .delivery__btn {

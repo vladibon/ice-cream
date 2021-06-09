@@ -1,5 +1,4 @@
 <div class="backdrop-delivery backdrop-delivery--is-hidden" data-modal-delivery>
-  <!--backdrop-delivery--is-hidden -->
   <div class="modal-delivery">
     <button class="btn-delivery-close btn-close" type="button" data-modal-close-delivery>
       <svg class="btn-delivery-close__icon" width="14" height="14">
@@ -8,23 +7,23 @@
     </button>
 
     <h2 class="modal-delivery__title modal-delivery__title--margin">
-      The best<br />ice cream delivery
+      <span class="modal-delivery__br">The best</span> ice cream delivery
     </h2>
 
     <form name="delivery-form" autocomplete="off">
       <ul class="delivery__list">
-        <li class="delivery__item delivery__item--margin">
-          <label
-            ><span class="delivery__label">Name</span>
+        <li class="delivery__item delivery__item--margin delivery__item--name">
+          <label>
+            <span class="delivery__label">Name</span>
             <input class="delivery__inp" type="text" name="name" />
             <svg class="delivery__icon" width="20" height="20">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </label>
         </li>
-        <li class="delivery__item delivery__item--margin">
-          <label
-            ><span class="delivery__label">Phone</span>
+        <li class="delivery__item delivery__item--margin delivery__item--phone">
+          <label>
+            <span class="delivery__label">Phone</span>
             <input class="delivery__inp" type="tel" name="phone" />
             <svg class="delivery__icon" width="20" height="20">
               <use href="./images/icons.svg#icon-phone"></use>
@@ -64,25 +63,19 @@
             </svg>
           </label>
         </li>
-        <li>
-          <p class="delivery__time">Choose your delivery timing:</p>
+        <li class="delivery__time">
+          <p>Choose your delivery timing:</p>
         </li>
-        <li class="delivery__item delivery__item--margin delivery__item--flex-regular">
-          <label class="delivery_time-label">
+        <li class="delivery__item delivery__item--margin delivery__item--flex-two">
+          <label class="delivery__time-label">
             <input class="delivery__radio" type="radio" checked name="regular" />
-            <span class="chk"
-              >Regular<br />
-              ( 24 hours )</span
-            >
+            <span class="chk"> Regular</span> ( 24 hours )
           </label>
         </li>
-        <li class="delivery__item delivery__item--margin delivery__item--flex-fast">
-          <label class="delivery_time-label">
+        <li class="delivery__item delivery__item--margin delivery__item--flex-two">
+          <label class="delivery__time-label">
             <input class="delivery__radio" type="radio" name="fast" />
-            <span class="chk"
-              >Fast<br />
-              ( 4 hours )</span
-            >
+            <span class="chk"> Fast</span> ( 4 hours )
           </label>
         </li>
         <li class="delivery__item delivery__item--margin delivery__item--flex-total">
