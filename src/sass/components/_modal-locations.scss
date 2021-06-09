@@ -42,19 +42,19 @@
   position: absolute;
   width: 32px;
   height: 32px;
-  top: 8px;
-  right: 8px;
+  top: 15px;
+  right: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: $primary-bg-color;
+  background-color: $btn-secondary-color;
   border: $primary-bg-color;
   border-radius: 50%;
   cursor: pointer;
 
   &:focus,
   &:hover {
-    fill: $main-title-color;
+    fill: $header-main-bg-color;
   }
 }
 
