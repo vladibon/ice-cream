@@ -71,7 +71,7 @@
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    color: #ffffff;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -88,11 +88,19 @@
 }
 .slick-prev:before
 {
-    content: '←';
+    content: '__';
+
+    background-image: url(../images/reviews/circle-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 [dir='rtl'] .slick-prev:before
 {
-    content: '→';
+    content: '__';
+
+    background-image: url(../images/reviews/circle-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .slick-next
@@ -106,11 +114,19 @@
 }
 .slick-next:before
 {
-    content: '→';
+    content: '__';
+
+    background-image: url(../images/reviews/circle-right.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 [dir='rtl'] .slick-next:before
 {
-    content: '←';
+    content: '__';
+
+    background-image: url(../images/reviews/circle-left.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 /* Dots */
@@ -188,17 +204,21 @@
     width: 20px;
     height: 20px;
 
-    content: '●';
+    content: '';
     text-align: center;
 
-    color: #d9d9d9;
+    background-image: url(../images/reviews/big-circle.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 .slick-dots li.slick-active button:before
 {
-    font-size: 15px;
-    content: '▲';
-    color: #d31342;
+    content: '';
+
+    background-image: url(../images/reviews/home.svg);
+    background-repeat: no-repeat;
+    background-position: center;
 }
