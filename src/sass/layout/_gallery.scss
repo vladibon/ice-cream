@@ -2,31 +2,125 @@
   display: flex;
   justify-content: center;
   width: 100%;
-  height: calc(100vw / 3);
-  max-height: 430px;
   
-  background-image: linear-gradient($primary-bg-color 25%, $white-bg-color 25%, $white-bg-color);
-
-  @media screen and (min-width: 1280px) {
-    background-image: linear-gradient($primary-bg-color 172px, $white-bg-color 172px, $white-bg-color);
-  }
+  background-image: linear-gradient($primary-bg-color 40%, $white-bg-color 40%, $white-bg-color);
 }
 
 .gallery__grid {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 0 calc(100vw / 32);
 }
 
 .gallery__item {
-  display: block;
-  padding: 0 calc(100vw / 256);
+  padding: 0 ($mobile / 320);
+
+  @include respond-above($tablet) {
+    padding: 0 ($tablet / 320);
+  }
+
+  @include respond-above($desktop) {
+    padding: 0 ($desktop / 320);
+  }
+
+  &--pt1 {
+    padding-top: (100vw / 25.6);
+
+    @include respond-above($mobile) {
+      padding-top: ($mobile / 25.6);
+    }
+
+    @include respond-above($tablet) {
+      padding-top: ($tablet / 25.6);
+    }
+
+    @include respond-above($desktop) {
+      padding-top: ($desktop / 25.6);
+    }
+  }
+  
+  &--pt2 {
+    padding-top: (100vw / 15);
+
+    @include respond-above($mobile) {
+      padding-top: ($mobile / 15);
+    }
+
+    @include respond-above($tablet) {
+      padding-top: ($tablet / 15);
+    }
+
+    @include respond-above($desktop) {
+      padding-top: ($desktop / 15);
+    }
+  }
+  
+  &--pt3 {
+    padding-top: (100vw / 12.8);
+
+    @include respond-above($mobile) {
+      padding-top: ($mobile / 12.8);
+    }
+
+    @include respond-above($tablet) {
+      padding-top: ($tablet / 12.8);
+    }
+
+    @include respond-above($desktop) {
+      padding-top: ($desktop / 12.8);
+    }
+  }
+  
+  &--pt4 {
+    padding-top: (100vw / 9.14);
+
+    @include respond-above($mobile) {
+      padding-top: ($mobile / 9.14);
+    }
+
+    @include respond-above($tablet) {
+      padding-top: ($tablet / 9.14);
+    }
+
+    @include respond-above($desktop) {
+      padding-top: ($desktop / 9.14);
+    }
+  }
+  
+  &--pt5 {
+    padding-top: (100vw / 8.25);
+
+    @include respond-above($mobile) {
+      padding-top: ($mobile / 8.25);
+    }
+
+    @include respond-above($tablet) {
+      padding-top: ($tablet / 8.25);
+    }
+
+    @include respond-above($desktop) {
+      padding-top: ($desktop / 8.25);
+    }
+  }
 }
 
 .gallery__img {
-  border-radius: calc(100vw / 128);
-  margin: calc(100vw / 128) 0;
+  width: 100%;
+  max-width: ($mobile / 9.2);
+  border-radius: 5px;
+  margin: 2px 0;
+
+  @include respond-above($tablet) {
+    max-width: ($tablet / 9.2);
+    border-radius: 12px;
+    margin: 4px 0;
+  }
+
+  @include respond-above($desktop) {
+    max-width: ($desktop / 9.2);
+    border-radius: 20px;
+    margin: 8px 0;
+  }
+
   box-shadow: $adress-card-shadow;
 
   transform: scale(1);
@@ -38,6 +132,22 @@
     z-index: 2;
     box-shadow: $gallery-shadow;
 
-    transform: scale(1.4);
+    transform: scale(1.3);
+  }
+
+  &--1x {
+    width: 50%;
+  }
+
+  &--2x {
+    max-width: ($mobile / 9.2 * 2);
+  
+    @include respond-above($tablet) {
+      max-width: ($tablet / 9.2 * 2);
+    }
+  
+    @include respond-above($desktop) {
+      max-width: ($desktop / 9.2 * 2);
+    }
   }
 }

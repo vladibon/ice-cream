@@ -60,6 +60,7 @@
     height: 100vh;
     min-height: 360px;
 
+    opacity: 0.9;
     background-color: $site-nav-bg-color;
     box-shadow: $site-nav-shadow;
     transition: transform $modal-animation;
@@ -72,10 +73,23 @@
 
 .site-nav__list {
   @include respond-below($desktop) {
-    position: absolute;
-    top: 136px;
-    left: 0;
+    position: fixed;
+    z-index: 5;
+    right: 0;
+    top: 126px;
     width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: visibility $modal-animation, opacity $modal-animation,
+      transform $modal-animation 30ms;
+
+    .site-nav-backdrop--is-open & {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   @include respond-above($desktop) {
@@ -108,6 +122,7 @@
   font-weight: 700;
   line-height: 1.28;
   color: $white-text-color;
+  transition: transform $modal-animation;
 
   @include respond-below($desktop) {
     font-size: 14px;
@@ -116,63 +131,15 @@
   &--active {
     color: $main-title-color;
   }
-}
 
-// Site Nav Button
-.site-nav-btn {
-  position: absolute;
-  z-index: 5;
-  top: 4px;
-  right: 10px;
-
-  padding: 10px;
-  display: flex;
-  align-items: center;
-
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  opacity: 1;
-  transition: opacity $animation;
-
-  &:active {
-    opacity: 0;
-  }
-
-  &--nav-open {
-    position: fixed;
-    transform: translateY(10px);
-  }
-
-  @include respond-above($tablet) {
-    transform: translateX(-14px);
-
-    &--nav-open {
-      transform: translateY(10px);
-    }
-  }
-
-  @include respond-above($desktop) {
-    display: none;
-  }
-}
-
-.site-nav-btn__icon {
-  .site-nav-btn--nav-open & {
-    display: none;
-  }
-}
-
-.site-nav-btn__icon-close {
-  display: none;
-
-  .site-nav-btn--nav-open & {
-    display: block;
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
   }
 }
 
 // Buy now Button
-.page-header__btn {
+.btn-buy {
   position: absolute;
   width: 160px;
 
@@ -184,7 +151,8 @@
     top: 3px;
     right: 84px;
     opacity: 1;
-    transition: visibility $modal-animation, opacity $modal-animation;
+    transition: visibility $modal-animation, opacity $modal-animation,
+      background-color $modal-animation, transform $modal-animation;
 
     &--nav-open {
       pointer-events: none;
@@ -197,10 +165,20 @@
     top: 2px;
     right: 116px;
   }
+
+  &:hover,
+  &:focus {
+    background-color: $btn-primary-accent-color;
+    transform: scale(1.05);
+  }
+
+  &__icon {
+    margin-left: 10px;
+  }
 }
 
 // Buy now Button Mobile
-.page-header__btn-mob {
+.btn-buy-mob {
   position: fixed;
   z-index: 5;
   top: 62px;
@@ -213,8 +191,8 @@
   visibility: hidden;
   opacity: 0;
   transform: translateX(200px);
-  transition: color $animation, background-color $animation, visibility $modal-animation,
-    opacity $modal-animation, transform $modal-animation;
+  transition: background-color $modal-animation, visibility $modal-animation,
+    opacity $modal-animation, transform $modal-animation 20ms;
 
   &--nav-open {
     visibility: visible;
@@ -223,11 +201,49 @@
     transform: translateX(0);
   }
 
+  &:hover,
+  &:focus {
+    background-color: $btn-primary-accent-color;
+    transform: scale(1.05);
+  }
+
   @include respond-above($desktop) {
     display: none;
   }
 }
 
-.page-header__icon {
-  margin-left: 10px;
+// Scroll to Top Button
+.btn-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+
+  min-width: 40px;
+  padding: 16px 6px;
+
+  background-color: $site-nav-bg-color;
+  fill: $btn-primary-color;
+  outline: none;
+  opacity: 0.5;
+  transition: opacity $modal-animation, transform $modal-animation;
+
+  @include respond-above($tablet) {
+    bottom: 34px;
+    right: 34px;
+    min-width: 48px;
+  }
+
+  @include respond-above($desktop) {
+    bottom: 42px;
+    right: 42px;
+    min-width: 60px;
+    min-height: 80px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+    transform: scale(1.06);
+  }
 }
