@@ -10,7 +10,7 @@
   padding-left: 44px;
   padding-right: 44px;
   border-radius: 24px;
-  transition: visibility $modal-animation, opacity $modal-animation;
+  transition: visibility $modal-animation, opacity $modal-animation, transform $modal-animation;
 
   @include respond-above($tablet) {
     padding-top: 50px;
@@ -50,7 +50,6 @@
     visibility: hidden;
     opacity: 0;
     transform: scale(0.5);
-    transition: visibility $animation, opacity $animation;
   }
 }
 
