@@ -1,0 +1,298 @@
+.section--products {
+  background-color: $white-bg-color;
+  padding-top: 120px;
+  padding-bottom: 100px;
+
+  @include respond-above($tablet) {
+    padding-bottom: 110px;
+  }
+  @include respond-above($desktop) {
+    padding-top: 130px;
+    padding-bottom: 120px;
+  }
+}
+
+.section__label {
+  font-family: $title-font;
+  color: $secondary-title-color;
+
+  margin-bottom: 15px;
+  font-size: 18px;
+  line-height: 1.17;
+  text-align: center;
+  text-transform: uppercase;
+
+  @include respond-above($tablet) {
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.section__title--margin {
+  margin-bottom: 145px;
+
+  text-align: center;
+
+  @include respond-above($tablet) {
+    margin-bottom: 150px;
+  }
+
+  @include respond-above($desktop) {
+    margin-bottom: 260px;
+  }
+}
+
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include respond-above($tablet) {
+    @include grid();
+  }
+}
+
+.products__item {
+  max-width: 330px;
+
+  @include respond-below($tablet) {
+    &:not(:last-child) {
+      margin-bottom: 130px;
+    }
+  }
+  @include respond-above($tablet) {
+    @include grid-item();
+  }
+}
+
+.product {
+  position: relative;
+
+  text-align: center;
+  border-radius: 24px;
+
+  @include respond-below($desktop) {
+    min-height: 485px;
+  }
+
+  &--ice-cream {
+    background-color: $header-main-bg-color;
+  }
+
+  &--ice-cream::before {
+    @extend %befor-mobile;
+
+    background-image: url(/images/products/mobile/products_img1_mobile_@1x.png);
+
+    @include retina-display(2) {
+      background-image: url(/images/products/mobile/products_img1_mobile_@2x.png);
+    }
+
+    @include respond-above($tablet) {
+      width: 220px;
+      height: 226px;
+      top: -21%;
+
+      background-image: url(/images/products/tablet/products_img1_tablet_@1x.png);
+
+      @include retina-display(2) {
+        background-image: url(/images/products/tablet/products_img1_tablet_@2x.png);
+      }
+    }
+
+    @include respond-above($desktop) {
+      width: 335px;
+      height: 335px;
+      top: -40%;
+
+      background-image: url(/images/products/desktop/products_img1_desktop_@1x.png);
+
+      @include retina-display(2) {
+        background-image: url(/images/products/desktop/products_img1_desktop_@2x.png);
+      }
+    }
+  }
+
+  &--ice-coffee {
+    background-color: $brown-card-bg-color;
+  }
+
+  &--ice-coffee::before {
+    @extend %befor-mobile;
+
+    background-image: url(/images/products/mobile/products_img2_mobile_@1x.png);
+
+    @include retina-display(2) {
+      background-image: url(/images/products/mobile/products_img2_mobile_@2x.png);
+    }
+
+    @include respond-above($tablet) {
+      width: 220px;
+      height: 233px;
+
+      background-image: url(/images/products/tablet/products_img2_tablet_@1x.png);
+
+      @include retina-display(2) {
+        background-image: url(/images/products/tablet/products_img2_tablet_@2x.png);
+      }
+    }
+
+    @include respond-above($desktop) {
+      width: 335px;
+      height: 335px;
+      top: -40%;
+
+      background-image: url(/images/products/desktop/products_img2_desktop_@1x.png);
+
+      @include retina-display(2) {
+        background-image: url(/images/products/desktop/products_img2_desktop_@2x.png);
+      }
+    }
+  }
+
+  &--milkshakes {
+    background-color: $green-card-bg-color;
+  }
+
+  &--milkshakes::before {
+    @extend %befor-mobile;
+
+    background-image: url(/images/products/mobile/products_img3_mobile_@1x.png);
+
+    @include retina-display(2) {
+      background-image: url(/images/products/mobile/products_img3_mobile_@2x.png);
+    }
+
+    @include respond-above($tablet) {
+      width: 220px;
+      height: 224px;
+      top: -21%;
+
+      background-image: url(/images/products/tablet/products_img3_tablet_@1x.png);
+
+      @include retina-display(2) {
+        background-image: url(/images/products/tablet/products_img3_tablet_@2x.png);
+      }
+    }
+
+    @include respond-above($desktop) {
+      width: 335px;
+      height: 335px;
+      top: -40%;
+
+      background-image: url(/images/products/desktop/products_img3_desktop_@1x.png);
+
+      @include retina-display(2) {
+        background-image: url(/images/products/desktop/products_img3_desktop_@2x.png);
+      }
+    }
+  }
+}
+
+.product__content {
+  padding-top: 160px;
+  padding-left: 40px;
+  padding-bottom: 40px;
+  padding-right: 40px;
+
+  @include respond-above($tablet) {
+    padding-top: 150px;
+    padding-left: 11px;
+    padding-right: 11px;
+  }
+
+  @include respond-above($desktop) {
+    padding-top: 163px;
+    padding-left: 44px;
+    padding-bottom: 50px;
+    padding-right: 44px;
+  }
+}
+
+.product__title {
+  position: relative;
+  display: inline-flex;
+  margin-bottom: 66px;
+
+  font-family: $title-font;
+  color: $white-text-color;
+
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  @include respond-above($desktop) {
+    margin-bottom: 70px;
+    font-size: 30px;
+    line-height: 1.13;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 53px;
+    left: 50%;
+    transform: translate(-50%);
+
+    width: 26px;
+    height: 6px;
+
+    background-image: url(/images/products/midle-circle.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+
+    @include respond-above($desktop) {
+      top: 65px;
+    }
+  }
+}
+
+.product__text {
+  display: block;
+
+  color: $white-text-color;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+
+  @include respond-above($tablet) {
+    line-height: 1.76;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 16px;
+  }
+
+  &--margin {
+    margin-bottom: 30px;
+
+    @include respond-above($tablet) {
+      margin-bottom: 40px;
+    }
+
+    @include respond-above($desktop) {
+      margin-bottom: 60px;
+    }
+  }
+}
+
+.product__addition {
+  @include respond-above($tablet) {
+    display: none;
+  }
+}
+
+.btn-open--centered {
+  margin-left: auto;
+  margin-right: auto;
+}

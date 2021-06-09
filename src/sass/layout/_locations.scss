@@ -1,0 +1,188 @@
+.locations {
+  padding-top: 45px;
+  padding-bottom: 65px;
+  background-image: linear-gradient($white-bg-color 130px, $primary-bg-color 20px);
+}
+
+.locations__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @include respond-above($tablet) {
+    @include grid();
+  }
+}
+
+.locations__item {
+  max-width: 330px;
+  font-weight: 500;
+  background-color: $white-bg-color;
+  border-radius: 24px;
+
+  box-shadow: $adress-card-shadow;
+
+  @include respond-below($tablet) {
+    padding: 45px 22px;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+  }
+  @include respond-above($tablet) {
+    padding: 50px 32px;
+    @include grid-item();
+  }
+
+  @include respond-above($desktop) {
+    padding: 50px 45px 60px;
+  }
+}
+
+.locations__type {
+  @include respond-above($tablet) {
+    height: 16px;
+    font-size: 12px;
+    margin-bottom: 25px;
+  }
+  @include respond-below($desktop) {
+    height: 28px;
+  }
+  margin-bottom: 30px;
+  line-height: 1.83;
+  text-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: 80px;
+  color: $white-text-color;
+  background-color: $brown-card-bg-color;
+  border-radius: 4px;
+}
+.locations__type-foodtruck {
+  @include respond-above($tablet) {
+    font-size: 12px;
+    height: 16px;
+  }
+  @include respond-below($desktop) {
+    height: 28px;
+  }
+  margin-bottom: 25px;
+  line-height: 1.83;
+  text-align: center;
+  align-items: center;
+  text-transform: uppercase;
+  width: 130px;
+
+  color: $white-text-color;
+  background-color: $green-card-bg-color;
+  border-radius: 4px;
+}
+.locations__title {
+  @include respond-below($tablet) {
+    font-size: 12px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
+  margin-bottom: 10px;
+  line-height: 1.83;
+  font-weight: 700;
+}
+.locations__descr {
+  @include respond-below($tablet) {
+    font-size: 12px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
+  position: relative;
+  line-height: 1.5;
+  color: $gray-text-color;
+}
+.locations__descr::after {
+  @include respond-below($tablet) {
+    margin-top: 25px;
+  }
+  content: '';
+  margin-top: 30px;
+  width: 100%;
+  margin-top: 25px;
+  display: inline-block;
+  border: 1px solid $fill-brackets-color;
+}
+
+.locations__work-day {
+  @include respond-below($tablet) {
+    font-size: 12px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
+  margin-bottom: 0;
+  line-height: 1.83;
+}
+.locations__work-time {
+  @include respond-below($tablet) {
+    font-size: 12px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
+  margin-bottom: 10px;
+  line-height: 1.83;
+  color: $secondary-title-color;
+}
+.locations__contacts-list::before {
+  content: '';
+
+  width: 100%;
+
+  display: inline-block;
+  border: 1px solid $fill-brackets-color;
+}
+.locations__contacts-item {
+  margin-bottom: 0;
+}
+
+.locations__link {
+  @include respond-below($tablet) {
+    font-size: 12px;
+  }
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
+  display: inline-block;
+  margin-bottom: 0;
+  line-height: 1.5;
+  line-height: 115%;
+  color: $gray-text-color;
+}
+
+.locations__btn-list {
+  margin-top: 54px;
+  @include respond-above($tablet) {
+    justify-content: center;
+    display: flex;
+    margin-top: 80px;
+  }
+  @include respond-above($desktop) {
+    justify-content: center;
+    display: flex;
+    margin-top: 86px;
+  }
+}
+.locations__btn-item {
+  @include respond-below($tablet) {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  @include respond-above($tablet) {
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+}
+.locations__btn-item {
+  text-align: center;
+}

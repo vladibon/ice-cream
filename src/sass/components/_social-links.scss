@@ -1,0 +1,54 @@
+.social {
+  display: flex;
+  margin-bottom: 46px;
+  align-items: center;
+  justify-content: flex-end;
+
+  @include respond-above($desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.social__item:not(:last-child) {
+  margin-right: 28px;
+
+  @include respond-above($tablet) {
+    margin-right: 30px;
+  }
+
+  @include respond-above($desktop) {
+    margin-right: 25px;
+  }
+}
+
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: $brand-link-color;
+  transition: background-color $animation, transform $animation;
+
+  @include respond-above($tablet) {
+    width: 34px;
+    height: 34px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $accent-link-color;
+    transform: scale(1.25);
+  }
+}
+
+.social__icon {
+  width: 19px;
+  height: 19px;
+
+  @include respond-above($tablet) {
+    width: 20px;
+    height: 20px;
+  }
+}

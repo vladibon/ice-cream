@@ -1,0 +1,90 @@
+<!-- Header -->
+<header class="page-header" id="page-home">
+  <div class="container page-header__container">
+    <!-- Company`s Logo -->
+    <a class="logo" href="index.html">
+      <svg class="logo__icon" width="50" height="50" aria-label="Logo">
+        <use href="images/icons.svg#logo"></use>
+      </svg>
+      Icecream
+    </a>
+
+    <div class="site-nav-backdrop" data-nav>
+      <!-- Site Navigation -->
+      <nav class="site-nav" id="nav">
+        <ul class="site-nav__list">
+          <li class="site-nav__item">
+            <a class="site-nav__link site-nav__link--active" href="#page-home" data-nav-link-home
+              >Home</a
+            >
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#advantages" data-nav-link-advantages>About us</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#about" data-nav-link-about>How it’s made?</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#products" data-nav-link-products>Our products</a>
+          </li>
+
+          <li class="site-nav__item">
+            <a class="site-nav__link" href="#locations" data-nav-link-locations>Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- Header Buttons -->
+    <div class="page-header__buttons">
+      <!-- Site Nav Button -->
+      <button
+        class="hamburger hamburger--collapse"
+        type="button"
+        aria-expanded="false"
+        aria-controls="nav"
+        data-nav-btn
+      >
+        <span class="hamburger-box" aria-label="Переключатель меню навигации">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+
+      <!-- Buy now Button -->
+      <button class="btn btn--primary btn-buy" type="button" data-buy-btn data-modal-open-delivery>
+        Buy now
+        <svg class="btn-buy__icon" width="6" height="10">
+          <use href="images/icons.svg#buy-btn"></use>
+        </svg>
+      </button>
+
+      <!-- Buy now Button Mobile -->
+      <button
+        class="btn btn--primary btn-buy-mob"
+        type="button"
+        data-buy-btn-mob
+        data-modal-open-mobile-delivery
+      >
+        Buy now
+        <svg class="btn-buy__icon" width="6" height="10">
+          <use href="images/icons.svg#buy-btn"></use>
+        </svg>
+      </button>
+
+      <!-- Scroll to Top Button -->
+      <button
+        class="btn btn--secondary btn-top"
+        id="myBtn"
+        onclick="topFunction()"
+        title="Go to top"
+      >
+        <svg width="30" height="30">
+          <use href="images/icons.svg#circle-up"></use>
+        </svg>
+      </button>
+    </div>
+  </div>
+</header>

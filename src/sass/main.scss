@@ -1,0 +1,25 @@
+@import './utils/variables';
+@import './utils/placeholders';
+@import './utils/mixins';
+@import './utils/common';
+@import './utils/visually-hidden';
+
+@import './components/logo';
+@import './components/hamburger.scss';
+@import './components/buttons';
+@import './components/social-links';
+@import './components/modal-readmore';
+@import './components/modal-buynow';
+@import './components/modal-products';
+@import './components/modal-locations';
+
+@import './layout/container';
+@import './layout/page-header';
+@import './layout/hero.scss';
+@import './layout/products.scss';
+@import './layout/about.scss';
+@import './layout/advantages.scss';
+@import './layout/gallery.scss';
+@import './layout/customer-reviews.scss';
+@import './layout/locations.scss';
+@import './layout/page-footer.scss';

@@ -1,0 +1,143 @@
+.footer {
+  padding-top: 50px;
+  background-color: $primary-bg-color;
+
+  @include respond-above($tablet) {
+    padding-top: 100px;
+  }
+}
+
+.footer__box {
+  @include respond-above($tablet) {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+}
+
+.footer__content {
+  @include respond-below($tablet) {
+    margin-bottom: 43px;
+    max-width: 230px;
+  }
+
+  @include respond-above($tablet) {
+    padding-bottom: 91px;
+    max-width: 340px;
+  }
+
+  @include respond-above($desktop) {
+    padding-bottom: 97px;
+    max-width: 100%;
+  }
+}
+
+.footer__text {
+  margin-bottom: 17px;
+  font-family: $title-font;
+  font-size: 18px;
+  line-height: 1.17;
+  text-transform: uppercase;
+
+  color: $secondary-title-color;
+
+  @include respond-above($tablet) {
+    margin-bottom: 16px;
+    font-size: 26px;
+    line-height: 1.15;
+  }
+
+  @include respond-above($desktop) {
+    margin-bottom: 15px;
+    font-size: 30px;
+    line-height: 1.13;
+  }
+
+  &--accent {
+    margin-bottom: 0;
+    font-family: $title-font;
+    font-size: 34px;
+    line-height: 1.15;
+    text-transform: uppercase;
+
+    color: $main-title-color;
+
+    @include respond-above($tablet) {
+      font-size: 48px;
+      line-height: 1.15;
+      letter-spacing: 0.06em;
+    }
+
+    @include respond-above($desktop) {
+      font-size: 58px;
+      line-height: 1.14;
+    }
+  }
+}
+
+.footer__socials {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  @include respond-below($tablet) {
+    padding-bottom: 43px;
+  }
+}
+
+.footer__info {
+  margin-left: auto;
+  margin-bottom: 0;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 1.83;
+
+  @include respond-above($tablet) {
+    font-size: 14px;
+    line-height: 1.86;
+    letter-spacing: 0.01em;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.02em;
+  }
+}
+
+.footer__contact {
+  color: $main-title-color;
+}
+
+.copyright {
+  border-top: $main-border;
+}
+
+.copyright__text {
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 0;
+  padding-top: 22px;
+  padding-bottom: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  color: $gray-text-color;
+
+  @include respond-below($tablet) {
+    max-width: 150px;
+  }
+
+  @include respond-above($tablet) {
+    text-align: center;
+    padding-top: 29px;
+    padding-bottom: 18px;
+  }
+
+  @include respond-above($desktop) {
+    text-align: center;
+    padding-top: 9px;
+    padding-bottom: 10px;
+  }
+}

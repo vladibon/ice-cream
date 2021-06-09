@@ -1,0 +1,74 @@
+html {
+  scroll-behavior: smooth;
+}
+
+.page {
+  font-family: $main-font;
+  font-size: 16px;
+  line-height: 1.76;
+  color: $black-text-color;
+  background-color: $white-text-color;
+
+  @include respond-below($desktop) {
+    &--nav-open {
+      overflow: hidden;
+    }
+  }
+
+  &__modal-open {
+    overflow: hidden;
+  }
+}
+
+ul {
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+p {
+  margin-top: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.section__title {
+  font-weight: 400;
+  font-size: 34px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  font-family: $title-font;
+  color: $main-title-color;
+
+  @include respond-above($tablet) {
+    font-size: 48px;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 58px;
+    line-height: 1.14;
+    letter-spacing: 0.06em;
+  }
+}

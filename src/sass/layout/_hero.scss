@@ -1,0 +1,320 @@
+.hero {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 195px;
+  padding-bottom: 160px;
+  background-color: $header-main-bg-color;
+  overflow: hidden;
+
+  @include respond-above($tablet) {
+    padding-top: 100px;
+    padding-bottom: 34px;
+  }
+
+  @include respond-above($desktop) {
+    padding-top: 170px;
+    padding-bottom: 56px;
+  }
+}
+
+.container--hero {
+  position: relative;
+}
+.container--hero {
+  @include respond-above($tablet) {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+}
+
+.hero__wrapper {
+  z-index: 2;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+// Hero section elements
+.hero__title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 1.16;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $white-text-color;
+
+  @include respond-above($tablet) {
+    font-size: 22px;
+    line-height: 1.14;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 38px;
+    line-height: 1.16;
+    margin-bottom: 25px;
+  }
+}
+
+.hero__title--accent {
+  font-size: 48px;
+  line-height: 0.96;
+  color: $main-title-color;
+
+  @include respond-above($tablet) {
+    font-size: 34px;
+    line-height: 0.9;
+  }
+
+  @include respond-above($desktop) {
+    font-size: 58px;
+  }
+}
+
+.btn--hero {
+  display: flex;
+}
+
+.hero-links {
+  display: flex;
+
+  @include respond-above($tablet) {
+    margin-bottom: 66px;
+  }
+
+  @include respond-above($desktop) {
+    margin-bottom: 112px;
+  }
+}
+
+.hero-links__item:not(:last-child) {
+  margin-right: 8px;
+}
+
+.extra-info {
+  display: none;
+
+  @include respond-above($tablet) {
+    display: block;
+    width: 115px;
+    margin-left: 120px;
+
+    font-size: 8px;
+    line-height: 1.5;
+    color: $white-text-color;
+  }
+
+  @include respond-above($desktop) {
+    width: 200px;
+    font-size: 14px;
+    line-height: 1.4;
+    margin-left: 180px;
+  }
+}
+
+.extra-info__link {
+  width: 18px;
+  height: 18px;
+
+  @include respond-above($desktop) {
+    width: 26px;
+    height: 26px;
+  }
+}
+
+.store-list {
+  display: none;
+
+  @include respond-above($tablet) {
+    display: block;
+  }
+}
+
+.store-list__item {
+  position: relative;
+
+  top: -8px;
+  right: 0px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background-color: $white-bg-color;
+
+  @include respond-above($desktop) {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+.store-list__item:not(:last-child) {
+  margin-bottom: 40px;
+
+  @include respond-above($desktop) {
+    margin-bottom: 62px;
+  }
+}
+
+.store-list__wrapper {
+  position: absolute;
+  right: 6px;
+  width: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.store-list__number {
+  font-family: $title-font;
+  font-size: 28px;
+  line-height: 1.15;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $main-title-color;
+  margin-bottom: 0;
+
+  @include respond-above($desktop) {
+    font-size: 46px;
+  }
+}
+
+.store-list__name {
+  font-size: 8px;
+  color: $white-text-color;
+  margin-bottom: 0;
+
+  @include respond-above($desktop) {
+    font-size: 14px;
+  }
+}
+
+// Images
+.hero__image--main {
+  position: absolute;
+  display: block;
+  right: -62px;
+  bottom: -85px;
+  width: 346px;
+  height: 346px;
+  border-radius: 50%;
+  background-color: $header-circle-bg-color;
+
+  @include respond-above($tablet) {
+    width: 324px;
+    height: 324px;
+    left: 310px;
+    bottom: 12px;
+  }
+
+  @include respond-above($desktop) {
+    width: 538px;
+    height: 538px;
+    left: 475px;
+    bottom: 19px;
+  }
+}
+
+.hero__image--main::after {
+  content: '';
+  display: block;
+  @extend %bgr-image-absolute;
+  left: 50%;
+  bottom: -75px;
+  transform: translate(-50%, 0);
+  width: 171px;
+  height: 410px;
+
+  background-image: url(../images/hero/mobile/hero1_mobile_@1x.png);
+
+  @include retina-display(2) {
+    background-image: url(../images/hero/mobile/hero1_mobile_@2x.png);
+  }
+
+  @include respond-above($tablet) {
+    background-image: url(../images/hero/tablet/hero1_tablet_@1x.png);
+    left: 45%;
+    bottom: -46px;
+    width: 143px;
+    height: 336px;
+
+    @include retina-display(2) {
+      background-image: url(../images/hero/tablet/hero1_tablet_@2x.png);
+    }
+  }
+
+  @include respond-above($desktop) {
+    background-image: url(../images/hero/desktop/hero1_desktop_@1x.png);
+    bottom: -75px;
+    width: 236px;
+    height: 557px;
+
+    @include retina-display(2) {
+      background-image: url(../images/hero/desktop/hero1_desktop_@2x.png);
+    }
+  }
+}
+
+.hero__image--left {
+  @include respond-below($tablet) {
+    display: none;
+  }
+
+  @extend %bgr-image-absolute;
+  left: 35px;
+  bottom: -6px;
+  width: 124px;
+  height: 126px;
+
+  background-image: url(../images/hero/tablet/hero3_tablet_@1x.png);
+
+  @include retina-display(2) {
+    background-image: url(../images/hero/tablet/hero3_tablet_@2x.png);
+  }
+
+  @include respond-above($desktop) {
+    background-image: url(../images/hero/desktop/hero3_desktop_@1x.png);
+    bottom: -11px;
+    left: 77px;
+    width: 188px;
+    height: 191px;
+
+    @include retina-display(2) {
+      background-image: url(../images/hero/desktop/hero3_desktop_@2x.png);
+    }
+  }
+}
+
+.hero__image--right {
+  @include respond-below($tablet) {
+    display: none;
+  }
+
+  @extend %bgr-image-absolute;
+  right: 35px;
+  bottom: -34px;
+  width: 168px;
+  height: 133px;
+  background-image: url(../images/hero/tablet/hero2_tablet_@1x.png);
+
+  @include retina-display(2) {
+    background-image: url(../images/hero/tablet/hero2_tablet_@2x.png);
+  }
+
+  @include respond-above($desktop) {
+    background-image: url(../images/hero/desktop/hero2_desktop_@1x.png);
+    right: 109px;
+    bottom: -56px;
+    width: 293px;
+    height: 232px;
+
+    @include retina-display(2) {
+      background-image: url(../images/hero/desktop/hero2_desktop_@2x.png);
+    }
+  }
+}

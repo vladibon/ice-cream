@@ -1,0 +1,249 @@
+.page-header {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  padding-top: 10px;
+
+  @include respond-above($tablet) {
+    padding-top: 24px;
+  }
+
+  @include respond-above($desktop) {
+    padding-top: 38px;
+  }
+}
+
+.page-header__container {
+  position: relative;
+
+  @include respond-above($desktop) {
+    padding-left: 46px;
+    display: flex;
+  }
+}
+
+.site-nav-backdrop {
+  @include respond-below($desktop) {
+    position: fixed;
+    z-index: 4;
+    top: 0;
+    right: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    background-color: $backdrop-color;
+    overflow-y: scroll;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility $modal-animation, opacity $modal-animation;
+
+    &--is-open {
+      visibility: visible;
+      opacity: 1;
+      pointer-events: initial;
+    }
+  }
+}
+
+// Site Navigation
+.site-nav {
+  @include respond-below($desktop) {
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translateX(200px);
+
+    width: 100vw;
+    max-width: 250px;
+    height: 100vh;
+    min-height: 360px;
+
+    opacity: 0.9;
+    background-color: $site-nav-bg-color;
+    box-shadow: $site-nav-shadow;
+    transition: transform $modal-animation;
+
+    .site-nav-backdrop--is-open & {
+      transform: translateX(0);
+    }
+  }
+}
+
+.site-nav__list {
+  @include respond-below($desktop) {
+    position: fixed;
+    z-index: 5;
+    right: 0;
+    top: 126px;
+    width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: visibility $modal-animation, opacity $modal-animation,
+      transform $modal-animation 30ms;
+
+    .site-nav-backdrop--is-open & {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @include respond-above($desktop) {
+    display: flex;
+  }
+}
+
+.site-nav__item {
+  @include respond-below($desktop) {
+    padding-left: 34px;
+    border-bottom: $site-nav-border;
+  }
+
+  &:nth-child(1) {
+    @include respond-below($desktop) {
+      border-top: $site-nav-border;
+    }
+  }
+
+  @include respond-above($desktop) {
+    margin-right: 35px;
+  }
+}
+
+.site-nav__link {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: block;
+
+  font-weight: 700;
+  line-height: 1.28;
+  color: $white-text-color;
+  transition: transform $modal-animation;
+
+  @include respond-below($desktop) {
+    font-size: 14px;
+  }
+
+  &--active {
+    color: $main-title-color;
+  }
+
+  &:hover,
+  &:focus {
+    transform: scale(1.05);
+  }
+}
+
+// Buy now Button
+.btn-buy {
+  position: absolute;
+  width: 160px;
+
+  @include respond-below($tablet) {
+    display: none;
+  }
+
+  @include respond-between($tablet, $desktop) {
+    top: 3px;
+    right: 84px;
+    opacity: 1;
+    transition: visibility $modal-animation, opacity $modal-animation,
+      background-color $modal-animation, transform $modal-animation;
+
+    &--nav-open {
+      pointer-events: none;
+      visibility: hidden;
+      opacity: 0;
+    }
+  }
+
+  @include respond-above($desktop) {
+    top: 2px;
+    right: 116px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $btn-primary-accent-color;
+    transform: scale(1.05);
+  }
+
+  &__icon {
+    margin-left: 10px;
+  }
+}
+
+// Buy now Button Mobile
+.btn-buy-mob {
+  position: fixed;
+  z-index: 5;
+  top: 62px;
+  right: 34px;
+
+  width: calc(100% - 68px);
+  max-width: 182px;
+  pointer-events: none;
+
+  visibility: hidden;
+  opacity: 0;
+  transform: translateX(200px);
+  transition: background-color $modal-animation, visibility $modal-animation,
+    opacity $modal-animation, transform $modal-animation 20ms;
+
+  &--nav-open {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: initial;
+    transform: translateX(0);
+  }
+
+  &:hover,
+  &:focus {
+    background-color: $btn-primary-accent-color;
+    transform: scale(1.05);
+  }
+
+  @include respond-above($desktop) {
+    display: none;
+  }
+}
+
+// Scroll to Top Button
+.btn-top {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 3;
+
+  min-width: 40px;
+  padding: 16px 6px;
+
+  background-color: $site-nav-bg-color;
+  fill: $btn-primary-color;
+  outline: none;
+  opacity: 0.5;
+  transition: opacity $modal-animation, transform $modal-animation;
+
+  @include respond-above($tablet) {
+    bottom: 34px;
+    right: 34px;
+    min-width: 48px;
+  }
+
+  @include respond-above($desktop) {
+    bottom: 42px;
+    right: 42px;
+    min-width: 60px;
+    min-height: 80px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+    transform: scale(1.06);
+  }
+}
