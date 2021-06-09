@@ -1,4 +1,4 @@
-.backdrop {
+.backdrop-locations {
   position: fixed;
   top: 0;
   left: 0;
@@ -7,20 +7,15 @@
   background-color: rgba(0, 0, 0, 0.1);
 
   opacity: 1;
-  //transition: visibility $animation, opacity $animation;
+  transition: visibility $animation, opacity $animation;
+  &--is-hidden {
+    overflow-y: scroll;
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
-.is-hidden {
-  overflow-y: scroll;
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
-}
-
-.backdrop.is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
 .modal-locations {
   @include respond-below($tablet) {
     width: 100%;
@@ -74,7 +69,7 @@
   letter-spacing: 0.04em;
   color: $main-title-color;
   margin-bottom: 16px;
-  @include respond-between($breakpoint-lower, $breakpoint-upper) {
+  @include respond-between($tablet, $desktop) {
     font-family: $title-font;
     font-size: 24px;
     line-height: 1.13;
