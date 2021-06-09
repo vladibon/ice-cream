@@ -11,7 +11,7 @@
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    document.body.classList.toggle('page__modal-open-delivery');
+    document.body.classList.toggle('page__modal-open');
     refs.modal.classList.toggle('backdrop-delivery--is-hidden');
   }
 })();
