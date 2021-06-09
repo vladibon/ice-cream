@@ -60,6 +60,7 @@
     height: 100vh;
     min-height: 360px;
 
+    opacity: 0.9;
     background-color: $site-nav-bg-color;
     box-shadow: $site-nav-shadow;
     transition: transform $modal-animation;
@@ -133,7 +134,7 @@
 
   &:hover,
   &:focus {
-    transform: scale(1.04);
+    transform: scale(1.05);
   }
 }
 
@@ -168,7 +169,7 @@
   &:hover,
   &:focus {
     background-color: $btn-primary-accent-color;
-    transform: scale(1.04);
+    transform: scale(1.05);
   }
 
   &__icon {
@@ -203,7 +204,7 @@
   &:hover,
   &:focus {
     background-color: $btn-primary-accent-color;
-    transform: scale(1.04);
+    transform: scale(1.05);
   }
 
   @include respond-above($desktop) {
@@ -216,16 +217,33 @@
   display: none;
   position: fixed;
   bottom: 20px;
-  right: 30px;
+  right: 20px;
   z-index: 3;
 
-  padding: 12px 20px;
+  min-width: 40px;
+  padding: 16px 6px;
+
+  background-color: $site-nav-bg-color;
+  fill: $btn-primary-color;
   outline: none;
-  opacity: 0.6;
+  opacity: 0.5;
   transition: opacity $modal-animation, transform $modal-animation;
 
+  @include respond-above($tablet) {
+    bottom: 34px;
+    right: 34px;
+    min-width: 48px;
+  }
+
+  @include respond-above($desktop) {
+    bottom: 42px;
+    right: 42px;
+    min-width: 60px;
+    min-height: 80px;
+  }
+
   &:hover {
-    opacity: 0.7;
-    transform: scale(1.04);
+    opacity: 0.6;
+    transform: scale(1.06);
   }
 }
