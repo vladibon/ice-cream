@@ -72,10 +72,23 @@
 
 .site-nav__list {
   @include respond-below($desktop) {
-    position: absolute;
-    top: 136px;
-    left: 0;
+    position: fixed;
+    z-index: 5;
+    right: 0;
+    top: 126px;
     width: 100%;
+
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(200px);
+    transition: visibility $modal-animation, opacity $modal-animation,
+      transform $modal-animation 30ms;
+
+    .site-nav-backdrop--is-open & {
+      visibility: visible;
+      opacity: 1;
+      transform: translateX(0);
+    }
   }
 
   @include respond-above($desktop) {
@@ -162,7 +175,7 @@
   opacity: 0;
   transform: translateX(200px);
   transition: background-color $modal-animation, visibility $modal-animation,
-    opacity $modal-animation, transform $modal-animation;
+    opacity $modal-animation, transform $modal-animation 20ms;
 
   &--nav-open {
     visibility: visible;
