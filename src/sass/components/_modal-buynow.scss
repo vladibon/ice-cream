@@ -21,7 +21,6 @@
 }
 
 .modal-delivery {
-  position: relative;
   width: 100%;
 
   background-color: $primary-bg-color;
@@ -29,10 +28,6 @@
   border-radius: 4px;
   transform: translate(0, 0) scaleX(1);
   transition: transform $modal-animation;
-
-  @include respond-below($mobile) {
-    margin: 0 auto;
-  }
 
   @include respond-above($mobile) {
     position: absolute;
@@ -74,15 +69,6 @@
   }
 }
 
-.btn-close {
-  border-style: none;
-  border-radius: 50%;
-}
-
-.btn-close__icon {
-  fill: #d41443;
-}
-
 .modal-delivery {
   width: 320px;
   margin-left: auto;
@@ -106,11 +92,13 @@
   color: #d41443;
 }
 
+.modal-delivery__title--margin {
+  margin-bottom: 16px;
+}
+
 .delivery__list {
   display: flex;
   flex-wrap: wrap;
-
-  height: 40px;
 
   font-weight: 500;
   font-size: 14px;
@@ -120,8 +108,22 @@
   color: #d41443;
 }
 
+.delivery__item {
+  width: 100%;
+}
+
+.delivery__label {
+  display: block;
+  margin-left: 12px;
+  margin-bottom: 10px;
+}
+
 .delivery__inp {
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  border: none;
   background-color: $white-bg-color;
-  box-shadow: $input-shadow;
+  box-shadow: $modal-elements-shadow;
   border-radius: 16px;
 }

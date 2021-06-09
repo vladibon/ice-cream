@@ -38,25 +38,6 @@
     min-height: 581px;
   }
 }
-.btn-close {
-  position: absolute;
-  width: 32px;
-  height: 32px;
-  top: 8px;
-  right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $white-bg-color;
-  border: 1px solid rgba(0, 0, 0, 0.1);
-  border-radius: 50%;
-  cursor: pointer;
-
-  &:focus,
-  &:hover {
-    fill: $btn-secondary-color;
-  }
-}
 
 .modal-locations__container {
   padding: 40px;

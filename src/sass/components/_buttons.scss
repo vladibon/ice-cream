@@ -102,3 +102,26 @@
 .btn-open__icon {
   fill: currentColor;
 }
+
+.btn-close {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  top: 16px;
+  right: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $btn-primary-color;
+  box-shadow: $modal-elements-shadow;
+  stroke: $accent-link-color;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:focus,
+  &:hover {
+    background-color: $btn-secondary-color;
+    stroke: $white-bg-color;
+  }
+}

@@ -1,18 +1,21 @@
 <div class="backdrop-delivery backdrop-delivery--is-hidden" data-modal-delivery>
+  <!--backdrop-delivery--is-hidden -->
   <div class="modal-delivery">
-    <button class="btn-close" type="button" data-modal-close-delivery>
-      <svg class="btn-close__icon" width="14" height="14">
+    <button class="btn-delivery-close btn-close" type="button" data-modal-close-delivery>
+      <svg class="btn-delivery-close__icon" width="14" height="14">
         <use href="images/icons.svg#close-menu"></use>
       </svg>
     </button>
 
-    <h2 class="modal-delivery__title">The best ice cream delivery</h2>
+    <h2 class="modal-delivery__title modal-delivery__title--margin">
+      The best<br />ice cream delivery
+    </h2>
 
     <form name="form-delivery" autocomplete="off">
       <ul class="delivery__list">
         <li class="delivery__item">
-          <label>
-            Name
+          <label
+            ><span class="delivery__label">Name</span>
             <input class="delivery__inp" type="text" name="name" />
             <svg class="modal__icon" width="18" height="18">
               <use href="#"></use>
@@ -20,8 +23,8 @@
           </label>
         </li>
         <li class="delivery__item">
-          <label>
-            Phone
+          <label
+            ><span class="delivery__label"></span> Phone
             <input class="delivery__inp" type="tel" name="phone" />
             <svg class="modal__icon" width="18" height="18">
               <use href="#"></use>
@@ -29,8 +32,8 @@
           </label>
         </li>
         <li class="delivery__item">
-          <label>
-            Address
+          <label
+            ><span class="delivery__label"></span> Address
             <input class="delivery__inp" type="text" name="address" />
             <svg class="modal__icon" width="18" height="18">
               <use href="#"></use>
@@ -38,8 +41,8 @@
           </label>
         </li>
         <li class="delivery__item">
-          <label>
-            Ice cream flavor
+          <label
+            ><span class="delivery__label"></span> Ice cream flavor
             <select class="delivery__inp" name="flavor">
               <option value="Chocolate-vanilla">Chocolate-vanilla</option>
               <option value="Strawberry-kiwi">Strawberry-kiwi</option>
@@ -53,8 +56,8 @@
           </label>
         </li>
         <li class="delivery__item">
-          <label>
-            Amount, kg
+          <label
+            ><span class="delivery__label"></span> Amount, kg
             <input class="delivery__inp" type="number" name="amount" />
             <svg class="modal__icon" width="18" height="18">
               <use href="#"></use>
@@ -65,20 +68,22 @@
           <p>Choose your delivery timing:</p>
         </li>
         <li class="delivery__item">
-          <label>
+          <label
+            ><span class="delivery__label"></span>
             <input class="delivery__radio" type="radio" checked name="regular" />
             <span class="chk">Regular ( 24 hours )</span>
           </label>
         </li>
         <li class="delivery__item">
-          <label>
+          <label
+            ><span class="delivery__label"></span>
             <input class="delivery__radio" type="radio" name="fast" />
             <span class="chk">Fast ( 4 hours )</span>
           </label>
         </li>
         <li class="delivery__item">
-          <label>
-            Total:
+          <label
+            ><span class="delivery__label"></span> Total:
             <input class="delivery__inp" type="number" name="email" />
             <svg class="modal__icon" width="18" height="18">
               <use href="#"></use>
@@ -86,9 +91,9 @@
           </label>
         </li>
         <li class="delivery__item">
-          <label>
-            Enter your card number
-            <input class="modal__inp" type="number" name="email" />
+          <label
+            ><span class="delivery__label"></span> Enter your card number
+            <input class="delivery__inp" type="number" name="email" />
             <svg class="modal__icon" width="18" height="18">
               <use href="#"></use>
             </svg>
@@ -101,12 +106,11 @@
               <use href=""></use>
             </svg>
             <span class="check__bord"></span>
-            Соглашаюсь с рассылкой и принимаю&ensp;
-            <a class="check__link" href="">Условия договора</a>
+            I want to pay cash when my order arrives
           </label>
         </li>
       </ul>
-      <button class="btn btn--submit" type="submit">Order</button>
+      <!-- <button class="btn2 btn--submit2" type="submit">Order</button> -->
     </form>
   </div>
 </div>

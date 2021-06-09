@@ -13,8 +13,8 @@
 <path d="M0 13H20" stroke="#D41443"/>
 </symbol>
 <symbol id="close-menu" viewBox="0 0 16 16">
-<path d="M1.25928 1L14.7408 15" stroke="white"/>
-<path d="M1 14.7407L15 1.25924" stroke="white"/>
+<path d="M1.25928 1L14.7408 15"/>
+<path d="M1 14.7407L15 1.25924"/>
 </symbol>
 <symbol id="buy-btn" viewBox="0 0 6 10" fill="none">
 <path d="M1 1L5 5L1 9" stroke="#D41443" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
