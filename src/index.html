@@ -17,6 +17,8 @@
       integrity="sha512-ISS7cAi1PEhQ8jnbJpJZMd29NlhNj4AWYyLOSp2CE/CsHxTCu+r+t0D2yoJudVrd0/8fTVPUVDzY5Tvli75u/g=="
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" type="text/css" href="./slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="./slick/slick-theme.css"/>
   </head>
   <body class="page" data-nav-page modal-open>
     <include src="./partials/page-header.html"></include>
@@ -42,5 +44,16 @@
     <script src="./js/modal-products.js"></script>
     <script src="./js/modal-buynow.js"></script>
     <script src="./js/modal-locations.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="./slick/slick.min.js"></script>
+    <!-- <script src="./js/slick-script.js"></script> -->
+    <script>
+      $(document).ready(function(){
+        $('.your-class').slick({
+          setting-name: setting-value
+        });
+      });
+    </script>    
   </body>
 </html>
