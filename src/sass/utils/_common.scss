@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .page {
   font-family: $main-font;
   font-size: 16px;
@@ -5,11 +9,15 @@
   color: $black-text-color;
   background-color: $white-text-color;
 
-  // @include respond-below($desktop) {
-  //   &--nav-open {
-  //     overflow: hidden;
-  //   }
-  // }
+  @include respond-below($desktop) {
+    &--nav-open {
+      overflow: hidden;
+    }
+  }
+
+  &__modal-open {
+    overflow: hidden;
+  }
 }
 
 ul {

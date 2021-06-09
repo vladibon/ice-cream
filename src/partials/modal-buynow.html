@@ -1,0 +1,112 @@
+<div class="backdrop-delivery backdrop-delivery--is-hidden" data-modal-delivery>
+  <div class="modal-delivery">
+    <button class="btn-close" type="button" data-modal-close-delivery>
+      <svg class="btn-close__icon" width="14" height="14">
+        <use href="images/icons.svg#close-menu"></use>
+      </svg>
+    </button>
+
+    <h2 class="modal-delivery__title">The best ice cream delivery</h2>
+
+    <form name="form-delivery" autocomplete="off">
+      <ul class="delivery__list">
+        <li class="delivery__item">
+          <label>
+            Name
+            <input class="delivery__inp" type="text" name="name" />
+            <svg class="modal__icon" width="18" height="18">
+              <use href="#"></use>
+            </svg>
+          </label>
+        </li>
+        <li class="delivery__item">
+          <label>
+            Phone
+            <input class="delivery__inp" type="tel" name="phone" />
+            <svg class="modal__icon" width="18" height="18">
+              <use href="#"></use>
+            </svg>
+          </label>
+        </li>
+        <li class="delivery__item">
+          <label>
+            Address
+            <input class="delivery__inp" type="text" name="address" />
+            <svg class="modal__icon" width="18" height="18">
+              <use href="#"></use>
+            </svg>
+          </label>
+        </li>
+        <li class="delivery__item">
+          <label>
+            Ice cream flavor
+            <select class="delivery__inp" name="flavor">
+              <option value="Chocolate-vanilla">Chocolate-vanilla</option>
+              <option value="Strawberry-kiwi">Strawberry-kiwi</option>
+              <option value="Banana-caramel">Banana-caramel</option>
+              <option value="Pistachio">Pistachio</option>
+              <option value="Brendy-cherry">Brendy-cherry</option>
+            </select>
+            <svg class="modal__icon" width="18" height="18">
+              <use href="#"></use>
+            </svg>
+          </label>
+        </li>
+        <li class="delivery__item">
+          <label>
+            Amount, kg
+            <input class="delivery__inp" type="number" name="amount" />
+            <svg class="modal__icon" width="18" height="18">
+              <use href="#"></use>
+            </svg>
+          </label>
+        </li>
+        <li class="delivery__item">
+          <p>Choose your delivery timing:</p>
+        </li>
+        <li class="delivery__item">
+          <label>
+            <input class="delivery__radio" type="radio" checked name="regular" />
+            <span class="chk">Regular ( 24 hours )</span>
+          </label>
+        </li>
+        <li class="delivery__item">
+          <label>
+            <input class="delivery__radio" type="radio" name="fast" />
+            <span class="chk">Fast ( 4 hours )</span>
+          </label>
+        </li>
+        <li class="delivery__item">
+          <label>
+            Total:
+            <input class="delivery__inp" type="number" name="email" />
+            <svg class="modal__icon" width="18" height="18">
+              <use href="#"></use>
+            </svg>
+          </label>
+        </li>
+        <li class="delivery__item">
+          <label>
+            Enter your card number
+            <input class="modal__inp" type="number" name="email" />
+            <svg class="modal__icon" width="18" height="18">
+              <use href="#"></use>
+            </svg>
+          </label>
+        </li>
+        <li>
+          <label class="check">
+            <input class="check__inp" type="checkbox" name="consent" value="" />
+            <svg class="check__icon" width="16" height="16">
+              <use href=""></use>
+            </svg>
+            <span class="check__bord"></span>
+            Соглашаюсь с рассылкой и принимаю&ensp;
+            <a class="check__link" href="">Условия договора</a>
+          </label>
+        </li>
+      </ul>
+      <button class="btn btn--submit" type="submit">Order</button>
+    </form>
+  </div>
+</div>
