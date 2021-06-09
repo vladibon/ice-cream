@@ -1,4 +1,4 @@
-.backdrop {
+.backdrop-readmore {
   position: fixed;
   top: 0;
   left: 0;
@@ -10,19 +10,19 @@
   //transition: visibility $animation, opacity $animation;
 }
 
-.is-hidden {
+.backdrop-readmore--is-hidden {
   overflow-y: scroll;
   pointer-events: none;
   visibility: hidden;
   opacity: 0;
 }
 
-.backdrop.is-hidden {
+.backdrop-readmore.backdrop-readmore--is-hidden {
   opacity: 0;
   pointer-events: none;
 }
 .modal {
-  @include respond-below($tablet) {
+  @include respond-below($mobile) {
     width: 100%;
   }
   position: absolute;
@@ -61,7 +61,22 @@
     fill: $btn-secondary-color;
   }
 }
+
+.modal {
+  width: 640px;
+  height: 742px;
+  border-radius: 16px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #fdced9 100%);
+}
 .modal-section {
+  position: relative;
+  width: 540px;
+  height: 650px;
+  left: 50px;
+  top: 48px;
+
+  text-align: center;
   background: rgba(255, 255, 255, 0.75);
   box-shadow: $adress-card-shadow;
   border-radius: 16px;
@@ -70,6 +85,10 @@
   font-family: $title-font;
   font-style: normal;
   font-weight: normal;
+  margin-bottom: 25px;
+  padding-top: 40px;
+  padding-left: 49px;
+  padding-right: 49px;
   font-size: 30px;
   line-height: 1.13;
   text-align: center;
@@ -85,6 +104,7 @@
   font-size: 16px;
   line-height: 1.76;
   letter-spacing: 0.04em;
-
+  padding-left: 67px;
+  padding-right: 49px;
   color: $black-text-color;
 }
