@@ -4,56 +4,41 @@
   background-image: linear-gradient($white-bg-color 130px, $primary-bg-color 20px);
 }
 
-.container__locations {
-  @include respond-below($tablet) {
-    width: 100%;
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-}
 .locations__list {
-  @include respond-above($tablet) {
-    display: flex;
-    margin: -10px;
-  }
-}
-.locations__item {
-  @include respond-below($tablet) {
-    padding: 45px 20px;
-    width: 220px;
-  }
-  @include respond-below($desktop) {
-    padding: 50px 32px;
-  }
-  @include respond-above($tablet) {
-    @include grid-item();
-  }
-  padding: 50px 45px 60px 45px;
-  border-radius: 30px;
-  background-color: $white-bg-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 
-  box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
+  @include respond-above($tablet) {
+    @include grid();
+  }
 }
+
 .locations__item {
+  max-width: 330px;
+  font-weight: 500;
+  background-color: $white-bg-color;
+  border-radius: 24px;
+
+  box-shadow: $adress-card-shadow;
+
   @include respond-below($tablet) {
+    padding: 45px 22px;
+
     &:not(:last-child) {
       margin-bottom: 20px;
     }
-    margin-left: auto;
-    margin-right: auto;
   }
-  @include respond-between($tablet, $desktop) {
-    &:not(:last-child) {
-      margin-right: 20px;
-      max-width: 330px;
-    }
+  @include respond-above($tablet) {
+    padding: 50px 32px;
+    @include grid-item();
   }
+
   @include respond-above($desktop) {
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    padding: 50px 45px 60px;
   }
 }
+
 .locations__type {
   @include respond-above($tablet) {
     height: 16px;
@@ -120,7 +105,7 @@
   }
   content: '';
   margin-top: 30px;
-  width: 180px;
+  width: 100%;
   margin-top: 25px;
   display: inline-block;
   border: 1px solid $fill-brackets-color;
@@ -150,7 +135,7 @@
 .locations__contacts-list::before {
   content: '';
 
-  width: 180px;
+  width: 100%;
 
   display: inline-block;
   border: 1px solid $fill-brackets-color;
@@ -174,16 +159,16 @@
 }
 
 .locations__btn-list {
-  padding-top: 55px;
+  margin-top: 54px;
   @include respond-above($tablet) {
     justify-content: center;
     display: flex;
-    padding-top: 80px;
+    margin-top: 80px;
   }
   @include respond-above($desktop) {
     justify-content: center;
     display: flex;
-    padding-top: 85px;
+    margin-top: 86px;
   }
 }
 .locations__btn-item {
