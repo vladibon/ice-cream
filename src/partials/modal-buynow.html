@@ -11,96 +11,100 @@
       The best<br />ice cream delivery
     </h2>
 
-    <form name="form-delivery" autocomplete="off">
+    <form name="delivery-form" autocomplete="off">
       <ul class="delivery__list">
-        <li class="delivery__item">
+        <li class="delivery__item delivery__item--margin">
           <label
             ><span class="delivery__label">Name</span>
             <input class="delivery__inp" type="text" name="name" />
-            <svg class="modal__icon" width="18" height="18">
-              <use href="#"></use>
+            <svg class="delivery__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </label>
         </li>
-        <li class="delivery__item">
+        <li class="delivery__item delivery__item--margin">
           <label
-            ><span class="delivery__label"></span> Phone
+            ><span class="delivery__label">Phone</span>
             <input class="delivery__inp" type="tel" name="phone" />
-            <svg class="modal__icon" width="18" height="18">
-              <use href="#"></use>
+            <svg class="delivery__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-phone"></use>
             </svg>
           </label>
         </li>
-        <li class="delivery__item">
+        <li class="delivery__item delivery__item--margin">
           <label
-            ><span class="delivery__label"></span> Address
+            ><span class="delivery__label">Address</span>
             <input class="delivery__inp" type="text" name="address" />
-            <svg class="modal__icon" width="18" height="18">
-              <use href="#"></use>
+            <svg class="delivery__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-home"></use>
             </svg>
           </label>
         </li>
-        <li class="delivery__item">
-          <label
-            ><span class="delivery__label"></span> Ice cream flavor
-            <select class="delivery__inp" name="flavor">
+        <li class="delivery__item delivery__item--margin delivery__item--flex-ice">
+          <label>
+            <span class="delivery__label">Ice cream flavor</span>
+            <select class="delivery__inp delivery__inp--select" name="flavor">
               <option value="Chocolate-vanilla">Chocolate-vanilla</option>
               <option value="Strawberry-kiwi">Strawberry-kiwi</option>
               <option value="Banana-caramel">Banana-caramel</option>
               <option value="Pistachio">Pistachio</option>
               <option value="Brendy-cherry">Brendy-cherry</option>
             </select>
-            <svg class="modal__icon" width="18" height="18">
-              <use href="#"></use>
+            <svg class="delivery__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-ice"></use>
             </svg>
           </label>
         </li>
-        <li class="delivery__item">
+        <li class="delivery__item delivery__item--margin delivery__item--flex-kg">
           <label
-            ><span class="delivery__label"></span> Amount, kg
-            <input class="delivery__inp" type="number" name="amount" />
-            <svg class="modal__icon" width="18" height="18">
-              <use href="#"></use>
-            </svg>
-          </label>
-        </li>
-        <li class="delivery__item">
-          <p>Choose your delivery timing:</p>
-        </li>
-        <li class="delivery__item">
-          <label
-            ><span class="delivery__label"></span>
-            <input class="delivery__radio" type="radio" checked name="regular" />
-            <span class="chk">Regular ( 24 hours )</span>
-          </label>
-        </li>
-        <li class="delivery__item">
-          <label
-            ><span class="delivery__label"></span>
-            <input class="delivery__radio" type="radio" name="fast" />
-            <span class="chk">Fast ( 4 hours )</span>
-          </label>
-        </li>
-        <li class="delivery__item">
-          <label
-            ><span class="delivery__label"></span> Total:
-            <input class="delivery__inp" type="number" name="email" />
-            <svg class="modal__icon" width="18" height="18">
-              <use href="#"></use>
-            </svg>
-          </label>
-        </li>
-        <li class="delivery__item">
-          <label
-            ><span class="delivery__label"></span> Enter your card number
-            <input class="delivery__inp" type="number" name="email" />
-            <svg class="modal__icon" width="18" height="18">
-              <use href="#"></use>
+            ><span class="delivery__label">Amount, kg</span>
+            <input class="delivery__inp delivery__inp--kg" type="number" name="amount" />
+            <svg class="delivery__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-kg"></use>
             </svg>
           </label>
         </li>
         <li>
-          <label class="check">
+          <p class="delivery__time">Choose your delivery timing:</p>
+        </li>
+        <li class="delivery__item delivery__item--margin delivery__item--flex-regular">
+          <label class="delivery_time-label">
+            <input class="delivery__radio" type="radio" checked name="regular" />
+            <span class="chk"
+              >Regular<br />
+              ( 24 hours )</span
+            >
+          </label>
+        </li>
+        <li class="delivery__item delivery__item--margin delivery__item--flex-fast">
+          <label class="delivery_time-label">
+            <input class="delivery__radio" type="radio" name="fast" />
+            <span class="chk"
+              >Fast<br />
+              ( 4 hours )</span
+            >
+          </label>
+        </li>
+        <li class="delivery__item delivery__item--margin delivery__item--flex-total">
+          <label class="delivery__total-label">
+            <span class="delivery_total-title">Total:</span>
+            <input class="delivery__inp delivery__inp--unchk" type="text" disabled name="email" />
+            <svg class="delivery__icon delivery__icon--total" width="20" height="20">
+              <use href="./images/icons.svg#icon-basket"></use>
+            </svg>
+          </label>
+        </li>
+        <li class="delivery__item delivery__item--margin">
+          <label>
+            <span class="delivery__label">Enter your card number</span>
+            <input class="delivery__inp" type="number" name="email" />
+            <svg class="delivery__icon" width="20" height="20">
+              <use href="./images/icons.svg#icon-pay"></use>
+            </svg>
+          </label>
+        </li>
+        <li>
+          <label class="delivery_check">
             <input class="check__inp" type="checkbox" name="consent" value="" />
             <svg class="check__icon" width="16" height="16">
               <use href=""></use>
@@ -110,7 +114,9 @@
           </label>
         </li>
       </ul>
-      <!-- <button class="btn2 btn--submit2" type="submit">Order</button> -->
+      <div class="delivery__btn">
+        <button class="btn btn--secondary" type="submit">Order</button>
+      </div>
     </form>
   </div>
 </div>
