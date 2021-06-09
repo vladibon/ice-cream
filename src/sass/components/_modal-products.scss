@@ -28,22 +28,29 @@
   }
 
   &--ice-cream {
-    background-color: #fa98b1;
+    background-image: linear-gradient(to bottom, #fa98b1 50%, $header-main-bg-color);
+
+    box-shadow: 0px 8px 30px #f3aec0;
   }
 
   &--ice-coffee {
-    background-color: #e4ba80;
+    background-image: linear-gradient(to bottom, #d6af77 50%, $brown-card-bg-color);
+
+    box-shadow: 0px 8px 30px #d6af77;
   }
 
   &--milkshakes {
-    background-color: #b4d686;
+    background-image: linear-gradient(to bottom, #afd47a 50%, $green-card-bg-color);
+
+    box-shadow: 0px 8px 30px #c3e099;
   }
 
   &--is-hidden {
     pointer-events: none;
     visibility: hidden;
     opacity: 0;
-    transition: visibility $modal-animation, opacity $modal-animation;
+    transform: scale(0.5);
+    transition: visibility $animation, opacity $animation;
   }
 }
 
