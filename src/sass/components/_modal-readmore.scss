@@ -7,7 +7,7 @@
   background-color: rgba(190, 105, 165, 0.2);
 
   opacity: 1;
-  //transition: visibility $animation, opacity $animation;
+  transition: visibility $modal-animation, opacity $modal-animation;
 }
 
 .backdrop-readmore--is-hidden {
@@ -22,7 +22,7 @@
   pointer-events: none;
 }
 .modal {
-  @include respond-below($mobile) {
+  @include respond-below($tablet) {
     width: 100%;
   }
   position: absolute;
@@ -37,9 +37,10 @@
   border-radius: 4px;
   transform: translate(-50%, -50%) scaleX(1);
   transition: scale $animation, visibility $animation;
-  @media screen and(min-width:1200) {
-    min-width: 528px;
-    min-height: 581px;
+
+  @include respond-below($mobile) {
+    min-width: 512px;
+    min-height: 320px;
   }
 }
 .btn-close {
@@ -76,7 +77,6 @@
   left: 50px;
   top: 48px;
 
-  text-align: center;
   background: rgba(255, 255, 255, 0.75);
   box-shadow: $adress-card-shadow;
   border-radius: 16px;
@@ -104,6 +104,7 @@
   font-size: 16px;
   line-height: 1.76;
   letter-spacing: 0.04em;
+  margin-bottom: 25px;
   padding-left: 67px;
   padding-right: 49px;
   color: $black-text-color;
