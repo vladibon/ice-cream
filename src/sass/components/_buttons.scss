@@ -24,7 +24,7 @@
   &:hover,
   &:focus {
     background-color: $btn-primary-accent-color;
-    transform: translate(10px, 0px) scale(1.15);
+    transform: scale(1.1);
   }
 }
 
@@ -35,7 +35,7 @@
   &:hover,
   &:focus {
     background-color: $btn-secondary-accent-color;
-    transform: translate(-10px, 0px) scale(1.15);
+    transform: scale(1.1);
   }
 }
 
