@@ -52,29 +52,34 @@
       </button>
 
       <!-- Buy now Button -->
-      <button
-        class="btn btn--primary page-header__btn"
-        type="button"
-        data-buy-btn
-        data-modal-open-delivery
-      >
+      <button class="btn btn--primary btn-buy" type="button" data-buy-btn data-modal-open-delivery>
         Buy now
-        <svg class="page-header__icon" width="6" height="10">
+        <svg class="btn-buy__icon" width="6" height="10">
           <use href="images/icons.svg#buy-btn"></use>
         </svg>
       </button>
 
       <!-- Buy now Button Mobile -->
       <button
-        class="btn btn--primary page-header__btn-mob"
+        class="btn btn--primary btn-buy-mob"
         type="button"
         data-buy-btn-mob
         data-modal-open-mobile-delivery
       >
         Buy now
-        <svg class="page-header__icon" width="6" height="10">
+        <svg class="btn-buy__icon" width="6" height="10">
           <use href="images/icons.svg#buy-btn"></use>
         </svg>
+      </button>
+
+      <!-- Scroll to Top Button -->
+      <button
+        class="btn btn--secondary btn-top"
+        id="myBtn"
+        onclick="topFunction()"
+        title="Go to top"
+      >
+        Top
       </button>
     </div>
   </div>
