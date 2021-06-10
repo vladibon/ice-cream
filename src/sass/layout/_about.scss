@@ -176,21 +176,24 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.62;
+  margin-bottom: 22px;
 
   color: $gray-text-color;
+
+  @include respond-above($tablet) {
+    margin-bottom: 62px;
+  }
+
+  @include respond-above($desktop) {
+    margin-bottom: 45px;
+  }
 
   &--p {
     display: block;
     margin-top: 12px;
-    margin-bottom: 22px;
-
-    @include respond-above($tablet) {
-      margin-bottom: 62px;
-    }
 
     @include respond-above($desktop) {
       margin-top: 27px;
-      margin-bottom: 49px;
     }
   }
 
