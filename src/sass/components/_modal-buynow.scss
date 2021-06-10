@@ -196,6 +196,8 @@
 }
 
 .delivery__radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 
   &:checked ~ .chk {
@@ -323,6 +325,8 @@
 }
 
 .check__inp {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 
   &:checked ~ .check__bord {
@@ -475,7 +479,7 @@
   display: none;
 
   &:checked + label {
-    background-color: #dedede;
+    // background-color: #dedede;
   }
   &:disabled + label {
     opacity: 0.6;
@@ -496,12 +500,8 @@
 
   overflow: hidden;
 
-  & + input + & {
-    border-top: 0 solid #c7ccd160;
-  }
-
   &:hover {
-    background-color: #d8093a !important;
+    background-color: $main-title-color !important;
 
     color: #ffffff;
   }
