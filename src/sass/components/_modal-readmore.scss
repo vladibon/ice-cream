@@ -2,19 +2,20 @@
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(190, 105, 165, 0.2);
 
+  width: 100vw;
+  height: 100vh;
+
+  background-color: rgba(190, 105, 165, 0.2);
+  overflow-y: scroll;
   opacity: 1;
   transition: visibility $modal-animation, opacity $modal-animation;
-}
 
-.backdrop-readmore--is-hidden {
-  overflow-y: scroll;
-  pointer-events: none;
-  visibility: hidden;
-  opacity: 0;
+  &--is-hidden {
+    pointer-events: none;
+    visibility: hidden;
+    opacity: 0;
+  }
 }
 
 .backdrop-readmore.backdrop-readmore--is-hidden {
@@ -22,10 +23,12 @@
   pointer-events: none;
 }
 .modal {
-  @include respond-below($tablet) {
-    width: 100%;
-  }
   position: absolute;
+  width: 640px;
+  min-height: 742px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #fdced9 100%);
+
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
@@ -34,13 +37,13 @@
   background-color: $primary-bg-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
+  border-radius: 16px;
   transform: translate(-50%, -50%) scaleX(1);
   transition: scale $animation, visibility $animation;
 
   @include respond-below($mobile) {
-    min-width: 512px;
-    min-height: 320px;
+    max-width: 320px;
+    min-height: 512px;
   }
 }
 .btn-close {
@@ -63,23 +66,21 @@
   }
 }
 
-.modal {
-  width: 640px;
-  height: 742px;
-  border-radius: 16px;
-
-  background: linear-gradient(180deg, #ffffff 0%, #fdced9 100%);
-}
 .modal-section {
   position: relative;
-  width: 540px;
-  height: 650px;
+  max-width: 540px;
+  min-height: 650px;
   left: 50px;
   top: 48px;
 
   background: rgba(255, 255, 255, 0.75);
   box-shadow: $adress-card-shadow;
   border-radius: 16px;
+
+  @include respond-below($mobile) {
+    max-width: 280px;
+    min-height: 440px;
+  }
 }
 .modal-title {
   font-family: $title-font;
