@@ -41,26 +41,6 @@
   }
 }
 
-.modal-locations__btn-close {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  top: 16px;
-  right: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: $btn-secondary-color;
-  border: $primary-bg-color;
-  border-radius: 50%;
-  cursor: pointer;
-
-  &:focus,
-  &:hover {
-    fill: $header-main-bg-color;
-  }
-}
-
 .modal-locations__container {
   padding: 40px;
 }
