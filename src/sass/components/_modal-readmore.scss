@@ -16,37 +16,13 @@
     visibility: hidden;
     opacity: 0;
   }
-}
-
-.backdrop-readmore.backdrop-readmore--is-hidden {
-  opacity: 0;
-  pointer-events: none;
-}
-.modal {
-  position: absolute;
-  width: 640px;
-  min-height: 742px;
-
-  background: linear-gradient(180deg, #ffffff 0%, #fdced9 100%);
-
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0 auto;
-
-  background-color: $primary-bg-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 16px;
-  transform: translate(-50%, -50%) scaleX(1);
-  transition: scale $animation, visibility $animation;
-
-  @include respond-below($mobile) {
-    max-width: 320px;
-    min-height: 512px;
+  &.backdrop-readmore--is-hidden {
+    opacity: 0;
+    pointer-events: none;
   }
 }
-.btn-close {
+
+.batton-close {
   position: absolute;
   width: 32px;
   height: 32px;
@@ -60,26 +36,66 @@
   border-radius: 50%;
   cursor: pointer;
 
+  @include respond-below($mobile) {
+    width: 24px;
+    height: 24px;
+    top: 6px;
+    right: 6px;
+  }
+
   &:focus,
   &:hover {
     fill: $btn-secondary-color;
   }
 }
 
+.modal-readmore {
+  position: absolute;
+  width: 100%;
+  max-width: 640px;
+  min-height: 742px;
+
+  background: linear-gradient(180deg, #ffffff 0%, #fdced9 100%);
+
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: auto;
+
+  background-color: $primary-bg-color;
+  box-shadow: $adress-card-shadow;
+  border-radius: 16px;
+  transform: translate(-50%, -50%) scaleX(1);
+  transition: scale $animation, visibility $animation;
+
+  @include respond-below($mobile) {
+    position: absolute;
+    left: 50%;
+    width: 100%;
+    max-width: 320px;
+    transform: translate(-50%, 0) scaleX(1);
+    transition: transform $modal-animation;
+  }
+}
+
 .modal-section {
   position: relative;
+  width: 100%;
   max-width: 540px;
   min-height: 650px;
   left: 50px;
   top: 48px;
-
+  margin-right: 0;
   background: rgba(255, 255, 255, 0.75);
   box-shadow: $adress-card-shadow;
   border-radius: 16px;
 
   @include respond-below($mobile) {
+    position: relative;
     max-width: 280px;
-    min-height: 440px;
+    height: 440px;
+    left: 20px;
+    top: 36px;
   }
 }
 .modal-title {
@@ -97,6 +113,11 @@
   text-transform: uppercase;
 
   color: $main-title-color;
+
+  @include respond-below($mobile) {
+    font-size: 16px;
+    line-height: 1.14;
+  }
 }
 .modal-text {
   font-family: $main-font;
@@ -108,5 +129,11 @@
   margin-bottom: 25px;
   padding-left: 67px;
   padding-right: 49px;
+
   color: $black-text-color;
+
+  @include respond-below($mobile) {
+    font-size: 12px;
+    line-height: 1.4;
+  }
 }
