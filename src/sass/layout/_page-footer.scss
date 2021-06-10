@@ -22,12 +22,12 @@
   }
 
   @include respond-above($tablet) {
-    padding-bottom: 91px;
+    margin-bottom: 91px;
     max-width: 340px;
   }
 
   @include respond-above($desktop) {
-    padding-bottom: 97px;
+    margin-bottom: 97px;
     max-width: 100%;
   }
 }
@@ -41,10 +41,14 @@
 
   color: $secondary-title-color;
 
-  transform: translate(0px, 120px);
+  // transform: translate(0px, 120px);
+  // opacity: 0;
+  // transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1),
+  //   opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transform: scale(0);
   opacity: 0;
-  transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 600ms cubic-bezier(0.4, 0, 0.2, 1);
 
   @include respond-above($tablet) {
     margin-bottom: 16px;
@@ -59,7 +63,7 @@
   }
 
   &._active {
-    transform: translate(0px, 0px);
+    transform: scale(1);
     opacity: 1;
   }
 
@@ -72,10 +76,11 @@
 
     color: $main-title-color;
 
-    transform: translate(0px, 120px);
+    // transform: translate(0px, 120px);
+    transform: scale(0);
     opacity: 0;
-    transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1) 200ms,
-      opacity 800ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
+    transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1) 200ms,
+      opacity 600ms cubic-bezier(0.4, 0, 0.2, 1) 200ms;
 
     @include respond-above($tablet) {
       font-size: 48px;
@@ -88,7 +93,8 @@
       line-height: 1.14;
     }
     &._active {
-      transform: translate(0px, 0px);
+      // transform: translate(0px, 0px);
+      transform: scale(1);
       opacity: 1;
     }
   }
@@ -100,7 +106,7 @@
   justify-content: flex-end;
 
   @include respond-below($tablet) {
-    padding-bottom: 43px;
+    margin-bottom: 43px;
   }
 }
 

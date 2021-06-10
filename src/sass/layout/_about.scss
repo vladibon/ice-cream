@@ -48,8 +48,8 @@
 
   transform: translate(0px, 120px);
   opacity: 0;
-  transition: transform 800ms cubic-bezier(0.4, 0, 0.2, 1),
-    opacity 800ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 600ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 600ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &._active {
     transform: translate(0px, 0px);
