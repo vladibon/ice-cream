@@ -18,9 +18,3 @@ for (let i = 0; i < selectSingle_labels.length; i++) {
     selectSingle.setAttribute('data-state', '');
   });
 }
-
-// Reset title
-const reset = document.querySelector('.reset');
-reset.addEventListener('click', () => {
-  selectSingle_title.textContent = selectSingle_title.getAttribute('data-default');
-});

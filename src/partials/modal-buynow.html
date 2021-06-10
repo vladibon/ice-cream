@@ -11,30 +11,6 @@
     </h2>
 
     <form name="delivery-form" autocomplete="off">
-      <!--  -->
-      <div class="__select" data-state="">
-        <div class="__select__title" data-default="Option 0">Option 0</div>
-        <div class="__select__content">
-          <input
-            id="singleSelect0"
-            class="__select__input"
-            type="radio"
-            name="singleSelect"
-            checked
-          />
-          <label for="singleSelect0" class="__select__label">Option 0</label>
-          <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
-          <label for="singleSelect1" class="__select__label">Option 1</label>
-          <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
-          <label for="singleSelect2" class="__select__label">Option 2</label>
-          <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
-          <label for="singleSelect3" class="__select__label">Option 3</label>
-          <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
-          <label for="singleSelect4" class="__select__label">Option 4</label>
-        </div>
-      </div>
-      <!--  -->
-
       <ul class="delivery__list">
         <li class="delivery__item delivery__item--margin delivery__item--name">
           <label>
@@ -64,25 +40,45 @@
           </label>
         </li>
         <li class="delivery__item delivery__item--margin delivery__item--flex-ice">
-          <label>
-            <span class="delivery__label">Ice cream flavor</span>
-            <select class="delivery__inp delivery__inp--select" name="flavor">
-              <option value="Chocolate-vanilla">Chocolate-vanilla</option>
-              <option value="Strawberry-kiwi">Strawberry-kiwi</option>
-              <option value="Banana-caramel">Banana-caramel</option>
-              <option value="Pistachio">Pistachio</option>
-              <option value="Brendy-cherry">Brendy-cherry</option>
-            </select>
+          <span class="delivery__label">Ice cream flavor</span>
+          <div class="__select" data-state="">
+            <div class="__select__title" data-default="Option 0">Chocolate-vanilla</div>
+            <div class="__select__content">
+              <input
+                id="singleSelect0"
+                class="__select__input"
+                type="radio"
+                name="singleSelect"
+                checked
+              />
+              <label for="singleSelect0" class="__select__label">Chocolate-vanilla</label>
+              <input id="singleSelect1" class="__select__input" type="radio" name="singleSelect" />
+              <label for="singleSelect1" class="__select__label">Chocolate-vanilla</label>
+              <input id="singleSelect2" class="__select__input" type="radio" name="singleSelect" />
+              <label for="singleSelect2" class="__select__label">Strawberry-kiwi</label>
+              <input id="singleSelect3" class="__select__input" type="radio" name="singleSelect" />
+              <label for="singleSelect3" class="__select__label">Banana-caramel</label>
+              <input id="singleSelect4" class="__select__input" type="radio" name="singleSelect" />
+              <label for="singleSelect4" class="__select__label">Pistachio</label>
+              <input id="singleSelect5" class="__select__input" type="radio" name="singleSelect" />
+              <label for="singleSelect5" class="__select__label">Brendy-cherry</label>
+            </div>
             <svg class="delivery__icon" width="20" height="20">
               <use href="./images/icons.svg#icon-ice"></use>
             </svg>
-          </label>
+          </div>
         </li>
         <li class="delivery__item delivery__item--margin delivery__item--flex-kg">
           <label
             ><span class="delivery__label">Amount, kg</span>
-            <input class="delivery__inp delivery__inp--kg" type="number" name="amount" />
-            <svg class="delivery__icon" width="20" height="20">
+            <input
+              class="delivery__inp delivery__inp--kg"
+              type="number"
+              name="amount"
+              min="0"
+              step="0.25"
+            />
+            <svg class="delivery__icon delivery__icon--kg" width="20" height="20">
               <use href="./images/icons.svg#icon-kg"></use>
             </svg>
           </label>
@@ -121,13 +117,7 @@
         <li class="delivery__item delivery__item--margin delivery__item--flex-total">
           <label class="delivery__total-label">
             <span class="delivery_total-title delivery_total-title--margin">Total:</span>
-            <input
-              class="delivery__inp delivery__inp--unchk"
-              type="text"
-              disabled
-              name="total"
-              value="84$"
-            />
+            <input class="delivery__inp delivery__inp--unchk" type="text" disabled name="total" />
             <svg class="delivery__icon delivery__icon--total" width="20" height="20">
               <use href="./images/icons.svg#icon-basket"></use>
             </svg>
@@ -136,7 +126,7 @@
         <li class="delivery__item delivery__item--margin">
           <label>
             <span class="delivery__label">Enter your card number</span>
-            <input class="delivery__inp" type="number" name="card" />
+            <input class="delivery__inp" type="text" name="card" />
             <svg class="delivery__icon" width="20" height="20">
               <use href="./images/icons.svg#icon-pay"></use>
             </svg>
