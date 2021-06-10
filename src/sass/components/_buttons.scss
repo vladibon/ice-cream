@@ -63,6 +63,7 @@
   }
 }
 
+.btn--modal,
 .btn--locations {
   @include respond-below($tablet) {
     width: 160px;
