@@ -3,8 +3,8 @@
   z-index: 6;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.1);
 
   opacity: 1;
@@ -18,13 +18,10 @@
 }
 
 .modal-locations {
-  @include respond-below($tablet) {
-    width: 100%;
-  }
   position: absolute;
+  width: 320px;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
   margin: 0 auto;
   padding: 36px 14px;
 
@@ -32,20 +29,27 @@
   box-shadow: 30px 0px 8px rgba(212, 20, 67, 0.1), 30px 0px, 8px rgba(212, 20, 67, 0.1),
     30px 0px 8px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-  transform: translate(-50%, -50%) scaleX(1);
+  transform: translate(-50%, 0) scaleX(1);
   transition: scale $animation, visibility $animation;
 
-  @include respond-below($desktop) {
-    min-width: 644px;
-    min-height: 649px;
+  @include respond-above($tablet) {
+    top: 50%;
+    width: 644px;
+    padding: 40px 90px;
+
+    transform: translate(-50%, -50%) scaleX(1);
+  }
+
+  @include respond-above($desktop) {
+    min-width: 680px;
   }
 }
 
-.modal-locations__container {
-  padding: 40px;
-}
-
 .modal-locations__title {
+  display: center;
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
   font-family: $title-font;
   font-weight: bold;
   font-size: 20px;
@@ -54,8 +58,8 @@
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: $main-title-color;
-  margin-bottom: 16px;
   @include respond-between($tablet, $desktop) {
+    width: 100%;
     font-family: $title-font;
     font-size: 24px;
     line-height: 1.13;
@@ -65,6 +69,9 @@
     color: $main-title-color;
   }
   @include respond-above($desktop) {
+    width: 560px;
+    margin-left: -25px;
+    margin-right: -25px;
     font-family: $title-font;
     font-size: 30px;
     line-height: 1.13;

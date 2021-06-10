@@ -104,7 +104,7 @@
   fill: currentColor;
 }
 
-.btn-close {
+.button-close {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -117,6 +117,7 @@
   box-shadow: $modal-elements-shadow;
   stroke: $accent-link-color;
   border: none;
+  outline: none;
   border-radius: 50%;
   cursor: pointer;
 
