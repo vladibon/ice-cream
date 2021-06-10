@@ -46,8 +46,8 @@
   .backdrop-delivery--is-hidden & {
     transform: translate(-50%, 30%) scaleX(0.3);
 
-    @include respond-above($desktop) {
-      transform: translate(-50%, -10%) scaleX(0.4);
+    @include respond-above($tablet) {
+      transform: translate(-50%, -15%) scaleX(0.4);
     }
   }
 }

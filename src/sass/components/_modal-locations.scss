@@ -122,9 +122,9 @@
     letter-spacing: 0.01em;
     color: $main-title-color;
   }
-  &:focus {
-    // border-color: $btn-cl;
-  }
+  // &:focus {
+  //   // border-color: $btn-cl;
+  // }
 }
 
 .modal-locations__icons {
@@ -146,14 +146,14 @@
   transition: $animation;
   outline: none;
 
-  &:focus ~ .modal-locations_icons {
-    // fill: $btn-cl;
-  }
+  // &:focus ~ .modal-locations_icons {
+  //   // fill: $btn-cl;
+  // }
 
-  &:focus {
-    // color: $btn-cl;
-    // border-color: $btn-cl;
-  }
+  // &:focus {
+  //   // color: $btn-cl;
+  //   // border-color: $btn-cl;
+  // }
 }
 .checkbox-link {
   // color: $btn-cl;
