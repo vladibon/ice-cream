@@ -94,7 +94,7 @@
   border-radius: 10px;
   outline: none;
   //margin-bottom: 10px;
-  box-shadow: $input-shadow;
+  // box-shadow: $input-shadow;
 }
 
 .feedback-textarea {
@@ -106,7 +106,7 @@
   box-sizing: border-box;
   border-radius: 16px;
   outline: none;
-  box-shadow: $input-shadow;
+  // box-shadow: $input-shadow;
   &::placeholder {
     font-size: 14px;
     line-height: 1.14;
