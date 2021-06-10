@@ -167,6 +167,8 @@
 .delivery__inp--select {
   display: block;
   padding-top: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 
   background-image: url('../images/modal/icon-arrowdown.svg');
