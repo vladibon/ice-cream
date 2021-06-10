@@ -1,6 +1,3 @@
-input {
-  appearance: none;
-}
 .backdrop-delivery {
   position: fixed;
   z-index: 6;
@@ -26,7 +23,7 @@ input {
 .modal-delivery {
   position: absolute;
   left: 50%;
-  min-width: 320px;
+  width: 320px;
   padding: 36px 14px;
 
   background-color: $primary-bg-color;
@@ -38,7 +35,7 @@ input {
 
   @include respond-above($tablet) {
     top: 50%;
-    min-width: 644px;
+    width: 644px;
     padding: 40px 90px;
 
     transform: translate(-50%, -50%) scaleX(1);
@@ -71,6 +68,11 @@ input {
   text-transform: uppercase;
 
   color: $main-title-color;
+
+  @include respond-above($tablet) {
+    font-size: 24px;
+    line-height: 1.13;
+  }
 }
 
 .modal-delivery__title--margin {
@@ -87,6 +89,11 @@ input {
   letter-spacing: 0.04em;
 
   color: $main-title-color;
+
+  @include respond-above($tablet) {
+    font-size: 16px;
+    line-height: 1;
+  }
 }
 
 .modal-delivery__br {
@@ -161,17 +168,17 @@ input {
   color: $accent-link-color;
 }
 
-.delivery__inp--kg {
-  // color: $accent-link-color;
-}
-
 .delivery__time {
   width: 100%;
   padding-left: 12px;
 }
 
 .delivery__time-label {
+  position: relative;
   display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  color: $secondary-title-color;
 }
 
 .delivery__item--flex-two {
@@ -179,7 +186,44 @@ input {
 }
 
 .delivery__radio {
+  appearance: none;
+
+  &:checked ~ .chk {
+    border: 1px solid $accent-link-color;
+  }
+
+  &:checked ~ .check__icon {
+    fill: $accent-link-color;
+  }
+  &:checked ~ .chk__txt {
+    color: $main-title-color;
+  }
+}
+
+.delivery__radio--margin {
   margin-right: 10px;
+}
+
+.chk {
+  display: block;
+  min-width: 20px;
+  min-height: 20px;
+
+  background: $white-bg-color;
+  box-shadow: $modal-elements-shadow;
+  border-radius: 50%;
+}
+
+.chk--margin {
+  margin-right: 20px;
+}
+
+.space {
+  margin-left: 50px;
+
+  @include respond-above($tablet) {
+    margin-left: 0;
+  }
 }
 
 .delivery__item--flex-total {
@@ -190,6 +234,15 @@ input {
 
 .delivery__inp--unchk {
   width: 120px;
+  text-align: center;
+
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.04em;
+
+  color: $black-text-color;
+
   &:hover,
   &:focus {
     border: none;
@@ -207,26 +260,84 @@ input {
 }
 
 .delivery__icon--total {
-  left: 105px;
+  left: 110px;
+
+  @include respond-above($tablet) {
+    left: 120px;
+  }
 }
 
 .delivery_total-title {
-  margin-right: 16px;
-
   font-family: Titan One;
   font-size: 20px;
   line-height: 1.15;
   letter-spacing: 0.04em;
   text-transform: uppercase;
+
+  @include respond-above($tablet) {
+    font-size: 24px;
+    line-height: 1.13;
+  }
+}
+
+.delivery_total-title--margin {
+  margin-right: 16px;
+
+  @include respond-above($tablet) {
+    margin-right: 10px;
+  }
 }
 
 .delivery_check {
-  display: inline-flex;
-  width: 66%;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.delivery_check--margin {
   margin-bottom: 24px;
+}
+
+.check__bord {
+  display: block;
+  min-width: 20px;
+  min-height: 20px;
+
+  background: $white-bg-color;
+  box-shadow: $modal-elements-shadow;
+  border-radius: 2px;
+}
+
+.check__bord--margin {
+  margin-right: 20px;
+}
+
+.check__inp {
+  appearance: none;
+
+  &:checked ~ .check__bord {
+    border: 1px solid $accent-link-color;
+  }
+
+  &:checked ~ .check__icon {
+    fill: $accent-link-color;
+  }
+}
+
+.check__icon {
+  position: absolute;
+  top: 3px;
+  left: 13px;
+  fill: $btn-primary-color;
+  cursor: pointer;
+}
+
+.check__icon--margin {
+  top: 6px;
+  left: 0;
 
   @include respond-above($tablet) {
-    width: 100%;
+    top: 1px;
   }
 }
 

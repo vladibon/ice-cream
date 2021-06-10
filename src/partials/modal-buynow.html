@@ -66,22 +66,44 @@
         <li class="delivery__time">
           <p>Choose your delivery timing:</p>
         </li>
+
         <li class="delivery__item delivery__item--margin delivery__item--flex-two">
           <label class="delivery__time-label">
-            <input class="delivery__radio" type="radio" checked name="regular" />
-            <span class="chk"> Regular</span> ( 24 hours )
+            <input
+              class="delivery__radio delivery__radio--margin"
+              type="radio"
+              checked
+              name="time"
+            />
+            <svg class="check__icon" width="15" height="15">
+              <use href="./images/icons.svg#icon-radio"></use>
+            </svg>
+            <span class="chk chk--margin"></span>
+            <span class="chk__txt">Regular</span><span class="chk__txt space">( 24 hours )</span>
           </label>
         </li>
+
         <li class="delivery__item delivery__item--margin delivery__item--flex-two">
           <label class="delivery__time-label">
-            <input class="delivery__radio" type="radio" name="fast" />
-            <span class="chk"> Fast</span> ( 4 hours )
+            <input class="delivery__radio delivery__radio--margin" type="radio" name="time" />
+            <svg class="check__icon" width="15" height="15">
+              <use href="./images/icons.svg#icon-radio"></use>
+            </svg>
+            <span class="chk chk--margin"></span>
+            <span class="chk__txt">Fast</span><span class="chk__txt space">( 4 hours )</span>
           </label>
         </li>
+
         <li class="delivery__item delivery__item--margin delivery__item--flex-total">
           <label class="delivery__total-label">
-            <span class="delivery_total-title">Total:</span>
-            <input class="delivery__inp delivery__inp--unchk" type="text" disabled name="email" />
+            <span class="delivery_total-title delivery_total-title--margin">Total:</span>
+            <input
+              class="delivery__inp delivery__inp--unchk"
+              type="text"
+              disabled
+              name="total"
+              value="84$"
+            />
             <svg class="delivery__icon delivery__icon--total" width="20" height="20">
               <use href="./images/icons.svg#icon-basket"></use>
             </svg>
@@ -90,19 +112,20 @@
         <li class="delivery__item delivery__item--margin">
           <label>
             <span class="delivery__label">Enter your card number</span>
-            <input class="delivery__inp" type="number" name="email" />
+            <input class="delivery__inp" type="number" name="card" />
             <svg class="delivery__icon" width="20" height="20">
               <use href="./images/icons.svg#icon-pay"></use>
             </svg>
           </label>
         </li>
+
         <li>
-          <label class="delivery_check">
+          <label class="delivery_check delivery_check--margin">
             <input class="check__inp" type="checkbox" name="consent" value="" />
-            <svg class="check__icon" width="16" height="16">
-              <use href=""></use>
+            <svg class="check__icon check__icon--margin" width="18" height="18">
+              <use href="./images/icons.svg#icon-chk"></use>
             </svg>
-            <span class="check__bord"></span>
+            <span class="check__bord check__bord--margin"></span>
             I want to pay cash when my order arrives
           </label>
         </li>
