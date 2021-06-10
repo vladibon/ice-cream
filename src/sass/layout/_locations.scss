@@ -61,17 +61,18 @@
 }
 
 .locations__type {
-  @include respond-above($tablet) {
+  @include respond-below($tablet) {
     height: 16px;
     font-size: 12px;
     margin-bottom: 25px;
   }
-  @include respond-below($desktop) {
+  @include respond-above($tablet) {
     height: 28px;
   }
   margin-bottom: 30px;
   line-height: 1.83;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   text-transform: uppercase;
   width: 80px;
@@ -80,16 +81,18 @@
   border-radius: 4px;
 }
 .locations__type-foodtruck {
-  @include respond-above($tablet) {
-    font-size: 12px;
+  @include respond-below($tablet) {
     height: 16px;
+    font-size: 12px;
+    margin-bottom: 25px;
   }
-  @include respond-below($desktop) {
+  @include respond-above($tablet) {
     height: 28px;
   }
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   line-height: 1.83;
-  text-align: center;
+  display: flex;
+  justify-content: center;
   align-items: center;
   text-transform: uppercase;
   width: 130px;
