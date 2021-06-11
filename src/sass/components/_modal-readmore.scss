@@ -8,102 +8,116 @@
   background-color: $backdrop-color;
   overflow-y: scroll;
 
+  visibility: visible;
   opacity: 1;
   transition: visibility $modal-animation, opacity $modal-animation;
-}
 
-.backdrop-readmore.backdrop-readmore--is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-.modal {
-  @include respond-below($tablet) {
-    width: 100%;
+  &--is-hidden {
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
   }
+}
 
+.modal-readmore {
   position: absolute;
+  top: 20px;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 320px;
+  min-height: 440px;
   margin: 0 auto;
+  padding: 36px 20px;
 
-  background-color: $primary-bg-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 4px;
-  transform: translate(-50%, -50%) scaleX(1);
-  transition: scale $animation, visibility $animation;
+  background: linear-gradient(180deg, #ffffff 0%, #fdced9 100%);
+  box-shadow: $modal-elements-shadow;
+  border-radius: 16px;
+  transform: translate(-50%, 0) scaleX(1);
+  transition: transform $modal-animation;
 
-  @include respond-below($mobile) {
-    min-width: 512px;
-    min-height: 320px;
+  @include respond-above($tablet) {
+    top: 50%;
+    max-width: 640px;
+    min-height: 650px;
+    padding: 48px 50px;
+
+    transform: translate(-50%, -50%) scaleX(1);
+  }
+
+  .backdrop-readmore--is-hidden & {
+    transform: translate(-50%, 30%) scaleX(0.3);
+
+    @include respond-above($tablet) {
+      transform: translate(-50%, -15%) scaleX(0.4);
+    }
   }
 }
+
 .btn-close {
   position: absolute;
-  width: 32px;
-  height: 32px;
-  top: 8px;
-  right: 8px;
+  z-index: 7;
+  top: 10px;
+  right: 10px;
+  width: 24px;
+  height: 24px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+  stroke: $btn-secondary-color;
   background-color: $white-bg-color;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
 
-  &:focus,
-  &:hover {
-    fill: $btn-secondary-color;
+  @include respond-above($tablet) {
+    top: 16px;
+    right: 16px;
+    width: 30px;
+    height: 30px;
   }
 }
 
-.modal {
-  width: 640px;
-  height: 742px;
-  border-radius: 16px;
+.modal-content {
+  padding: 24px 12px;
 
-  background: linear-gradient(180deg, #ffffff 0%, #fdced9 100%);
-}
-.modal-section {
-  position: relative;
-  width: 540px;
-  height: 650px;
-  left: 50px;
-  top: 48px;
+  @include respond-above($tablet) {
+    padding: 40px 49px;
+  }
 
-  background: rgba(255, 255, 255, 0.75);
+  background: linear-gradient(rgba(255, 255, 255, 0.75), rgba(255, 255, 255, 0.75));
   box-shadow: $adress-card-shadow;
   border-radius: 16px;
 }
 .modal-title {
+  margin-bottom: 12px;
   font-family: $title-font;
-  font-style: normal;
   font-weight: normal;
-  margin-bottom: 25px;
-  padding-top: 40px;
-  padding-left: 49px;
-  padding-right: 49px;
-  font-size: 30px;
-  line-height: 1.13;
-  text-align: center;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.2;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-
+  text-align: center;
   color: $main-title-color;
+
+  @include respond-above($tablet) {
+    margin-bottom: 25px;
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 .modal-text {
   font-family: $main-font;
-  font-style: normal;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.76;
+  font-style: normal;
+  font-size: 12px;
+  line-height: 1.4;
   letter-spacing: 0.04em;
-  margin-bottom: 25px;
-  padding-left: 67px;
-  padding-right: 49px;
   color: $black-text-color;
+
+  @include respond-above($tablet) {
+    font-size: 16px;
+    line-height: 1.76;
+  }
 }
