@@ -1,6 +1,6 @@
 <div class="backdrop-locations backdrop-locations--is-hidden" data-modal-locations>
   <div class="modal-locations">
-    <button class="btn-close" data-modal-close-locations>
+    <button class="button-close" data-modal-close-locations>
       <svg width="14" height="14">
         <use href="./images/icons.svg#close-menu"></use>
       </svg>
@@ -36,15 +36,17 @@
           name="feedback"
           class="feedback-textarea"
           rows="5"
-          placeholder="message"
+          placeholder="Your message here.."
         ></textarea>
       </label>
       <input type="checkbox" name="user-checkbox" class="checkbox visually-hidden" id="checkbox" />
       <label class="checkbox-label" for="checkbox">
-        I have read and agree
+        <span>
+          I have read and agree
         <a href="#" class="checkbox-link">Privacy Policy</a></label
       >
-      <button class="btn btn--secondary" type="submit">Send</button>
+        </span>
+      <button class="btn btn--secondary btn--modal" type="submit">Send</button>
     </form>
   </div>
 </div>

@@ -22,8 +22,10 @@
 
 .modal-delivery {
   position: absolute;
+  top: 20px;
   left: 50%;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
   padding: 36px 14px;
 
   background-color: $primary-bg-color;
@@ -35,25 +37,17 @@
 
   @include respond-above($tablet) {
     top: 50%;
-    width: 644px;
+    max-width: 644px;
     padding: 40px 90px;
 
     transform: translate(-50%, -50%) scaleX(1);
   }
 
-  @include respond-above($desktop) {
-    max-width: 644px;
-  }
-
   .backdrop-delivery--is-hidden & {
-    transform: translate(0, 50%) scaleX(0);
+    transform: translate(-50%, 30%) scaleX(0.3);
 
-    @include respond-above($mobile) {
-      transform: translate(-50%, 50%) scaleX(0);
-    }
-
-    @include respond-above($desktop) {
-      transform: translate(-50%, 0) scaleX(0);
+    @include respond-above($tablet) {
+      transform: translate(-50%, -15%) scaleX(0.4);
     }
   }
 }
