@@ -159,7 +159,17 @@
 }
 
 .delivery__inp--select {
-  color: $accent-link-color;
+  display: block;
+  padding-top: 5px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+  background-image: url('../images/modal/icon-arrowdown.svg');
+
+  background-repeat: no-repeat, repeat;
+  background-position: right 0.7em top 50%, 0 0;
+  background-size: 0.65em auto, 100%;
 }
 
 .delivery__time {
@@ -180,6 +190,8 @@
 }
 
 .delivery__radio {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 
   &:checked ~ .chk {
@@ -307,6 +319,8 @@
 }
 
 .check__inp {
+  -webkit-appearance: none;
+  -moz-appearance: none;
   appearance: none;
 
   &:checked ~ .check__bord {
@@ -337,4 +351,144 @@
 
 .delivery__btn {
   text-align: center;
+}
+
+.delivery__icon--kg {
+  top: 30px;
+  left: 15px;
+}
+
+// ------------------------Select------------------------
+.__select {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 0 8px 16px 0;
+  background-color: $white-bg-color;
+  border-radius: 16px;
+  box-shadow: $modal-elements-shadow;
+
+  &[data-state='active'] {
+    .__select__title {
+      &::before {
+        transform: translate(-3px, -50%) rotate(-45deg);
+      }
+
+      &::after {
+        transform: translate(3px, -50%) rotate(45deg);
+      }
+    }
+
+    .__select__content {
+      opacity: 1;
+    }
+
+    .__select__label + .__select__input + .__select__label {
+      max-height: 40px;
+      border-top-width: 1px;
+    }
+  }
+}
+.__select__title {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 8px 8px 8px 33px;
+  color: $black-text-color;
+  border-radius: 16px;
+  border: solid 1px transparent;
+
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: '';
+
+    position: absolute;
+    top: 50%;
+    right: 16px;
+
+    display: block;
+    width: 10px;
+    height: 2px;
+
+    transition: all 0.3s ease-out;
+
+    background-color: $accent-link-color;
+
+    transform: translate(-3px, -50%) rotate(45deg);
+  }
+  &::after {
+    transform: translate(3px, -50%) rotate(-45deg);
+  }
+
+  &:hover {
+    border-color: $accent-link-color;
+
+    &::before,
+    &::after {
+      background-color: $accent-link-color;
+    }
+  }
+}
+
+.__select__content {
+  position: absolute;
+  top: 40px;
+  left: 3px;
+
+  display: flex;
+  flex-direction: column;
+  width: calc(100% - 6px);
+
+  background-color: $white-bg-color;
+  color: black;
+  border: 1px solid $secondary-title-color;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+
+  transition: all 0.3s ease-out;
+
+  opacity: 0;
+  z-index: 8;
+}
+
+.__select__input {
+  display: none;
+
+  &:checked + label {
+    background-color: $accent-link-color;
+    color: $white-text-color;
+    border-radius: 16px;
+  }
+  &:disabled + label {
+    opacity: 0.6;
+    pointer-events: none;
+  }
+}
+
+.__select__label {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 40px;
+  max-height: 0;
+  padding: 0 16px;
+
+  transition: all 0.2s ease-out;
+
+  cursor: pointer;
+
+  overflow: hidden;
+
+  border-bottom: 1px solid $secondary-title-color;
+  border-radius: 16px;
+
+  &:hover {
+    background-color: $main-title-color !important;
+    border-radius: 16px;
+
+    color: $white-text-color;
+  }
 }
