@@ -157,19 +157,28 @@
 }
 .checkbox-link {
   // color: $btn-cl;
-  margin-right: 0;
+  margin-left: 65px;
+  font-weight: 700;
+  text-decoration: underline;
+  color: $main-title-color;
+  @include respond-above($tablet) {
+    margin-left: 5px;
+  }
 }
 .checkbox-label {
+  position: relative;
   display: flex;
   padding-top: 20px;
-  display: flex;
   margin-bottom: 30px;
   font-size: 14px;
   line-height: 1.71;
   letter-spacing: 0.03em;
   align-items: center;
-  justify-content: center;
-  color: $main-title-color;
+  color: $secondary-title-color;
+
+  @include respond-below($tablet) {
+    flex-wrap: wrap;
+  }
 }
 .checkbox {
   display: inline-block;
@@ -197,4 +206,9 @@
   display: flex;
   margin-left: auto;
   margin-right: auto;
+}
+
+.check__icon--loc {
+  left: 25px;
+  top: 23px;
 }

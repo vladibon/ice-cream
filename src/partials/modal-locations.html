@@ -39,13 +39,15 @@
           placeholder="Your message here.."
         ></textarea>
       </label>
-      <input type="checkbox" name="user-checkbox" class="checkbox visually-hidden" id="checkbox" />
-      <label class="checkbox-label" for="checkbox">
-        <span>
-          I have read and agree
-        <a href="#" class="checkbox-link">Privacy Policy</a></label
-      >
-        </span>
+      <label class="checkbox-label">
+        <input class="check__inp" type="checkbox" name="consent" value="" />
+        <svg class="check__icon check__icon--margin check__icon--loc" width="18" height="18">
+          <use href="./images/icons.svg#icon-chk"></use>
+        </svg>
+        <span class="check__bord check__bord--margin"></span>
+        I have read and agree
+        <a href="#" class="checkbox-link">Privacy Policy</a>
+      </label>
       <button class="btn btn--secondary btn--modal" type="submit">Send</button>
     </form>
   </div>
