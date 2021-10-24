@@ -1,49 +1,61 @@
-# parcel-project-template
+# Ice Cream landing page
 
-## Зависимости
+Beautiful site promoting Ice Cream company. Team project, developed by Go-IT students while studying
+HTML/CSS
 
-На компьютере должена быть установлена LTS-версия [Node.js](https://nodejs.org/en/).
+## Task
 
-## Перед началом работы
+Create a landing page with adaptive to different display sizes, using giving design and technical
+requires, also improving it by providing additional features.
 
-Один раз на проект установить все зависимости.
+## Tools used:
 
-```shell
-npm ci
-```
+### Basic
 
-### Разработка
+- HTML5 / CSS3;
+- SASS;
 
-Запустить режим разработки.
+### Service
 
-```shell
-npm run dev
-```
+- VS Code;
+- Figma;
+- Trello;
+- Git / github;
+- Parcel bundler;
+- Adobe Illustrator;
 
-Во вкладке браузера перейти по адресу [http://localhost:1234](http://localhost:1234).
+### Advanced
 
-### Деплой
+- JavaScript;
+- JQuery;
+- Slick slider;
+- Hamburgers;
 
-Сборка будет автоматически собирать и деплоить продакшен версию проекта на GitHub Pages, в ветку
-`gh-pages`, каждый раз когда обновляется ветка `main`. Например, после прямого пуша или принятого
-пул-реквеста. Для этого необходимо в файле `package.json` отредактировать поле `homepage` и скрипт
-`build`, заменив `имя_пользователя` и `имя_репозитория` на свои.
+## About our project
 
-```json
-"homepage": "https://имя_пользователя.github.io/имя_репозитория",
-"scripts": {
-  "build": "parcel build src/*.html --public-url /имя_репозитория/"
-},
-```
+Nowadays everybody needs a web-site. Even great hardworking local company known to produse the most
+delicious ice cream needs more people to learn about them.
 
-Через какое-то время живую страницу можно будет посмотреть по адресу указанному в отредактированном
-свойстве `homepage`, например
-[https://goitacademy.github.io/parcel-project-template](https://goitacademy.github.io/parcel-project-template).
+There are all crusial elements in our landing page:
 
-## Файлы и папки
+- First of all customers have a chance to learn more about the company and their production.
+- Also there are another clients reviews on the page.
+- Contact section contains links by which you can find the company in social media and also an
+  actual localization of them on the map.
+- You can reach for the callback from the site owners by complpleting the form at the end of the
+  page;
+- Also you have another form under the button "Buy now" in the header, by sending which you can make
+  your order on a mouthwatering ice cream;
 
-- Все паршалы файлов стилей должны лежать в папке `src/sass` и импортироваться в
-  `src/sass/main.scss`
-- Изображения добавляйте в папку `src/images`, заранее оптимизировав их. Сборщик просто копирует
-  используемые изображения чтобы не нагружать систему оптимизацией картинок, так как на слабых
-  компьютерах это может занять прилично времени.
+A lot of elements on the page are animated, so you can have fun while using the site.
+
+## Developers team
+
+- Team leader [Vladimir Bondar](https://github.com/vladibon);
+- Scrum muster [Olena Horobets](https://github.com/Olena-Horobets);
+- Developer [Valeriy Fedulov](https://github.com/Valeriy-Fedulov);
+- Developer [Iryna Grabovska](https://github.com/Iryna-Grabovska);
+- Developer [Eduard Konovka](https://github.com/Eduard-Konovka);
+- Developer [Konstantin Zakrzhevskyi](https://github.com/KonstantinZakrzhevskyi);
+- Developer [Anna Holub](https://github.com/Anna-Sergeevna);
+- Developer [Dmitryi Priadko](https://github.com/Dmitriff);
